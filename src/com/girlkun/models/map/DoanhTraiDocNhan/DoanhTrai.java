@@ -28,12 +28,14 @@ public class DoanhTrai {
     public static final List<DoanhTrai> DOANH_TRAI;
     public static final int MAX_AVAILABLE = 500;
     public static final int TIME_DOANH_TRAI = 1800000;
+    public static long TIME_RESET_DT;    
+    public static long TIME_DELAY_DT;
+
+    public static final int AVAILABLE = 150;
     public static int N_PLAYER_MAP = 0;
     public static final int N_PLAYER_CLAN = 0;
     private Player player;
-    
-    
- 
+
     static {
         DOANH_TRAI = new ArrayList<>();
         for (int i = 0; i < MAX_AVAILABLE; i++) {
@@ -77,6 +79,7 @@ public class DoanhTrai {
         this.isOpened = true;
         this.clan = clan;
         this.clan.timeOpenDoanhTrai = this.lastTimeOpen;
+        this.clan.lastTimeOpenDoanhTrai = this.lastTimeOpen;
         this.clan.playerOpenDoanhTrai = plOpen;
         this.clan.doanhTrai = this;
         ChangeMapService.gI().changeMapInYard(plOpen, 53, -1, 60);
@@ -84,12 +87,14 @@ public class DoanhTrai {
         sendTextDoanhTrai();
     }
     
+  
+    
     private void kickOutOfBDKB(Player player) {
         if (MapService.gI().isMapDoanhTrai(player.zone.map.mapId)) {
             Service.getInstance().sendThongBao(player, "Doanh Trại Đã Kết Thúc Bạn Đang Được Đưa Ra Ngoài");
-            ChangeMapService.gI().changeMapBySpaceShip(player, 27, -1, 1038);
-            running = false;
-            this.clan.BanDoKhoBau = null;
+            ChangeMapService.gI().changeMapBySpaceShip(player,player.gender + 21, -1, 1038);
+//            running = false;
+//            this.clan.BanDoKhoBau = null;
         }
     }
 

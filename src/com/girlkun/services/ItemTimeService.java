@@ -12,7 +12,6 @@ import com.girlkun.models.player.Player;
 import com.girlkun.network.io.Message;
 import com.girlkun.utils.Logger;
 
-
 public class ItemTimeService {
 
     private static ItemTimeService i;
@@ -46,7 +45,7 @@ public class ItemTimeService {
         if (player.itemTime.isUseCuongNo) {
             sendItemTime(player, 2754, (int) ((TIME_ITEM - (System.currentTimeMillis() - player.itemTime.lastTimeCuongNo)) / 1000));
         }
-        
+
         if (player.itemTime.isUseAnDanh) {
             sendItemTime(player, 2760, (int) ((TIME_ITEM - (System.currentTimeMillis() - player.itemTime.lastTimeAnDanh)) / 1000));
         }
@@ -65,7 +64,7 @@ public class ItemTimeService {
         if (player.itemTime.isUseBanhTet) {
             sendItemTime(player, 7079, (int) ((TIME_ITEM45P - (System.currentTimeMillis() - player.itemTime.lastTimeBanhTet)) / 1000));
         }
-        
+
         if (player.itemTime.isUseBanhChung) {
             sendItemTime(player, 7080, (int) ((TIME_ITEM45P - (System.currentTimeMillis() - player.itemTime.lastTimeBanhChung)) / 1000));
         }
@@ -78,14 +77,14 @@ public class ItemTimeService {
         if (player.itemTime.isUseMayDo) {
             sendItemTime(player, 2758, (int) ((TIME_MAY_DO - (System.currentTimeMillis() - player.itemTime.lastTimeUseMayDo)) / 1000));
         }
-                if (player.itemTime.isUseMayDo2) {//2758 icon// cai nay time co cho bằng cái máy dò kia ko
+        if (player.itemTime.isUseMayDo2) {//2758 icon// cai nay time co cho bằng cái máy dò kia ko
             sendItemTime(player, 2758, (int) ((TIME_MAY_DO - (System.currentTimeMillis() - player.itemTime.lastTimeUseMayDo2)) / 1000));
         }
         if (player.itemTime.isEatMeal) {
             sendItemTime(player, player.itemTime.iconMeal, (int) ((TIME_EAT_MEAL - (System.currentTimeMillis() - player.itemTime.lastTimeEatMeal)) / 1000));
         }
         if (player.itemTime.isUseTDLT) {
-            sendItemTime(player, 4387,player.itemTime.timeTDLT / 1000);
+            sendItemTime(player, 4387, player.itemTime.timeTDLT / 1000);
         }
     }
 
@@ -149,7 +148,7 @@ public class ItemTimeService {
             sendTextTime(player, BAN_DO_KHO_BAU, "Động kho báu: ", secondsLeft);
         }
     }
-    
+
     public void sendTextKhiGaHuyDiet(Player player) {
         if (player.clan != null
                 && player.clan.timeOpenKhiGaHuyDiet != 0) {
@@ -158,8 +157,9 @@ public class ItemTimeService {
             sendTextTime(player, KHI_GA_HUY_DIET, "Khí gas hủy diệt: ", secondsLeft);
         }
     }
+
     public void sendTextConDuongRanDoc(Player player) {
-          if (player.clan != null && !player.clan.haveGoneConDuongRanDoc
+        if (player.clan != null && !player.clan.haveGoneConDuongRanDoc
                 && player.clan.timeOpenConDuongRanDoc != 0) {
             int secondPassed = (int) ((System.currentTimeMillis() - player.clan.timeOpenConDuongRanDoc) / 1000);
             int secondsLeft = (ConDuongRanDoc.TIME_CON_DUONG_RAN_DOC / 1000) - secondPassed;
