@@ -47,35 +47,33 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.JSONValue;
 
-
 public class GodGK {
-public static Boolean baotri = false;
+
+    public static Boolean baotri = false;
+
     public static synchronized Player login(MySession session, AntiLogin al) {
         Player player = null;
         GirlkunResultSet rs = null;
         try {
             rs = GirlkunDB.executeQuery("select * from account where username = ? and password = ?", session.uu, session.pp);
             if (rs.first()) {
-                 session.userId = rs.getInt("account.id");
+                session.userId = rs.getInt("account.id");
                 session.isAdmin = rs.getBoolean("is_admin");
-                session.lastTimeLogout = rs.getTimestamp("last_time_logout").getTime();    
+                session.lastTimeLogout = rs.getTimestamp("last_time_logout").getTime();
                 session.goldBar = rs.getInt("account.thoi_vang");
                 session.bdPlayer = rs.getDouble("account.bd_player");
-                session.vnd =  rs.getInt("vnd");
+                session.vnd = rs.getInt("vnd");
+                session.coinBar = rs.getInt("tongnap");
+                session.actived = rs.getBoolean("active");
                 long lastTimeLogin = rs.getTimestamp("last_time_login").getTime();
                 int secondsPass1 = (int) ((System.currentTimeMillis() - lastTimeLogin) / 1000);
                 long lastTimeLogout = rs.getTimestamp("last_time_logout").getTime();
                 int secondsPass = (int) ((System.currentTimeMillis() - lastTimeLogout) / 1000);
 
-//                if (!session.isAdmin) {
-//                    Service.getInstance().sendThongBaoOK(session, "Chi danh cho admin");
-//                }else
-
-
                 if (rs.getBoolean("ban")) {
                     Service.getInstance().sendThongBaoOK(session, "Tài khoản đã bị khóa!");
-                }else if (baotri && session.isAdmin){
-                    Service.getInstance().sendThongBaoOK(session, "Máy chủ đang bảo trì, vào con cặc!");
+                } else if (baotri && session.isAdmin) {
+                    Service.getInstance().sendThongBaoOK(session, "Máy chủ đang bảo trì, vui lòng quay trở lại sau!");
                 } else if (secondsPass1 < Manager.SECOND_WAIT_LOGIN) {
                     if (secondsPass < secondsPass1) {
                         Service.getInstance().sendThongBaoOK(session, "Vui lòng chờ " + (Manager.SECOND_WAIT_LOGIN - secondsPass) + "s");
@@ -85,7 +83,7 @@ public static Boolean baotri = false;
                     return null;
                 } else if (rs.getTimestamp("last_time_login").getTime() > session.lastTimeLogout) {
                     Player plInGame = Client.gI().getPlayerByUser(session.userId);
-                  
+
                     Service.getInstance().sendThongBaoOK(session, "Tài khoản đang được đăng nhập tại máy chủ khác");
                 } else {
                     if (secondsPass < Manager.SECOND_WAIT_LOGIN) {
@@ -118,10 +116,10 @@ public static Boolean baotri = false;
                             player.haveTennisSpaceShip = rs.getBoolean("have_tennis_space_ship");
                             player.violate = rs.getInt("violate");
                             player.pointPvp = rs.getInt("pointPvp");
- //                           player.chuyenSinh = rs.getInt("chuyenSinh");
+                            //                           player.chuyenSinh = rs.getInt("chuyenSinh");
                             player.NguHanhSonPoint = rs.getInt("NguHanhSonPoint");
                             player.totalPlayerViolate = 0;
-                            if(player.kichhoat != 1){
+                            if (player.kichhoat == 1) {
                                 player.kichhoat = rs.getInt("active");
                             }
                             int clanId = rs.getInt("clan_id_sv" + Manager.SERVER);
@@ -162,8 +160,8 @@ public static Boolean baotri = false;
                                 player.location.x = Integer.parseInt(String.valueOf(dataArray.get(1)));
                                 player.location.y = Integer.parseInt(String.valueOf(dataArray.get(2)));
                                 player.location.lastTimeplayerMove = System.currentTimeMillis();
-                                if  (MapService.gI().isMapDoanhTrai(mapId)|| MapService.gI().isMapBlackBallWar(mapId)
-                                    || MapService.gI().isMapKhiGaHuyDiet(mapId)|| MapService.gI().isMapConDuongRanDoc(mapId) || MapService.gI().isMapBanDoKhoBau(mapId) || MapService.gI().isMapMaBu(mapId)) {
+                                if (MapService.gI().isMapDoanhTrai(mapId) || MapService.gI().isMapBlackBallWar(mapId)
+                                        || MapService.gI().isMapKhiGaHuyDiet(mapId) || MapService.gI().isMapConDuongRanDoc(mapId) || MapService.gI().isMapBanDoKhoBau(mapId) || MapService.gI().isMapMaBu(mapId)) {
                                     mapId = player.gender + 21;
                                     player.location.x = 300;
                                     player.location.y = 336;
@@ -370,12 +368,12 @@ public static Boolean baotri = false;
                             int timeAnDanh = Integer.parseInt(String.valueOf(dataArray.get(4)));
                             int timeOpenPower = Integer.parseInt(String.valueOf(dataArray.get(5)));
                             int timeMayDo = Integer.parseInt(String.valueOf(dataArray.get(6)));
-                            int timeMayDo2 = Integer.parseInt(String.valueOf(dataArray.get(6))); 
+                            int timeMayDo2 = Integer.parseInt(String.valueOf(dataArray.get(6)));
                             int timeMeal = Integer.parseInt(String.valueOf(dataArray.get(7)));
                             int iconMeal = Integer.parseInt(String.valueOf(dataArray.get(8)));
                             int timeBanhTet = Integer.parseInt(String.valueOf(dataArray.get(9)));
                             int timeBanhChung = Integer.parseInt(String.valueOf(dataArray.get(10)));
-                            
+
                             int timeUseTDLT = 0;
                             if (dataArray.size() == 10) {
                                 timeUseTDLT = Integer.parseInt(String.valueOf(dataArray.get(9)));
@@ -396,7 +394,7 @@ public static Boolean baotri = false;
                             player.itemTime.lastTimeUseMayDo = System.currentTimeMillis() - (ItemTime.TIME_MAY_DO - timeMayDo);
                             player.itemTime.lastTimeBanhTet = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhTet);
                             player.itemTime.lastTimeBanhChung = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhChung);
-                            
+
                             player.itemTime.lastTimeUseMayDo2 = System.currentTimeMillis() - (ItemTime.TIME_MAY_DO2 - timeMayDo2);
                             player.itemTime.lastTimeEatMeal = System.currentTimeMillis() - (ItemTime.TIME_EAT_MEAL - timeMeal);
                             player.itemTime.timeTDLT = timeUseTDLT * 60 * 1000;
@@ -479,29 +477,29 @@ public static Boolean baotri = false;
                                     skill = SkillUtil.createSkillLevel0(tempId);
                                 }
                                 skill.lastTimeUseThisSkill = Long.parseLong(String.valueOf(dataSkill.get(2)));
-                                if (dataSkill.size() > 3){
-                                    skill.currLevel= Short.parseShort(String.valueOf(dataSkill.get(3)));
+                                if (dataSkill.size() > 3) {
+                                    skill.currLevel = Short.parseShort(String.valueOf(dataSkill.get(3)));
                                 }
                                 player.playerSkill.skills.add(skill);
                             }
                             dataArray.clear();
 
                             //data skill shortcut
-                dataArray = (JSONArray) jv.parse(rs.getString("skills_shortcut"));
-                for (int i = 0; i < dataArray.size(); i++) {
-                    player.playerSkill.skillShortCut[i] = Byte.parseByte(String.valueOf(dataArray.get(i)));
-                }
-                for (int i : player.playerSkill.skillShortCut) {
-                    if (player.playerSkill.getSkillbyId(i) != null && player.playerSkill.getSkillbyId(i).damage > 0) {
-                        player.playerSkill.skillSelect = player.playerSkill.getSkillbyId(i);
-                        break;
-                    }
-                }
-                if (player.playerSkill.skillSelect == null) {
-                    player.playerSkill.skillSelect = player.playerSkill.getSkillbyId(player.gender == ConstPlayer.TRAI_DAT
-                            ? Skill.DRAGON : (player.gender == ConstPlayer.NAMEC ? Skill.DEMON : Skill.GALICK));
-                }
-                dataArray.clear();
+                            dataArray = (JSONArray) jv.parse(rs.getString("skills_shortcut"));
+                            for (int i = 0; i < dataArray.size(); i++) {
+                                player.playerSkill.skillShortCut[i] = Byte.parseByte(String.valueOf(dataArray.get(i)));
+                            }
+                            for (int i : player.playerSkill.skillShortCut) {
+                                if (player.playerSkill.getSkillbyId(i) != null && player.playerSkill.getSkillbyId(i).damage > 0) {
+                                    player.playerSkill.skillSelect = player.playerSkill.getSkillbyId(i);
+                                    break;
+                                }
+                            }
+                            if (player.playerSkill.skillSelect == null) {
+                                player.playerSkill.skillSelect = player.playerSkill.getSkillbyId(player.gender == ConstPlayer.TRAI_DAT
+                                        ? Skill.DRAGON : (player.gender == ConstPlayer.NAMEC ? Skill.DEMON : Skill.GALICK));
+                            }
+                            dataArray.clear();
 
                             //data pet
                             JSONArray petData = (JSONArray) jv.parse(rs.getString("pet"));
@@ -578,15 +576,15 @@ public static Boolean baotri = false;
                                     }
                                     pet.playerSkill.skills.add(skill);
                                 }
-                                if(pet.playerSkill.skills.size() < 5){
-                                    pet.playerSkill.skills.add(4,SkillUtil.createSkillLevel0(-1));
+                                if (pet.playerSkill.skills.size() < 5) {
+                                    pet.playerSkill.skills.add(4, SkillUtil.createSkillLevel0(-1));
                                 }
                                 pet.nPoint.hp = hp;
                                 pet.nPoint.mp = mp;
                                 player.pet = pet;
                             }
                             dataArray.clear();
-                           // nhiem vu bo mong 
+                            // nhiem vu bo mong 
                             JSONObject achievementObject = (JSONObject) JSONValue.parse(rs.getString("info_achievement"));
                             player.achievement.numPvpWin = Integer.parseInt(String.valueOf(achievementObject.get("numPvpWin")));
                             player.achievement.numSkillChuong = Integer.parseInt(String.valueOf(achievementObject.get("numSkillChuong")));
@@ -632,6 +630,7 @@ public static Boolean baotri = false;
         return player;
     }
 
+    
     public static void checkDo() {
         long st = System.currentTimeMillis();
         JSONValue jv = new JSONValue();
@@ -641,7 +640,7 @@ public static Boolean baotri = false;
         PreparedStatement ps = null;
         String name = "";
         ResultSet rs = null;
-        try (Connection con = GirlkunDB.getConnection()) {
+        try ( Connection con = GirlkunDB.getConnection()) {
             ps = con.prepareStatement("select * from player");
             rs = ps.executeQuery();
             while (rs.next()) {
@@ -856,7 +855,7 @@ public static Boolean baotri = false;
         PreparedStatement ps = null;
         String name = "";
         ResultSet rs = null;
-        try (Connection con = GirlkunDB.getConnection()) {
+        try ( Connection con = GirlkunDB.getConnection()) {
             ps = con.prepareStatement("select * from player");
             rs = ps.executeQuery();
             while (rs.next()) {
@@ -1016,8 +1015,8 @@ public static Boolean baotri = false;
             Logger.logException(Manager.class, e, "Lỗi load database");
         }
     }
-    
-     public static Player loadById(int id) {
+
+    public static Player loadById(int id) {
         Player player = null;
         GirlkunResultSet rs = null;
         try {
@@ -1064,12 +1063,12 @@ public static Boolean baotri = false;
                     player.location.x = Integer.parseInt(String.valueOf(dataArray.get(1)));
                     player.location.y = Integer.parseInt(String.valueOf(dataArray.get(2)));
                     if (MapService.gI().isMapDoanhTrai(mapId) || MapService.gI().isMapBlackBallWar(mapId)
-                       || MapService.gI().isMapKhiGaHuyDiet(mapId) || MapService.gI().isMapConDuongRanDoc(mapId) || MapService.gI().isMapBanDoKhoBau(mapId)) {
+                            || MapService.gI().isMapKhiGaHuyDiet(mapId) || MapService.gI().isMapConDuongRanDoc(mapId) || MapService.gI().isMapBanDoKhoBau(mapId)) {
                         mapId = player.gender + 21;
                         player.location.x = 300;
                         player.location.y = 336;
                     }
-                    player.zone = MapService.gI().getMapCanJoin(player, mapId,-1);
+                    player.zone = MapService.gI().getMapCanJoin(player, mapId, -1);
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
@@ -1209,39 +1208,41 @@ public static Boolean baotri = false;
 
                 //data friends
                 dataArray = (JSONArray) jv.parse(rs.getString("friends"));
-                if(dataArray != null){
-                for (int i = 0;i < dataArray.size(); i++) {
-                    JSONArray dataFE = (JSONArray) jv.parse(String.valueOf(dataArray.get(i)));
-                    Friend friend = new Friend();
-                    friend.id = Integer.parseInt(String.valueOf(dataFE.get(0)));
-                    friend.name = String.valueOf(dataFE.get(1));
-                    friend.head = Short.parseShort(String.valueOf(dataFE.get(2)));
-                    friend.body = Short.parseShort(String.valueOf(dataFE.get(3)));
-                    friend.leg = Short.parseShort(String.valueOf(dataFE.get(4)));
-                    friend.bag = Byte.parseByte(String.valueOf(dataFE.get(5)));
-                    friend.power = Long.parseLong(String.valueOf(dataFE.get(6)));
-                    player.friends.add(friend);
-                    dataFE.clear();
+                if (dataArray != null) {
+                    for (int i = 0; i < dataArray.size(); i++) {
+                        JSONArray dataFE = (JSONArray) jv.parse(String.valueOf(dataArray.get(i)));
+                        Friend friend = new Friend();
+                        friend.id = Integer.parseInt(String.valueOf(dataFE.get(0)));
+                        friend.name = String.valueOf(dataFE.get(1));
+                        friend.head = Short.parseShort(String.valueOf(dataFE.get(2)));
+                        friend.body = Short.parseShort(String.valueOf(dataFE.get(3)));
+                        friend.leg = Short.parseShort(String.valueOf(dataFE.get(4)));
+                        friend.bag = Byte.parseByte(String.valueOf(dataFE.get(5)));
+                        friend.power = Long.parseLong(String.valueOf(dataFE.get(6)));
+                        player.friends.add(friend);
+                        dataFE.clear();
+                    }
+                    dataArray.clear();
                 }
-                dataArray.clear();}
 
                 //data enemies
                 dataArray = (JSONArray) jv.parse(rs.getString("enemies"));
-                if(dataArray != null){
-                for (int i = 0; i < dataArray.size(); i++) {
-                    JSONArray dataFE = (JSONArray) jv.parse(String.valueOf(dataArray.get(i)));
-                    Enemy enemy = new Enemy();
-                    enemy.id = Integer.parseInt(String.valueOf(dataFE.get(0)));
-                    enemy.name = String.valueOf(dataFE.get(1));
-                    enemy.head = Short.parseShort(String.valueOf(dataFE.get(2)));
-                    enemy.body = Short.parseShort(String.valueOf(dataFE.get(3)));
-                    enemy.leg = Short.parseShort(String.valueOf(dataFE.get(4)));
-                    enemy.bag = Byte.parseByte(String.valueOf(dataFE.get(5)));
-                    enemy.power = Long.parseLong(String.valueOf(dataFE.get(6)));
-                    player.enemies.add(enemy);
-                    dataFE.clear();
+                if (dataArray != null) {
+                    for (int i = 0; i < dataArray.size(); i++) {
+                        JSONArray dataFE = (JSONArray) jv.parse(String.valueOf(dataArray.get(i)));
+                        Enemy enemy = new Enemy();
+                        enemy.id = Integer.parseInt(String.valueOf(dataFE.get(0)));
+                        enemy.name = String.valueOf(dataFE.get(1));
+                        enemy.head = Short.parseShort(String.valueOf(dataFE.get(2)));
+                        enemy.body = Short.parseShort(String.valueOf(dataFE.get(3)));
+                        enemy.leg = Short.parseShort(String.valueOf(dataFE.get(4)));
+                        enemy.bag = Byte.parseByte(String.valueOf(dataFE.get(5)));
+                        enemy.power = Long.parseLong(String.valueOf(dataFE.get(6)));
+                        player.enemies.add(enemy);
+                        dataFE.clear();
+                    }
+                    dataArray.clear();
                 }
-                dataArray.clear();}
 
                 //data nội tại
                 dataArray = (JSONArray) jv.parse(rs.getString("data_intrinsic"));
@@ -1278,7 +1279,7 @@ public static Boolean baotri = false;
                 player.itemTime.lastTimeEatMeal = System.currentTimeMillis() - (ItemTime.TIME_EAT_MEAL - timeMeal);
                 player.itemTime.lastTimeBanhTet = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhTet);
                 player.itemTime.lastTimeBanhChung = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhChung);
-                
+
                 player.itemTime.iconMeal = iconMeal;
                 player.itemTime.isUseBoHuyet = timeBoHuyet != 0;
                 player.itemTime.isUseBoKhi = timeBoKhi != 0;
@@ -1448,7 +1449,7 @@ public static Boolean baotri = false;
                     pet.nPoint.hp = hp;
                     pet.nPoint.mp = mp;
                     player.pet = pet;
-           }
+                }
                 JSONObject achievementObject = (JSONObject) JSONValue.parse(rs.getString("info_achievement"));
                 player.achievement.numPvpWin = Integer.parseInt(String.valueOf(achievementObject.get("numPvpWin")));
                 player.achievement.numSkillChuong = Integer.parseInt(String.valueOf(achievementObject.get("numSkillChuong")));

@@ -537,7 +537,7 @@ public class Pet extends Player {
                 return false;
             }
             switch (this.playerSkill.skillSelect.template.id) {
-                case Skill.THOI_MIEN:
+                case Skill.QUA_CAU_KENH_KHI:
                     if (!this.effectSkill.isThoiMien && SkillService.gI().canUseSkillWithCooldown(this) && SkillService.gI().canUseSkillWithMana(this)) {
                         SkillService.gI().useSkill(this, null, null,null);
                         return true;
@@ -834,7 +834,7 @@ public class Pet extends Player {
         this.playerSkill.skills.set(3, skill);
     }
 
-    public void openSkill5() {
+    public void openSkill5() {  
         Skill skill = null;
         int tiLeThoiMien = 10; //khi
         int tiLeSoCoLa = 70; //detrung

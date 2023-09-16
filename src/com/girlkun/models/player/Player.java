@@ -50,7 +50,7 @@ public class Player {
     public MySession session;
 
     public boolean beforeDispose;
-public boolean haveDuongTang;
+    public boolean haveDuongTang;
     public boolean isPet;
     public boolean isNewPet;
     public boolean isNewPet1;
@@ -195,6 +195,8 @@ public boolean haveDuongTang;
         }
     }
 
+
+
     public MySession getSession() {
         return this.session;
     }
@@ -289,15 +291,15 @@ public boolean haveDuongTang;
                                     Service.gI().point(this);
                                     break;
                                 case 1311: //Gà 9 cự
-                                    PetService.Pet2(this,  1419,1420,1421);
+                                    PetService.Pet2(this, 1419, 1420, 1421);
                                     Service.gI().point(this);
                                     break;
                                 case 1312: //Ngựa 9 hồng mao
-                                    PetService.Pet2(this,  1422,1423,1424);
+                                    PetService.Pet2(this, 1422, 1423, 1424);
                                     Service.gI().point(this);
                                     break;
                                 case 1313: //Voi 9 ngà
-                                    PetService.Pet2(this, 1425,1426,1427);
+                                    PetService.Pet2(this, 1425, 1426, 1427);
                                     Service.gI().point(this);
                                     break;
                                 case 1416: //Minions
@@ -419,13 +421,13 @@ public boolean haveDuongTang;
             return 24;
         } else if (item.template.id == 972) {
             return 25;
-            } else if (item.template.id == 1284) {
+        } else if (item.template.id == 1284) {
             return 24;
-            } else if (item.template.id == 1322) {
+        } else if (item.template.id == 1322) {
             return 17;
         } else if (item.template.id == 1321) {
             return 20;
-            } else if (item.template.id == 1320) {
+        } else if (item.template.id == 1320) {
             return 23;
         } else if (item.template.id == 1285) {
             return 2;
@@ -473,31 +475,31 @@ public boolean haveDuongTang;
             return 24;
         } else if (item.template.id == 1307) {
             return 25;
-            } else if (item.template.id == 1308) {
+        } else if (item.template.id == 1308) {
             return 24;
-            } else if (item.template.id == 1309) {
+        } else if (item.template.id == 1309) {
             return 17;
         } else if (item.template.id == 1310) {
             return 20;
-            } else if (item.template.id == 1311) {
+        } else if (item.template.id == 1311) {
             return 23;
-            } else if (item.template.id == 1312) {
+        } else if (item.template.id == 1312) {
             return 23;
-            } else if (item.template.id == 1313) {
+        } else if (item.template.id == 1313) {
             return 23;
-            } else if (item.template.id == 1314) {
+        } else if (item.template.id == 1314) {
             return 23;
-            } else if (item.template.id == 1315) {
+        } else if (item.template.id == 1315) {
             return 23;
-            } else if (item.template.id == 1316) {
+        } else if (item.template.id == 1316) {
             return 23;
-            } else if (item.template.id == 1317) {
+        } else if (item.template.id == 1317) {
             return 23;
-            } else if (item.template.id == 1318) {
+        } else if (item.template.id == 1318) {
             return 23;
-            } else if (item.template.id == 1319) {
+        } else if (item.template.id == 1319) {
             return 23;
-            } else if (item.template.id == 719) {
+        } else if (item.template.id == 719) {
             return 22;
         } else {
             return -1;
@@ -572,8 +574,8 @@ public boolean haveDuongTang;
 //                if (this.pet.typePet == 1) {
 //                    return idOutfitFusion[3 + this.gender][1];
                 return idOutfitFusion[3 + this.gender][1];
-            
-         } else if (fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3) {
+
+            } else if (fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3) {
 //                if (this.pet.typePet == 1) {
 //                    return idOutfitFusion[3 + this.gender][1];
 //                }
@@ -619,7 +621,7 @@ public boolean haveDuongTang;
 //                    return idOutfitFusion[3 + this.gender][2];
 //                }
                 return idOutfitFusion[3 + this.gender][2];
-           } else if (fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3) {
+            } else if (fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3) {
 //                if (this.pet.typePet == 1) {
 //                    return idOutfitFusion[3 + this.gender][2];
 //                }

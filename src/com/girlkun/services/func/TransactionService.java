@@ -58,10 +58,10 @@ public class TransactionService implements Runnable {
                         if (trade == null) {
                             trade = PLAYER_TRADE.get(plMap);
                         }
-                        //if (p1.session.actived == 0) {
-                           //Service.gI().sendThongBao(pl, "chưa mở thành viên");
-                          // return;
-                        //}
+                        if (pl.session.actived == false) {
+                           Service.gI().sendThongBao(pl, "Chưa mở thành viên\n Vui lòng Nạp Tiền");
+                           return;
+                        }
                         if (trade == null) {
                             if (action == SEND_INVITE_TRADE) {
                                 if (Util.canDoWithTime(pl.iDMark.getLastTimeTrade(), TIME_DELAY_TRADE)

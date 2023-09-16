@@ -20,11 +20,11 @@ import com.girlkun.services.Service;
 import com.girlkun.services.func.ChangeMapService;
 import com.girlkun.utils.Logger;
 import com.girlkun.utils.Util;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.girlkun.jdbc.daos.PlayerDAO;
 
 public class MySession extends Session {
 
@@ -52,9 +52,8 @@ public class MySession extends Session {
     public boolean joinedGame;
 
     public long lastTimeReadMessage;
-public int coinBar;
+    public int coinBar;
     public boolean actived;
-
     public int goldBar;
     public List<Item> itemsReward;
     public String dataReward;
@@ -68,7 +67,7 @@ public int coinBar;
         super(socket);
         this.isRIcon = false;
         Logger.success(
-                "BARCOLL CHẤP NHẬN CON XÚC VẬT: " + socket.getPort() + "___ IP: " + ipAddress + "___VÀO GAME: " + actived +"\n");
+                "PLAYER LOGIN THÀNH CÔNG: " + socket.getPort() + "___ IP: " + ipAddress + "___VÀO GAME: " + actived + "\n");
     }
 
     public void initItemsReward() {
@@ -101,6 +100,16 @@ public int coinBar;
         } catch (Exception e) {
 
         }
+    }
+
+//   kiểm tra xem đã nhận chưa
+
+    public boolean setReceivedMilestoneGift(Player pl,int receivedMilestoneGift) {
+        return PlayerDAO.isMilestoneReceived(pl,receivedMilestoneGift);
+    }
+    
+     public void updateReceivedMilestoneGift(Player pl,int receivedMilestoneGift,boolean received) {
+         PlayerDAO.updateMilestoneStatus(pl,receivedMilestoneGift,received);
     }
 
     @Override

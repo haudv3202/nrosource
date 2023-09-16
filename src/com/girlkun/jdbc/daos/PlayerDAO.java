@@ -29,7 +29,6 @@ import java.util.logging.Level;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
-
 public class PlayerDAO {
 
     public static boolean createNewPlayer(int userId, String name, byte gender, int hair) {
@@ -125,7 +124,6 @@ public class PlayerDAO {
                     item.add(457); //id item
                     item.add(2000); //số lượng
 
-                            
                     options.add(opt.toJSONString());
                     opt.clear();
                 } else {
@@ -272,10 +270,10 @@ public class PlayerDAO {
             dataArray.add(0); //mức độ nhiệm vụ
             String dataSideTask = dataArray.toJSONString();
             dataArray.clear();
-            
+
             String data_card = dataArray.toJSONString();
             String bill_data = dataArray.toJSONString();
-             JSONObject achievementObject = new JSONObject();
+            JSONObject achievementObject = new JSONObject();
             achievementObject.put("numPvpWin", 0);
             achievementObject.put("numSkillChuong", 0);
             achievementObject.put("numFly", 0);
@@ -290,20 +288,20 @@ public class PlayerDAO {
             achievementObject.put("numSkillDacBiet", 0);
             achievementObject.put("numPickGem", 0);
 
-           List<Boolean> list = new ArrayList<>(Arrays.asList(new Boolean[Manager.ACHIEVEMENTS.size()]));
+            List<Boolean> list = new ArrayList<>(Arrays.asList(new Boolean[Manager.ACHIEVEMENTS.size()]));
             Collections.fill(list, Boolean.FALSE);
             dataArray.addAll(list);
             achievementObject.put("listReceiveGem", dataArray);
             String info_achive = achievementObject.toJSONString();
 
             GirlkunDB.executeUpdate("insert into player"
-                            + "(account_id, name, head, gender, have_tennis_space_ship, clan_id_sv" + Manager.SERVER + ", "
-                            + "data_inventory, data_location, data_point, data_magic_tree, items_body, "
-                            + "items_bag, items_box, items_box_lucky_round, friends, enemies, data_intrinsic, data_item_time,"
-                            + "data_task, data_mabu_egg, data_charm, skills, skills_shortcut, pet,"
-                            + "active,"
-                            + "data_black_ball, data_side_task, info_achievement) "
-                            + "values ()", userId, name, hair, gender, 0, -1, inventory, location, point, magicTree,
+                    + "(account_id, name, head, gender, have_tennis_space_ship, clan_id_sv" + Manager.SERVER + ", "
+                    + "data_inventory, data_location, data_point, data_magic_tree, items_body, "
+                    + "items_bag, items_box, items_box_lucky_round, friends, enemies, data_intrinsic, data_item_time,"
+                    + "data_task, data_mabu_egg, data_charm, skills, skills_shortcut, pet,"
+                    + "active,"
+                    + "data_black_ball, data_side_task, info_achievement) "
+                    + "values ()", userId, name, hair, gender, 0, -1, inventory, location, point, magicTree,
                     itemsBody, itemsBag, itemsBox, itemsBoxLuckyRound, friends, enemies, intrinsic,
                     itemTime, task, mabuEgg, charms, skills, skillsShortcut, petData, 0, dataBlackBall, dataSideTask, info_achive);
             Logger.success("Tạo player mới thành công!");
@@ -344,7 +342,7 @@ public class PlayerDAO {
                     mp = 1;
                 } else {
                     if (MapService.gI().isMapDoanhTrai(mapId) || MapService.gI().isMapBlackBallWar(mapId)
-                          || MapService.gI().isMapKhiGaHuyDiet(mapId) || MapService.gI().isMapConDuongRanDoc(mapId)|| MapService.gI().isMapBanDoKhoBau(mapId) || MapService.gI().isMapMaBu(mapId)) {
+                            || MapService.gI().isMapKhiGaHuyDiet(mapId) || MapService.gI().isMapConDuongRanDoc(mapId) || MapService.gI().isMapBanDoKhoBau(mapId) || MapService.gI().isMapMaBu(mapId)) {
                         mapId = player.gender + 21;
                         x = 300;
                         y = 336;
@@ -699,12 +697,12 @@ public class PlayerDAO {
                 }
                 String dataBlackBall = dataArray.toJSONString();
                 dataArray.clear();
-                    JSONObject achievementObject = new JSONObject();
+                JSONObject achievementObject = new JSONObject();
                 achievementObject.put("numPvpWin", player.achievement.numPvpWin);
                 achievementObject.put("numSkillChuong", player.achievement.numSkillChuong);
                 achievementObject.put("numFly", player.achievement.numFly);
                 achievementObject.put("numKillMobFly", player.achievement.numKillMobFly);
-                achievementObject.put("numKillNguoiRom", player.achievement.numKillNguoiRom);               
+                achievementObject.put("numKillNguoiRom", player.achievement.numKillNguoiRom);
                 achievementObject.put("numHourOnline", player.achievement.numHourOnline);
                 achievementObject.put("numGivePea", player.achievement.numGivePea);
                 achievementObject.put("numSellItem", player.achievement.numSellItem);
@@ -717,7 +715,7 @@ public class PlayerDAO {
                 dataArray.addAll(player.achievement.listReceiveGem);
                 achievementObject.put("listReceiveGem", dataArray);
                 String info_achive = achievementObject.toJSONString();
-            
+
                 dataArray.clear();
                 String query = "  update player set head =?, have_tennis_space_ship = ?,"
                         + "clan_id_sv" + Manager.SERVER + " = ?, data_inventory = ?, data_location = ?, data_point = ?, data_magic_tree = ?,"
@@ -736,7 +734,7 @@ public class PlayerDAO {
                         itemsBag,
                         itemsBox,
                         itemsBoxLuckyRound,
-                        player.kichhoat,
+                        player.session.actived,
                         friend,
                         enemy,
                         intrinsic,
@@ -759,9 +757,46 @@ public class PlayerDAO {
             }
         }
     }
-public static boolean subcoin(Player player, int num) {
+
+    public static boolean isMilestoneReceived(Player player, int milestoneAmount) {
+        try ( Connection con = GirlkunDB.getConnection();) {
+            PreparedStatement ps = con.prepareStatement("SELECT received FROM milestone_data WHERE milestone_amount = ? AND user_id = ?");
+            ps.setInt(1, milestoneAmount);
+            ps.setInt(2, player.getSession().userId);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                boolean received = rs.getBoolean("received");
+                rs.close();
+                ps.close();
+                return received;
+            }
+            rs.close();
+            ps.close();
+        } catch (Exception e) {
+            Logger.logException(PlayerDAO.class, e, "Lỗi truy vấn gift " + player.name);
+        }
+        return false;
+    }
+
+    public static boolean updateMilestoneStatus(Player player, int milestoneAmount, boolean received) {
+        try ( Connection con = GirlkunDB.getConnection();) {
+            PreparedStatement ps = con.prepareStatement("insert into milestone_data (milestone_amount, received, user_id) values  (?, ?, ?) ON DUPLICATE KEY UPDATE received = ?");
+            ps.setInt(1, milestoneAmount);
+            ps.setBoolean(2, received);
+            ps.setInt(3, player.getSession().userId);
+            ps.setBoolean(4, received);
+            ps.executeUpdate();
+            ps.close();
+        } catch (Exception e) {
+            Logger.logException(PlayerDAO.class, e, "Lỗi update trạng thái nhận quà " + player.name);
+            return false;
+        }
+        return true;
+    }
+
+    public static boolean subcoin(Player player, int num) {
         PreparedStatement ps = null;
-        try (Connection con = GirlkunDB.getConnection();) {
+        try ( Connection con = GirlkunDB.getConnection();) {
             ps = con.prepareStatement("update account set coin = (coin - ?), active = ? where id = ?");
             ps.setInt(1, num);
             ps.setInt(2, player.getSession().actived ? 1 : 0);
@@ -779,12 +814,13 @@ public static boolean subcoin(Player player, int num) {
         }
         return true;
     }
+
     public static boolean subGoldBar(Player player, int num) {
         PreparedStatement ps = null;
-        try (Connection con = GirlkunDB.getConnection();) {
+        try ( Connection con = GirlkunDB.getConnection();) {
             ps = con.prepareStatement("update account set thoi_vang = (thoi_vang - ?), active = ? where id = ?");
             ps.setInt(1, num);
-            ps.setInt(2, player.kichhoat == 1 ? 1 : 0);
+            ps.setInt(2, player.session.actived == true ? 1 : 0);
             ps.setInt(3, player.getSession().userId);
             ps.executeUpdate();
             player.getSession().goldBar -= num;
@@ -806,7 +842,7 @@ public static boolean subcoin(Player player, int num) {
 
     public static boolean setIs_gift_box(Player player) {
         PreparedStatement ps = null;
-        try (Connection con = GirlkunDB.getConnection();) {
+        try ( Connection con = GirlkunDB.getConnection();) {
             ps = con.prepareStatement("update account set is_gift_box = 0 where id = ?");
             ps.setInt(1, player.getSession().userId);
             ps.executeUpdate();
@@ -819,9 +855,9 @@ public static boolean subcoin(Player player, int num) {
     }
 
     public static void addHistoryReceiveGoldBar(Player player, int goldBefore, int goldAfter,
-                                                int goldBagBefore, int goldBagAfter, int goldBoxBefore, int goldBoxAfter) {
+            int goldBagBefore, int goldBagAfter, int goldBoxBefore, int goldBoxAfter) {
         PreparedStatement ps = null;
-        try (Connection con = GirlkunDB.getConnection();) {
+        try ( Connection con = GirlkunDB.getConnection();) {
             ps = con.prepareStatement("insert into history_receive_goldbar(player_id,player_name,gold_before_receive,"
                     + "gold_after_receive,gold_bag_before,gold_bag_after,gold_box_before,gold_box_after) values (?,?,?,?,?,?,?,?)");
             ps.setInt(1, (int) player.id);
@@ -859,7 +895,7 @@ public static boolean subcoin(Player player, int num) {
         }
         PreparedStatement ps = null;
         ResultSet rs = null;
-        try (Connection con = GirlkunDB.getConnection();) {
+        try ( Connection con = GirlkunDB.getConnection();) {
             ps = con.prepareStatement("update account set reward = ? where id = ?");
             ps.setString(1, dataItemReward);
             ps.setInt(2, player.getSession().userId);
@@ -877,7 +913,7 @@ public static boolean subcoin(Player player, int num) {
 
     public static boolean insertHistoryGold(Player player, int quantily) {
         PreparedStatement ps = null;
-        try (Connection con = GirlkunDB.getConnection();) {
+        try ( Connection con = GirlkunDB.getConnection();) {
             ps = con.prepareStatement("insert into history_gold(name,gold) values (?,?)");
             ps.setString(1, player.name);
             ps.setInt(2, quantily);
@@ -915,10 +951,10 @@ public static boolean subcoin(Player player, int num) {
         }
         return lastTimeLogout > lastTimeLogin;
     }
-    
+
     public static boolean subvnd(Player player, int num) {
         PreparedStatement ps = null;
-        try (Connection con = GirlkunDB.getConnection();) {
+        try ( Connection con = GirlkunDB.getConnection();) {
             ps = con.prepareStatement("update account set vnd = (vnd - ?), active = ? where id = ?");
             ps.setInt(1, num);
             ps.setInt(2, player.getSession().actived ? 1 : 0);
@@ -936,7 +972,8 @@ public static boolean subcoin(Player player, int num) {
         }
         return true;
     }
-   public static void LogNapTIen(String uid,String menhgia,String seri, String code,String tranid) {
+
+    public static void LogNapTIen(String uid, String menhgia, String seri, String code, String tranid) {
         String UPDATE_PASS = "INSERT INTO naptien(uid,sotien,seri,code,loaithe,time,noidung,tinhtrang,tranid,magioithieu) VALUES(?,?,?,?,?,?,?,?,?,?)";
         try {
             Connection conn = GirlkunDB.getConnection();
@@ -945,11 +982,11 @@ public static boolean subcoin(Player player, int num) {
             ps = conn.prepareStatement(UPDATE_PASS);
             conn.setAutoCommit(false);
             //NGOC RONG SAO DEN
-             ps.setString(1, uid);
+            ps.setString(1, uid);
             ps.setString(2, menhgia);
             ps.setString(3, seri);
-             ps.setString(4, code);
-           
+            ps.setString(4, code);
+
             ps.setString(5, "VIETTEL");
             ps.setString(6, "123123123123");
             ps.setString(7, "dang nap the");
@@ -958,8 +995,7 @@ public static boolean subcoin(Player player, int num) {
             ps.setString(10, "0");
             if (ps.executeUpdate() == 1) {
             }
-            
-            
+
             conn.commit();
             //UPDATE NRSD
             conn.close();

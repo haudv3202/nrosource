@@ -34,9 +34,9 @@ public class ChatGlobalService implements Runnable {
     }
 
     public void chat(Player player, String text) {
-        if (player.kichhoat == 0) {
+        if (player.session.actived == false) {
             Service.getInstance().sendThongBaoFromAdmin(player,
-                    "|5|tài khoản mày kích hoạt chưa ib ad mèo kh cho");
+                    "|5|tài khoản mày kích hoạt chưa ib ad hậu");
             return;
         }
         if (waitingChat.size() >= COUNT_WAIT) {

@@ -43,7 +43,7 @@ public class ServerNotify extends Thread {
                     sendThongBaoBenDuoi(notifies.remove(0));
                 }
                 if (Util.canDoWithTime(this.lastTimeGK, 12000)) {
-                    sendThongBaoBenDuoi("Barcoll: Chúc Mọi Người Chơi Game Vui Vẽ!! ");
+                    sendThongBaoBenDuoi("NRO MAX: Chúc Mọi Người Chơi Game Vui Vẽ!! ");
                     this.lastTimeGK = System.currentTimeMillis();
                 }
             } catch (Exception ignored) {

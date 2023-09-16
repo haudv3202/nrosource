@@ -208,7 +208,7 @@ public class ServerManager {
                 String line = sc.nextLine();
                 if (line.equals("baotri")) {
                     Maintenance.gI().start(10);
-                } else if (line.equals("athread")) {
+                } else if (line.equals("debugsv")) {
                     ServerNotify.gI().notify("Nro Barcoll debug server: " + Thread.activeCount());
                 } else if (line.equals("nplayer")) {
                     Logger.error("Player in game: " + Client.gI().getPlayers().size() + "\n");
@@ -228,7 +228,7 @@ public class ServerManager {
                 } else if (line.startsWith("a")) {
                     String a = line.replace("a ", "");
                     Service.getInstance().sendThongBaoAllPlayer(a);
-                } else if (line.startsWith("qua")) {
+                }else if (line.startsWith("qua")) {
 //                    =1-1-1-1=1-1-1-1=
 //                     =playerId-quantily-itemId-sql=optioneId-pagram=
 

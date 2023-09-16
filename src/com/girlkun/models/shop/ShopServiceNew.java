@@ -403,6 +403,7 @@ public class ShopServiceNew {
     }
 
     private boolean subIemByItemShop(Player pl, ItemShop itemShop) {
+
         boolean isBuy = false;
         short itSpec = ItemService.gI().getItemIdByIcon((short) itemShop.iconSpec);
         int buySpec = itemShop.cost;
@@ -480,6 +481,7 @@ public class ShopServiceNew {
     }
     
     public void showConfirmSellItem(Player pl, int where, int index) {
+        Service.gI().sendThongBao(pl, "đã bán");
         if (index == 2 || index == 1) {
             return;
         }

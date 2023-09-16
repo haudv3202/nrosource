@@ -57,6 +57,13 @@ public class EffectSkill {
     public long lastTimeThoiMien;
     public int timeThoiMien;
 
+    
+      //QCKK
+    public boolean isQCKK;
+    public long lastTimeQCKK;
+    public int timeQCKK;
+    
+    
     //trói
     public boolean useTroi;
     public boolean anTroi;
@@ -101,6 +108,10 @@ public class EffectSkill {
         if (isThoiMien) {
             EffectSkillService.gI().removeThoiMien(this.player);
         }
+        
+          if (isQCKK) {
+            EffectSkillService.gI().removeThoiMien(this.player);
+        }
         if (isBlindDCTT) {
             EffectSkillService.gI().removeBlindDCTT(this.player);
         }
@@ -130,6 +141,10 @@ public class EffectSkill {
         if (isThoiMien && (Util.canDoWithTime(lastTimeThoiMien, timeThoiMien))) {
             EffectSkillService.gI().removeThoiMien(this.player);
         }
+        
+         if (isQCKK && (Util.canDoWithTime(lastTimeQCKK, timeQCKK))) {
+            EffectSkillService.gI().removeThoiMien(this.player);
+        }
         if (isBlindDCTT && (Util.canDoWithTime(lastTimeBlindDCTT, timeBlindDCTT))) {
             EffectSkillService.gI().removeBlindDCTT(this.player);
         }
@@ -151,7 +166,7 @@ public class EffectSkill {
     }
 
     public boolean isHaveEffectSkill() {
-        return isStun || isBlindDCTT || anTroi || isThoiMien || isBang;
+        return isStun || isBlindDCTT || anTroi || isThoiMien || isQCKK || isBang;
     }
     
     public void dispose(){

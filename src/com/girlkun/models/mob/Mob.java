@@ -622,167 +622,167 @@ public class Mob {
             if (((Pet) player).master.charms.tdThuHut > System.currentTimeMillis()) {
                 for (ItemMap item : items) {
                     if (item.itemTemplate.id != 590) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 220) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 221) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 222) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 223) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 224) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 933) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 934) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 17) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 18) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 19) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 20) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 441) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 442) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 443) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 444) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 445) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 446) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 447) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 2133) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 2134) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 2135) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 2136) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1900) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1901) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1902) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1903) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1904) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1905) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1906) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1907) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1908) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1909) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1066) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1067) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1068) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1069) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1070) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     // hút skh
                     if (item.itemTemplate.id != 1982) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1983) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1984) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1985) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1986) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1987) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1988) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1989) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1990) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1991) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1992) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1993) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1994) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1995) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 1996) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 380) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     } 
                 }
             }

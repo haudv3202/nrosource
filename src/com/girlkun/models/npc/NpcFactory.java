@@ -76,6 +76,8 @@ import java.util.logging.Level;
 import java.util.Timer;
 import java.util.TimerTask;
 import java.util.logging.Level;
+import java.text.NumberFormat;
+import java.util.Locale;
 
 public class NpcFactory {
 
@@ -1246,8 +1248,8 @@ public class NpcFactory {
                             break;
                         case 2:
                             if (player.getSession().vnd >= 10000) {
-                                if (player.kichhoat == 0) {
-                                    player.kichhoat = 1;
+                                if (player.session.actived == false) {
+                                    player.session.actived = true;
                                     PlayerDAO.subvnd(player, 10000);
                                     player.getSession().vnd -= 10000;
                                     Service.gI().sendThongBao(player, "Kích hoạt thành công");
@@ -1339,8 +1341,8 @@ public class NpcFactory {
                             break;
                         case 2:
                             if (player.getSession().vnd >= 10000) {
-                                if (player.kichhoat == 0) {
-                                    player.kichhoat = 1;
+                                if (player.session.actived == false) {
+                                    player.session.actived = true;
                                     PlayerDAO.subvnd(player, 10000);
                                     player.getSession().vnd -= 10000;
                                     Service.gI().sendThongBao(player, "Kích hoạt thành công");
@@ -2364,8 +2366,8 @@ public class NpcFactory {
                                     break;
                                 case 2:
                                     if (player.getSession().vnd >= 20000) {
-                                        if (player.kichhoat == 0) {
-                                            player.kichhoat = 1;
+                                        if (player.session.actived == false) {
+                                            player.session.actived = true;
                                             PlayerDAO.subvnd(player, 20000);
                                             player.getSession().vnd -= 20000;
                                             Service.gI().sendThongBao(player, "Kích hoạt thành công");
@@ -4463,7 +4465,7 @@ public class NpcFactory {
                     }
                     if (player.clan.doanhTrai != null && TimeUtil.getMinLeft(player.clan.lastTimeOpenDoanhTrai, DoanhTrai.TIME_DOANH_TRAI / 1000) > 0) {
                         createOtherMenu(player, ConstNpc.MENU_JOIN_DOANH_TRAI,
-                                "Bang hội của ngươi đang đánh trại độc nhãn\n" 
+                                "Bang hội của ngươi đang đánh trại độc nhãn\n"
                                 + "Thời gian còn lại là "
                                 + TimeUtil.getMinLeft(player.clan.lastTimeOpenDoanhTrai, DoanhTrai.TIME_DOANH_TRAI / 1000)
                                 + " phút. Ngươi có muốn tham gia không?",
@@ -4492,9 +4494,9 @@ public class NpcFactory {
                         return;
                     }
 //                    player.clan.haveGoneDoanhTrai 
-                    if (player.clan.doanhTrai != null  && TimeUtil.getMinLeft(player.clan.lastTimeOpenDoanhTrai, DoanhTrai.TIME_DOANH_TRAI / 1000) == 0) {
+                    if (player.clan.doanhTrai != null && TimeUtil.getMinLeft(player.clan.lastTimeOpenDoanhTrai, DoanhTrai.TIME_DOANH_TRAI / 1000) == 0) {
                         createOtherMenu(player, ConstNpc.IGNORE_MENU,
-                                "Bang hội của ngươi đã đi trại lúc "  + TimeUtil.formatTime(player.clan.timeOpenDoanhTrai, "HH:mm:ss") + " hôm nay. Người mở\n"
+                                "Bang hội của ngươi đã đi trại lúc " + TimeUtil.formatTime(player.clan.timeOpenDoanhTrai, "HH:mm:ss") + " hôm nay. Người mở\n"
                                 + "(" + player.name + "). Hẹn ngươi quay lại vào ngày mai", "OK", "Hướng\ndẫn\nthêm");
                         return;
                     }
@@ -4974,8 +4976,8 @@ public class NpcFactory {
                                     break;
                                 case 2:
                                     if (player.getSession().vnd >= 10000) {
-                                        if (player.kichhoat == 0) {
-                                            player.kichhoat = 1;
+                                        if (player.session.actived == false) {
+                                            player.session.actived = true;
                                             PlayerDAO.subvnd(player, 10000);
                                             player.getSession().vnd -= 10000;
                                             Service.gI().sendThongBao(player, "Kích hoạt thành công");
@@ -5290,8 +5292,8 @@ public class NpcFactory {
                                     break;
                                 case 1:
                                     this.createOtherMenu(player, 2,
-                                            "\b|1|Ngươi muốn đổi Quà Nạp à?\n|5|Khi quy đổi một mốc, số zeni trong hành trang ngươi sẽ bị trừ đi\n|5|Hãy lưu ý đọc kỹ quà nhận trước khi đổi\n|9|Cảm Ơn Bạn Đã Ủng Hộ!!!Mãi Keo:vv"
-                                            + "\b|7|Bạn đang có :" + player.getSession().coinBar + " Zeni",
+                                            "\b|1|Ngươi muốn đổi Quà Nạp à?\n|5|Khi quy đổi một mốc, Số zeni là số tiền bạn đã nạp,mỗi mức chỉ được nhận 1 lần\n|5|Hãy lưu ý đọc kỹ quà nhận trước khi đổi\n|9|Cảm Ơn Bạn Đã Ủng Hộ!!!Mãi Keo:vv"
+                                            + "\b|7|Số tiền bạn đã nạp là :" + player.getSession().coinBar + " VND",
                                             "Nhận Mốc 10k", "Nhận Mốc 20k", "Nhận Mốc 50k", "Nhận Mốc 100k", "Nhận Mốc 200k", "Nhận Mốc 500k", "Nhận Mốc 1000k");
                                     break;
                                 case 2:
@@ -5308,8 +5310,8 @@ public class NpcFactory {
                                     break;
                                 case 2:
                                     if (player.getSession().vnd >= 10000) {
-                                        if (player.kichhoat == 0) {
-                                            player.kichhoat = 1;
+                                        if (player.session.actived == false) {
+                                            player.session.actived = true;
                                             PlayerDAO.subvnd(player, 10000);
                                             player.getSession().vnd -= 10000;
                                             Service.gI().sendThongBao(player, "Kích hoạt thành công");
@@ -5329,12 +5331,17 @@ public class NpcFactory {
                                         return;
                                     }
                                     if (PlayerDAO.subcoin(player, 10000)) {
-                                        player.getSession().coinBar -= 10000;
-                                        Item i = ItemService.gI().createNewItem((short) 16, 10);
-                                        InventoryServiceNew.gI().addItemBag(player, i);
-                                        InventoryServiceNew.gI().sendItemBags(player);
-                                        Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 10k, Xin chúc mừng");
-                                        //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+                                        if (!player.getSession().setReceivedMilestoneGift(player, 10000)) {
+//                                            player.getSession().coinBar -= 10000;
+                                            Item i = ItemService.gI().createNewItem((short) 16, 10);
+                                            InventoryServiceNew.gI().addItemBag(player, i);
+                                            InventoryServiceNew.gI().sendItemBags(player);
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 10k, Xin chúc mừng");
+                                            //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+                                            player.getSession().updateReceivedMilestoneGift(player, 10000, true);
+                                        } else {
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 10k trước đó.");
+                                        }
                                     }
                                     break;
                                 case 1:
@@ -5343,14 +5350,19 @@ public class NpcFactory {
                                         return;
                                     }
                                     if (PlayerDAO.subcoin(player, 20000)) {
-                                        player.getSession().coinBar -= 20000;
-                                        Item i = ItemService.gI().createNewItem((short) 16, 20);
-                                        Item i1 = ItemService.gI().createNewItem((short) 20, 20);
-                                        InventoryServiceNew.gI().addItemBag(player, i);
-                                        InventoryServiceNew.gI().addItemBag(player, i1);
-                                        InventoryServiceNew.gI().sendItemBags(player);
-                                        Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 20k, Xin chúc mừng");
-                                        //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+                                        if (!player.getSession().setReceivedMilestoneGift(player, 20000)) {
+//                                            player.getSession().coinBar -= 20000;
+                                            Item i = ItemService.gI().createNewItem((short) 16, 20);
+                                            Item i1 = ItemService.gI().createNewItem((short) 20, 20);
+                                            InventoryServiceNew.gI().addItemBag(player, i);
+                                            InventoryServiceNew.gI().addItemBag(player, i1);
+                                            InventoryServiceNew.gI().sendItemBags(player);
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 20k, Xin chúc mừng");
+                                            //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+                                            player.getSession().updateReceivedMilestoneGift(player, 20000, true);
+                                        } else {
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 20k trước đó.");
+                                        }
                                     }
                                     break;
                                 case 2:
@@ -5359,24 +5371,29 @@ public class NpcFactory {
                                         return;
                                     }
                                     if (PlayerDAO.subcoin(player, 50000)) {
-                                        player.getSession().coinBar -= 50000;
-                                        Item i1 = ItemService.gI().createNewItem((short) 719, 1);
-                                        Item i2 = ItemService.gI().createNewItem((short) 1234, 1);
-                                        Item i3 = ItemService.gI().createNewItem((short) 1341, 1);
-                                        i1.itemOptions.add(new Item.ItemOption(50, 30));
-                                        i1.itemOptions.add(new Item.ItemOption(77, 30));
-                                        i1.itemOptions.add(new Item.ItemOption(103, 15));
-                                        i2.itemOptions.add(new Item.ItemOption(50, 15));
-                                        i2.itemOptions.add(new Item.ItemOption(77, 15));
-                                        i2.itemOptions.add(new Item.ItemOption(103, 30));
-                                        i3.itemOptions.add(new Item.ItemOption(50, 15));
-                                        i3.itemOptions.add(new Item.ItemOption(95, 15));
-                                        i3.itemOptions.add(new Item.ItemOption(96, 25));
-                                        InventoryServiceNew.gI().addItemBag(player, i1);
-                                        InventoryServiceNew.gI().addItemBag(player, i2);
-                                        InventoryServiceNew.gI().addItemBag(player, i3);
-                                        InventoryServiceNew.gI().sendItemBags(player);
-                                        Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 50k, Xin chúc mừng");
+                                        if (!player.getSession().setReceivedMilestoneGift(player, 50000)) {
+//                                            player.getSession().coinBar -= 50000;
+                                            Item i1 = ItemService.gI().createNewItem((short) 719, 1);
+                                            Item i2 = ItemService.gI().createNewItem((short) 1234, 1);
+                                            Item i3 = ItemService.gI().createNewItem((short) 1341, 1);
+                                            i1.itemOptions.add(new Item.ItemOption(50, 30));
+                                            i1.itemOptions.add(new Item.ItemOption(77, 30));
+                                            i1.itemOptions.add(new Item.ItemOption(103, 15));
+                                            i2.itemOptions.add(new Item.ItemOption(50, 15));
+                                            i2.itemOptions.add(new Item.ItemOption(77, 15));
+                                            i2.itemOptions.add(new Item.ItemOption(103, 30));
+                                            i3.itemOptions.add(new Item.ItemOption(50, 15));
+                                            i3.itemOptions.add(new Item.ItemOption(95, 15));
+                                            i3.itemOptions.add(new Item.ItemOption(96, 25));
+                                            InventoryServiceNew.gI().addItemBag(player, i1);
+                                            InventoryServiceNew.gI().addItemBag(player, i2);
+                                            InventoryServiceNew.gI().addItemBag(player, i3);
+                                            InventoryServiceNew.gI().sendItemBags(player);
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 50k, Xin chúc mừng");
+                                            player.getSession().updateReceivedMilestoneGift(player, 50000, true);
+                                        } else {
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 50k trước đó.");
+                                        }
                                         //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
                                     }
                                     break;
@@ -5386,29 +5403,34 @@ public class NpcFactory {
                                         return;
                                     }
                                     if (PlayerDAO.subcoin(player, 100000)) {
-                                        player.getSession().coinBar -= 100000;
-                                        Item i0 = ItemService.gI().createNewItem((short) 2001, 50);
-                                        Item i1 = ItemService.gI().createNewItem((short) 2002, 50);
-                                        Item i2 = ItemService.gI().createNewItem((short) 2003, 50);
-                                        Item i3 = ItemService.gI().createNewItem((short) 14, 3);
-                                        Item i4 = ItemService.gI().createNewItem((short) 15, 3);
-                                        Item i5 = ItemService.gI().createNewItem((short) 16, 3);
-                                        Item i6 = ItemService.gI().createNewItem((short) 17, 3);
-                                        Item i7 = ItemService.gI().createNewItem((short) 18, 3);
-                                        Item i8 = ItemService.gI().createNewItem((short) 20, 3);
-                                        Item i9 = ItemService.gI().createNewItem((short) 19, 3);
-                                        InventoryServiceNew.gI().addItemBag(player, i0);
-                                        InventoryServiceNew.gI().addItemBag(player, i1);
-                                        InventoryServiceNew.gI().addItemBag(player, i2);
-                                        InventoryServiceNew.gI().addItemBag(player, i4);
-                                        InventoryServiceNew.gI().addItemBag(player, i3);
-                                        InventoryServiceNew.gI().addItemBag(player, i5);
-                                        InventoryServiceNew.gI().addItemBag(player, i6);
-                                        InventoryServiceNew.gI().addItemBag(player, i7);
-                                        InventoryServiceNew.gI().addItemBag(player, i8);
-                                        InventoryServiceNew.gI().addItemBag(player, i9);
-                                        InventoryServiceNew.gI().sendItemBags(player);
-                                        Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 100k, Xin chúc mừng");
+                                        if (!player.getSession().setReceivedMilestoneGift(player, 100000)) {
+//                                            player.getSession().coinBar -= 100000;
+                                            Item i0 = ItemService.gI().createNewItem((short) 2001, 50);
+                                            Item i1 = ItemService.gI().createNewItem((short) 2002, 50);
+                                            Item i2 = ItemService.gI().createNewItem((short) 2003, 50);
+                                            Item i3 = ItemService.gI().createNewItem((short) 14, 3);
+                                            Item i4 = ItemService.gI().createNewItem((short) 15, 3);
+                                            Item i5 = ItemService.gI().createNewItem((short) 16, 3);
+                                            Item i6 = ItemService.gI().createNewItem((short) 17, 3);
+                                            Item i7 = ItemService.gI().createNewItem((short) 18, 3);
+                                            Item i8 = ItemService.gI().createNewItem((short) 20, 3);
+                                            Item i9 = ItemService.gI().createNewItem((short) 19, 3);
+                                            InventoryServiceNew.gI().addItemBag(player, i0);
+                                            InventoryServiceNew.gI().addItemBag(player, i1);
+                                            InventoryServiceNew.gI().addItemBag(player, i2);
+                                            InventoryServiceNew.gI().addItemBag(player, i4);
+                                            InventoryServiceNew.gI().addItemBag(player, i3);
+                                            InventoryServiceNew.gI().addItemBag(player, i5);
+                                            InventoryServiceNew.gI().addItemBag(player, i6);
+                                            InventoryServiceNew.gI().addItemBag(player, i7);
+                                            InventoryServiceNew.gI().addItemBag(player, i8);
+                                            InventoryServiceNew.gI().addItemBag(player, i9);
+                                            InventoryServiceNew.gI().sendItemBags(player);
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 100k, Xin chúc mừng");
+                                            player.getSession().updateReceivedMilestoneGift(player, 100000, true);
+                                        } else {
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 100k trước đó.");
+                                        }
                                         // Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 10 ô trống trong hành trang.");
                                     }
                                     break;
@@ -5418,37 +5440,42 @@ public class NpcFactory {
                                         return;
                                     }
                                     if (PlayerDAO.subcoin(player, 200000)) {
-                                        player.getSession().coinBar -= 200000;
-                                        Item i0 = ItemService.gI().createNewItem((short) 2091, 10);
-                                        Item i1 = ItemService.gI().createNewItem((short) 2092, 10);
-                                        Item i2 = ItemService.gI().createNewItem((short) 2093, 10);
-                                        Item i00 = ItemService.gI().createNewItem((short) 381, 99);
-                                        Item i10 = ItemService.gI().createNewItem((short) 382, 99);
-                                        Item i20 = ItemService.gI().createNewItem((short) 383, 99);
-                                        Item i200 = ItemService.gI().createNewItem((short) 384, 99);
-                                        Item i3 = ItemService.gI().createNewItem((short) 14, 10);
-                                        Item i4 = ItemService.gI().createNewItem((short) 15, 10);
-                                        Item i5 = ItemService.gI().createNewItem((short) 16, 10);
-                                        Item i6 = ItemService.gI().createNewItem((short) 17, 10);
-                                        Item i7 = ItemService.gI().createNewItem((short) 18, 10);
-                                        Item i9 = ItemService.gI().createNewItem((short) 19, 10);
-                                        Item i8 = ItemService.gI().createNewItem((short) 20, 10);
-                                        InventoryServiceNew.gI().addItemBag(player, i0);
-                                        InventoryServiceNew.gI().addItemBag(player, i1);
-                                        InventoryServiceNew.gI().addItemBag(player, i2);
-                                        InventoryServiceNew.gI().addItemBag(player, i00);
-                                        InventoryServiceNew.gI().addItemBag(player, i10);
-                                        InventoryServiceNew.gI().addItemBag(player, i20);
-                                        InventoryServiceNew.gI().addItemBag(player, i200);
-                                        InventoryServiceNew.gI().addItemBag(player, i4);
-                                        InventoryServiceNew.gI().addItemBag(player, i3);
-                                        InventoryServiceNew.gI().addItemBag(player, i5);
-                                        InventoryServiceNew.gI().addItemBag(player, i6);
-                                        InventoryServiceNew.gI().addItemBag(player, i7);
-                                        InventoryServiceNew.gI().addItemBag(player, i8);
-                                        InventoryServiceNew.gI().addItemBag(player, i9);
-                                        InventoryServiceNew.gI().sendItemBags(player);
-                                        Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 200k, Xin chúc mừng");
+                                        if (!player.getSession().setReceivedMilestoneGift(player, 200000)) {
+//                                            player.getSession().coinBar -= 200000;
+                                            Item i0 = ItemService.gI().createNewItem((short) 2091, 10);
+                                            Item i1 = ItemService.gI().createNewItem((short) 2092, 10);
+                                            Item i2 = ItemService.gI().createNewItem((short) 2093, 10);
+                                            Item i00 = ItemService.gI().createNewItem((short) 381, 99);
+                                            Item i10 = ItemService.gI().createNewItem((short) 382, 99);
+                                            Item i20 = ItemService.gI().createNewItem((short) 383, 99);
+                                            Item i200 = ItemService.gI().createNewItem((short) 384, 99);
+                                            Item i3 = ItemService.gI().createNewItem((short) 14, 10);
+                                            Item i4 = ItemService.gI().createNewItem((short) 15, 10);
+                                            Item i5 = ItemService.gI().createNewItem((short) 16, 10);
+                                            Item i6 = ItemService.gI().createNewItem((short) 17, 10);
+                                            Item i7 = ItemService.gI().createNewItem((short) 18, 10);
+                                            Item i9 = ItemService.gI().createNewItem((short) 19, 10);
+                                            Item i8 = ItemService.gI().createNewItem((short) 20, 10);
+                                            InventoryServiceNew.gI().addItemBag(player, i0);
+                                            InventoryServiceNew.gI().addItemBag(player, i1);
+                                            InventoryServiceNew.gI().addItemBag(player, i2);
+                                            InventoryServiceNew.gI().addItemBag(player, i00);
+                                            InventoryServiceNew.gI().addItemBag(player, i10);
+                                            InventoryServiceNew.gI().addItemBag(player, i20);
+                                            InventoryServiceNew.gI().addItemBag(player, i200);
+                                            InventoryServiceNew.gI().addItemBag(player, i4);
+                                            InventoryServiceNew.gI().addItemBag(player, i3);
+                                            InventoryServiceNew.gI().addItemBag(player, i5);
+                                            InventoryServiceNew.gI().addItemBag(player, i6);
+                                            InventoryServiceNew.gI().addItemBag(player, i7);
+                                            InventoryServiceNew.gI().addItemBag(player, i8);
+                                            InventoryServiceNew.gI().addItemBag(player, i9);
+                                            InventoryServiceNew.gI().sendItemBags(player);
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 200k, Xin chúc mừng");
+                                            player.getSession().updateReceivedMilestoneGift(player, 200000, true);
+                                        } else {
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 200k trước đó.");
+                                        }
                                         //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 10 ô trống trong hành trang.");
                                     }
                                     break;
@@ -5458,33 +5485,38 @@ public class NpcFactory {
                                         return;
                                     }
                                     if (PlayerDAO.subcoin(player, 500000)) {
-                                        player.getSession().coinBar -= 500000;
-                                        Item i0 = ItemService.gI().createNewItem((short) 1249, 1);
-                                        Item i1 = ItemService.gI().createNewItem((short) 1234, 1);
-                                        Item i4 = ItemService.gI().createNewItem((short) 1322, 1);
-                                        Item i5 = ItemService.gI().createNewItem((short) 220, 2000);
-                                        Item i6 = ItemService.gI().createNewItem((short) 221, 200);
-                                        Item i7 = ItemService.gI().createNewItem((short) 222, 2000);
-                                        Item i8 = ItemService.gI().createNewItem((short) 223, 2000);
-                                        i4.itemOptions.add(new Item.ItemOption(50, 30));
-                                        i4.itemOptions.add(new Item.ItemOption(77, 30));
-                                        i4.itemOptions.add(new Item.ItemOption(103, 30));
-                                        i0.itemOptions.add(new Item.ItemOption(0, 1200));
-                                        i0.itemOptions.add(new Item.ItemOption(95, 15));
-                                        i0.itemOptions.add(new Item.ItemOption(96, 15));
-                                        i1.itemOptions.add(new Item.ItemOption(6, 5700));
-                                        i1.itemOptions.add(new Item.ItemOption(7, 5700));
-                                        i1.itemOptions.add(new Item.ItemOption(95, 15));
-                                        i1.itemOptions.add(new Item.ItemOption(96, 15));
-                                        InventoryServiceNew.gI().addItemBag(player, i0);
-                                        InventoryServiceNew.gI().addItemBag(player, i1);
-                                        InventoryServiceNew.gI().addItemBag(player, i4);
-                                        InventoryServiceNew.gI().addItemBag(player, i5);
-                                        InventoryServiceNew.gI().addItemBag(player, i6);
-                                        InventoryServiceNew.gI().addItemBag(player, i7);
-                                        InventoryServiceNew.gI().addItemBag(player, i8);
-                                        InventoryServiceNew.gI().sendItemBags(player);
-                                        Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 500k, Xin chúc mừng");
+                                        if (!player.getSession().setReceivedMilestoneGift(player, 500000)) {
+//                                            player.getSession().coinBar -= 500000;
+                                            Item i0 = ItemService.gI().createNewItem((short) 1249, 1);
+                                            Item i1 = ItemService.gI().createNewItem((short) 1234, 1);
+                                            Item i4 = ItemService.gI().createNewItem((short) 1322, 1);
+                                            Item i5 = ItemService.gI().createNewItem((short) 220, 2000);
+                                            Item i6 = ItemService.gI().createNewItem((short) 221, 200);
+                                            Item i7 = ItemService.gI().createNewItem((short) 222, 2000);
+                                            Item i8 = ItemService.gI().createNewItem((short) 223, 2000);
+                                            i4.itemOptions.add(new Item.ItemOption(50, 30));
+                                            i4.itemOptions.add(new Item.ItemOption(77, 30));
+                                            i4.itemOptions.add(new Item.ItemOption(103, 30));
+                                            i0.itemOptions.add(new Item.ItemOption(0, 1200));
+                                            i0.itemOptions.add(new Item.ItemOption(95, 15));
+                                            i0.itemOptions.add(new Item.ItemOption(96, 15));
+                                            i1.itemOptions.add(new Item.ItemOption(6, 5700));
+                                            i1.itemOptions.add(new Item.ItemOption(7, 5700));
+                                            i1.itemOptions.add(new Item.ItemOption(95, 15));
+                                            i1.itemOptions.add(new Item.ItemOption(96, 15));
+                                            InventoryServiceNew.gI().addItemBag(player, i0);
+                                            InventoryServiceNew.gI().addItemBag(player, i1);
+                                            InventoryServiceNew.gI().addItemBag(player, i4);
+                                            InventoryServiceNew.gI().addItemBag(player, i5);
+                                            InventoryServiceNew.gI().addItemBag(player, i6);
+                                            InventoryServiceNew.gI().addItemBag(player, i7);
+                                            InventoryServiceNew.gI().addItemBag(player, i8);
+                                            InventoryServiceNew.gI().sendItemBags(player);
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 500k, Xin chúc mừng");
+                                            player.getSession().updateReceivedMilestoneGift(player, 500000, true);
+                                        } else {
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 500k trước đó.");
+                                        }
                                         //   Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 10 ô trống trong hành trang.");
                                     }
                                     break;
@@ -5494,37 +5526,42 @@ public class NpcFactory {
                                         return;
                                     }
                                     if (PlayerDAO.subcoin(player, 1000000)) {
-                                        player.getSession().coinBar -= 1000000;
-                                        Item i0 = ItemService.gI().createNewItem((short) 1249, 1);
-                                        Item i1 = ItemService.gI().createNewItem((short) 1234, 1);
-                                        Item i3 = ItemService.gI().createNewItem((short) 1321, 1);
-                                        Item i5 = ItemService.gI().createNewItem((short) 16, 99);
-                                        Item i6 = ItemService.gI().createNewItem((short) 1345, 3);
-                                        Item i9 = ItemService.gI().createNewItem((short) 1223, 1);
-                                        i3.itemOptions.add(new Item.ItemOption(50, 45));
-                                        i3.itemOptions.add(new Item.ItemOption(77, 45));
-                                        i3.itemOptions.add(new Item.ItemOption(103, 45));
-                                        i0.itemOptions.add(new Item.ItemOption(0, 1200));
-                                        i0.itemOptions.add(new Item.ItemOption(95, 15));
-                                        i0.itemOptions.add(new Item.ItemOption(96, 15));
-                                        i1.itemOptions.add(new Item.ItemOption(6, 6700));
-                                        i1.itemOptions.add(new Item.ItemOption(7, 6700));
-                                        i1.itemOptions.add(new Item.ItemOption(95, 20));
-                                        i1.itemOptions.add(new Item.ItemOption(96, 20));
-                                        i6.itemOptions.add(new Item.ItemOption(5, 125));
-                                        i6.itemOptions.add(new Item.ItemOption(36, 0));
-                                        i6.itemOptions.add(new Item.ItemOption(49, 42));
-                                        i6.itemOptions.add(new Item.ItemOption(30, 0));
-                                        i9.itemOptions.add(new Item.ItemOption(2, 12080));
-                                        i9.itemOptions.add(new Item.ItemOption(15, 15));
-                                        i9.itemOptions.add(new Item.ItemOption(94, 15));
-                                        InventoryServiceNew.gI().addItemBag(player, i0);
-                                        InventoryServiceNew.gI().addItemBag(player, i1);
-                                        InventoryServiceNew.gI().addItemBag(player, i3);
-                                        InventoryServiceNew.gI().addItemBag(player, i5);
-                                        InventoryServiceNew.gI().addItemBag(player, i6);
-                                        InventoryServiceNew.gI().sendItemBags(player);
-                                        Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 1000k, Xin chúc mừng");
+                                        if (!player.getSession().setReceivedMilestoneGift(player, 1000000)) {
+//                                            player.getSession().coinBar -= 1000000;
+                                            Item i0 = ItemService.gI().createNewItem((short) 1249, 1);
+                                            Item i1 = ItemService.gI().createNewItem((short) 1234, 1);
+                                            Item i3 = ItemService.gI().createNewItem((short) 1321, 1);
+                                            Item i5 = ItemService.gI().createNewItem((short) 16, 99);
+                                            Item i6 = ItemService.gI().createNewItem((short) 1345, 3);
+                                            Item i9 = ItemService.gI().createNewItem((short) 1223, 1);
+                                            i3.itemOptions.add(new Item.ItemOption(50, 45));
+                                            i3.itemOptions.add(new Item.ItemOption(77, 45));
+                                            i3.itemOptions.add(new Item.ItemOption(103, 45));
+                                            i0.itemOptions.add(new Item.ItemOption(0, 1200));
+                                            i0.itemOptions.add(new Item.ItemOption(95, 15));
+                                            i0.itemOptions.add(new Item.ItemOption(96, 15));
+                                            i1.itemOptions.add(new Item.ItemOption(6, 6700));
+                                            i1.itemOptions.add(new Item.ItemOption(7, 6700));
+                                            i1.itemOptions.add(new Item.ItemOption(95, 20));
+                                            i1.itemOptions.add(new Item.ItemOption(96, 20));
+                                            i6.itemOptions.add(new Item.ItemOption(5, 125));
+                                            i6.itemOptions.add(new Item.ItemOption(36, 0));
+                                            i6.itemOptions.add(new Item.ItemOption(49, 42));
+                                            i6.itemOptions.add(new Item.ItemOption(30, 0));
+                                            i9.itemOptions.add(new Item.ItemOption(2, 12080));
+                                            i9.itemOptions.add(new Item.ItemOption(15, 15));
+                                            i9.itemOptions.add(new Item.ItemOption(94, 15));
+                                            InventoryServiceNew.gI().addItemBag(player, i0);
+                                            InventoryServiceNew.gI().addItemBag(player, i1);
+                                            InventoryServiceNew.gI().addItemBag(player, i3);
+                                            InventoryServiceNew.gI().addItemBag(player, i5);
+                                            InventoryServiceNew.gI().addItemBag(player, i6);
+                                            InventoryServiceNew.gI().sendItemBags(player);
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 1000k, Xin chúc mừng");
+                                            player.getSession().updateReceivedMilestoneGift(player, 1000000, true);
+                                        } else {
+                                            Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 1000k trước đó.");
+                                        }
                                         //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 10 ô trống trong hành trang.");
                                         break;
 
@@ -5834,8 +5871,8 @@ public class NpcFactory {
                                     break;
                                 case 2:
                                     if (player.getSession().vnd >= 20000) {
-                                        if (player.kichhoat == 0) {
-                                            player.kichhoat = 1;
+                                        if (player.session.actived == false) {
+                                            player.session.actived = true;
                                             PlayerDAO.subvnd(player, 20000);
                                             player.getSession().vnd -= 20000;
                                             Service.gI().sendThongBao(player, "Kích hoạt thành công");
@@ -6009,7 +6046,7 @@ public class NpcFactory {
                 if (canOpenNpc(player)) {
                     createOtherMenu(player, ConstNpc.BASE_MENU,
                             "Mị nương đang đi lạc ngươi hãy giúp ta đưa nàng đến đảo kame \n Ta trao thưởng quà Hậu hĩnh,",
-                             "Hướng dẫn\n Hộ Tống mị", "Hộ Tống", "Đóng");
+                            "Hướng dẫn\n Hộ Tống mị", "Hộ Tống", "Đóng");
 
                 }
 
@@ -6328,18 +6365,17 @@ public class NpcFactory {
                     case ConstNpc.IGNORE_MENU:
 
                         break;
-                    case ConstNpc.MAKE_MATCH_PVP: //                        if (player.kichhoat == 1) 
-                    {
-                        if (Maintenance.isRuning) {
+                    case ConstNpc.MAKE_MATCH_PVP:
+                        if (player.session.actived == true) {
+                            if (Maintenance.isRuning) {
+                                break;
+                            }
+                            PVPService.gI().sendInvitePVP(player, (byte) select);
+                            break;
+                        } else {
+                            Service.getInstance().sendThongBao(player, "|5|VUI LÒNG KÍCH HOẠT TÀI KHOẢN TẠI\n|7|NROMAX.COM\n|5|ĐỂ MỞ KHÓA TÍNH NĂNG");
                             break;
                         }
-                        PVPService.gI().sendInvitePVP(player, (byte) select);
-                        break;
-                    }
-//                        else {
-//                            Service.getInstance().sendThongBao(player, "|5|VUI LÒNG KÍCH HOẠT TÀI KHOẢN TẠI\n|7|NROGOD.COM\n|5|ĐỂ MỞ KHÓA TÍNH NĂNG");
-//                            break;
-//                        }
                     case ConstNpc.MAKE_FRIEND:
                         if (select == 0) {
                             Object playerId = PLAYERID_OBJECT.get(player.id);
@@ -6666,7 +6702,7 @@ public class NpcFactory {
                         switch (select) {
                             case 0:
                                 if (player.getSession().goldBar >= 20) {
-                                    player.kichhoat = 1;
+                                    player.session.actived = true;
 
                                     Service.getInstance().sendThongBao(player, "Đã mở thành viên thành công!");
                                     break;
