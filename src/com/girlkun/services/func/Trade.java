@@ -81,7 +81,7 @@ public class Trade {
 
     public void addItemTrade(Player pl, byte index, int quantity) {
 //        System.out.println("quantity: " + quantity);
-        if (pl.kichhoat == 1) {
+        if (pl.session.actived == true) {
         if (true) {
             if (index == -1) {
                 if (pl.equals(this.player1)) {
@@ -144,6 +144,7 @@ public class Trade {
             }
         } 
         }else {
+          
            this.cancelTrade();
             Service.gI().sendThongBaoFromAdmin(pl,
                   "|5|VUI LÒNG Kích Hoạt Thành Viên!");
