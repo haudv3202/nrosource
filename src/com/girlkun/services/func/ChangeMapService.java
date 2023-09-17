@@ -720,7 +720,7 @@ public class ChangeMapService {
                 case 15: //đồi hoang
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_2_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin = null;
                     }
                     break;
                 case 42: //vách aru
@@ -728,7 +728,7 @@ public class ChangeMapService {
                 case 44: //vách kakarot
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_3_1) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin =  null;
                     }
                     break;
                 case 2: //thung lũng tre
@@ -736,7 +736,7 @@ public class ChangeMapService {
                 case 16: //làng plane
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_4_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin = null;
                     }
                     break;
                 case 24: //trạm tàu vũ trụ trái đất
@@ -744,21 +744,21 @@ public class ChangeMapService {
                 case 26: //trạm tàu vũ trụ xayda
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_4_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin =  null;
                     }
                     break;
                 case 3: //rừng nấm
-                case 11: //thung lũng maima
-                case 17: //rừng nguyên sinh
+//                case 11: //thung lũng maima
+//                case 17: //rừng nguyên sinh
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_8_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin = null;
                     }
                     break;
                 case 5:  // đảo kame
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_10_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin = null;
                     }
                     break;
                 case 27: //rừng bamboo
@@ -769,7 +769,7 @@ public class ChangeMapService {
                 case 36: //rừng đá
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_14_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin = null;
                     }
                     break;
                 case 30: //đảo bulong
@@ -777,7 +777,7 @@ public class ChangeMapService {
                 case 38: //bờ vực đen
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_15_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin = null;
                     }
                     break;
                 case 6: //đông karin
@@ -785,42 +785,42 @@ public class ChangeMapService {
                 case 19: //thành phố vegeta
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_16_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin = null;
                     }
                     break;
                 case 68: //thung lũng nappa
-                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_1) {
-                        return null;
-                    }
-                    break;
-                case 69: 
-                case 70: 
-                case 71:
-                case 72: 
-                case 64: //núi dây leo
+//                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_1) {
+//                        return null;
+//                    }
+//                    break;
+//                case 69: 
+//                case 70: 
+//                case 71:
+//                case 72: 
+//                case 64: //núi dây leo
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_6) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin = null;
                     }
                     break;
-                case 65: //núi cây quỷ
+//                case 65: //núi cây quỷ
                 case 63: //trại lính fide
-                case 66: //trại quỷ già
-                case 67: //vực chết
-                case 73: //thung lũng chết
-                case 74: //đồi cây fide
-                case 75: //khe núi tử thần
-                case 76: //núi đá
-                case 77: //rừng đá
+//                case 66: //trại quỷ già
+//                case 67: //vực chết
+//                case 73: //thung lũng chết
+//                case 74: //đồi cây fide
+//                case 75: //khe núi tử thần
+//                case 76: //núi đá
+//                case 77: //rừng đá
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_21_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
+                        zoneJoin = null;
                     }
                     break;
                 case 81: //hang quỷ chim
-                case 82: //núi khỉ đen
-                case 83: //hang khỉ đen
-                case 79: //núi khỉ đỏ
+//                case 82: //núi khỉ đen
+//                case 83: //hang khỉ đen
+//                case 79: //núi khỉ đỏ
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_22_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
                         return null;
