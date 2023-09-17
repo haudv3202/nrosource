@@ -15,11 +15,16 @@
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/services/ItemMapService.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/map/Zone.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/shop/Shop.java</file>
+            <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/jdbc/daos/GodGK.java</file>
+            <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/services/func/Trade.java</file>
+            <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/map/ItemMap.java</file>
+            <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/Template.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/services/NgocRongNamecService.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/server/io/MySession.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/services/TaskService.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/mob/Mob.java</file>
-            <file>file:/C:/xampp/htdocs/nrobaroll/data/girlkun/girlkun.properties</file>
+            <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/services/Service.java</file>
+            <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/server/Manager.java</file>
         </group>
     </open-files>
 </project-private>
