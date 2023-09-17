@@ -5330,7 +5330,6 @@ public class NpcFactory {
                                         Service.gI().sendThongBao(player, "Bạn không tích đủ mốc 10k zeni");
                                         return;
                                     }
-                                    if (PlayerDAO.subcoin(player, 10000)) {
                                         if (!player.getSession().setReceivedMilestoneGift(player, 10000)) {
 //                                            player.getSession().coinBar -= 10000;
                                             Item i = ItemService.gI().createNewItem((short) 16, 10);
@@ -5342,14 +5341,12 @@ public class NpcFactory {
                                         } else {
                                             Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 10k trước đó.");
                                         }
-                                    }
                                     break;
                                 case 1:
                                     if (player.getSession().coinBar < 20000) {
                                         Service.gI().sendThongBao(player, "Bạn không tích đủ mốc 20k zeni");
                                         return;
                                     }
-                                    if (PlayerDAO.subcoin(player, 20000)) {
                                         if (!player.getSession().setReceivedMilestoneGift(player, 20000)) {
 //                                            player.getSession().coinBar -= 20000;
                                             Item i = ItemService.gI().createNewItem((short) 16, 20);
@@ -5363,14 +5360,12 @@ public class NpcFactory {
                                         } else {
                                             Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 20k trước đó.");
                                         }
-                                    }
                                     break;
                                 case 2:
                                     if (player.getSession().coinBar < 50000) {
                                         Service.gI().sendThongBao(player, "Bạn không tích đủ mốc 50k zeni");
                                         return;
                                     }
-                                    if (PlayerDAO.subcoin(player, 50000)) {
                                         if (!player.getSession().setReceivedMilestoneGift(player, 50000)) {
 //                                            player.getSession().coinBar -= 50000;
                                             Item i1 = ItemService.gI().createNewItem((short) 719, 1);
@@ -5395,14 +5390,12 @@ public class NpcFactory {
                                             Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 50k trước đó.");
                                         }
                                         //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
-                                    }
                                     break;
                                 case 3:
                                     if (player.getSession().coinBar < 100000) {
                                         Service.gI().sendThongBao(player, "Bạn không tích đủ mốc 100k zeni");
                                         return;
                                     }
-                                    if (PlayerDAO.subcoin(player, 100000)) {
                                         if (!player.getSession().setReceivedMilestoneGift(player, 100000)) {
 //                                            player.getSession().coinBar -= 100000;
                                             Item i0 = ItemService.gI().createNewItem((short) 2001, 50);
@@ -5432,14 +5425,12 @@ public class NpcFactory {
                                             Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 100k trước đó.");
                                         }
                                         // Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 10 ô trống trong hành trang.");
-                                    }
                                     break;
                                 case 4:
                                     if (player.getSession().coinBar < 200000) {
                                         Service.gI().sendThongBao(player, "Bạn không tích đủ mốc 200k zeni");
                                         return;
                                     }
-                                    if (PlayerDAO.subcoin(player, 200000)) {
                                         if (!player.getSession().setReceivedMilestoneGift(player, 200000)) {
 //                                            player.getSession().coinBar -= 200000;
                                             Item i0 = ItemService.gI().createNewItem((short) 2091, 10);
@@ -5477,14 +5468,12 @@ public class NpcFactory {
                                             Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 200k trước đó.");
                                         }
                                         //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 10 ô trống trong hành trang.");
-                                    }
                                     break;
                                 case 5:
                                     if (player.getSession().coinBar < 500000) {
                                         Service.gI().sendThongBao(player, "Bạn không tích đủ mốc 500k zeni");
                                         return;
                                     }
-                                    if (PlayerDAO.subcoin(player, 500000)) {
                                         if (!player.getSession().setReceivedMilestoneGift(player, 500000)) {
 //                                            player.getSession().coinBar -= 500000;
                                             Item i0 = ItemService.gI().createNewItem((short) 1249, 1);
@@ -5518,14 +5507,12 @@ public class NpcFactory {
                                             Service.gI().sendThongBao(player, "Bạn đã nhận quà mốc 500k trước đó.");
                                         }
                                         //   Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 10 ô trống trong hành trang.");
-                                    }
                                     break;
                                 case 6:
                                     if (player.getSession().coinBar < 1000000) {
                                         Service.gI().sendThongBao(player, "Bạn không tích đủ mốc 1000k zeni");
                                         return;
                                     }
-                                    if (PlayerDAO.subcoin(player, 1000000)) {
                                         if (!player.getSession().setReceivedMilestoneGift(player, 1000000)) {
 //                                            player.getSession().coinBar -= 1000000;
                                             Item i0 = ItemService.gI().createNewItem((short) 1249, 1);
@@ -5564,8 +5551,7 @@ public class NpcFactory {
                                         }
                                         //    Service.getInstance().sendThongBao(player, "Bạn phải có ít nhất 10 ô trống trong hành trang.");
                                         break;
-
-                                    }
+                                        
                             }
                         }
                     }

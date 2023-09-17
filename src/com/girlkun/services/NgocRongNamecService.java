@@ -8,6 +8,7 @@ import com.girlkun.server.Client;
 import com.girlkun.server.Manager;
 import com.girlkun.server.ServerManager;
 import com.girlkun.services.func.ChangeMapService;
+import com.girlkun.utils.TimeUtil;
 import com.girlkun.utils.Util;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -24,7 +25,39 @@ public class NgocRongNamecService implements Runnable{
         if (instance == null) {
             instance = new NgocRongNamecService();
         }
+        NgocRongNamecService.instance.setTimeopenNRNM();
         return instance;
+    }
+    
+    public static long TIME_OP;
+    public static long TIME_BL;
+    public static long TIME_DELAY;
+
+    
+    public static final byte TIME_OP_HOUR = 14;
+    public static final byte TIME_OP_MIN = 0;
+    public static final byte TIME_OP_SECOND = 0;
+    
+    public static final byte TIME_BL_HOUR = 16;
+    public static final byte TIME_BL_MIN = 0;
+    public static final byte TIME_BL_SECOND = 0;
+    
+    public static final byte TIME_DL_HOUR = 14;
+    public static final byte TIME_DL_MIN = 0;
+    public static final byte TIME_DL_SECOND = 1;
+    private int day = -1;
+    
+        public void setTimeopenNRNM() {
+        if (NgocRongNamecService.instance.day == -1 || NgocRongNamecService.instance.day != TimeUtil.getCurrDay()) {
+            NgocRongNamecService.instance.day = TimeUtil.getCurrDay();
+            try {
+                TIME_OP = TimeUtil.getTime(TimeUtil.getTimeNow("dd/MM/yyyy") + " " + TIME_OP_HOUR + ":" + TIME_OP_MIN + ":" + TIME_OP_SECOND, "dd/MM/yyyy HH:mm:ss");
+                TIME_BL = TimeUtil.getTime(TimeUtil.getTimeNow("dd/MM/yyyy") + " " + TIME_BL_HOUR + ":" + TIME_BL_MIN + ":" + TIME_BL_SECOND, "dd/MM/yyyy HH:mm:ss");
+                TIME_DELAY = TimeUtil.getTime(TimeUtil.getTimeNow("dd/MM/yyyy") + " " + TIME_DL_HOUR + ":" + TIME_DL_MIN + ":" + TIME_DL_SECOND, "dd/MM/yyyy HH:mm:ss");
+
+            } catch (Exception ignored) {
+            }
+        }
     }
     
     public int mapNrNamec[] = {-1,-1,-1,-1,-1,-1,-1};
@@ -40,8 +73,7 @@ public class NgocRongNamecService implements Runnable{
     public void initNgocRongNamec(byte type) { //type 0:INIT NGOC RONG, type 1: INIT HOA THACH NGOC RONG
         ArrayList<Integer> listMap = new ArrayList<>();
         listMap.add(8);listMap.add(9);listMap.add(10);listMap.add(11);listMap.add(12);
-        listMap.add(13);listMap.add(31);listMap.add(32);listMap.add(33);listMap.add(34);listMap.add(0);listMap.add(1);listMap.add(2);listMap.add(3);
-        listMap.add(34);listMap.add(5);listMap.add(6);listMap.add(7);listMap.add(8);listMap.add(9);listMap.add(24);listMap.add(25);listMap.add(26);
+        listMap.add(13);listMap.add(31);listMap.add(32);listMap.add(33);listMap.add(34);
         for(byte i = 0; i < (byte)7; i++) {
             int index = Util.nextInt(0, listMap.size() - 1);
             int idZone = Util.nextInt(0, Manager.MAPS.get(listMap.get(index)).zones.size() - 1);
@@ -137,7 +169,7 @@ public class NgocRongNamecService implements Runnable{
     }
     
     public void reInitNrNamec(long time) {
-        lastTimeReinit = System.currentTimeMillis()+time;
+        lastTimeReinit = time;
         isReinit = true;
     }
     
@@ -243,11 +275,11 @@ public class NgocRongNamecService implements Runnable{
     public void run() {
         while (ServerManager.isRunning) {
             try{
-                if(this.isReinit && this.lastTimeReinit - System.currentTimeMillis() <= 0){
+                if(this.isReinit && System.currentTimeMillis() >= this.lastTimeReinit && System.currentTimeMillis() <= TIME_DELAY){
                     removeStoneNrNamec();
                     initNgocRongNamec((byte)0);
                 }
-                Thread.sleep(1000);
+                Thread.sleep(500);
             }catch(Exception e){
             }
         }

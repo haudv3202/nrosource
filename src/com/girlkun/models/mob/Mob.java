@@ -456,117 +456,117 @@ public class Mob {
                     if (item.itemTemplate.id != 590) {
                         ItemMapService.gI().pickItem(player, item.itemMapId, true);
                     }
-                    if (item.itemTemplate.id != 220) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 221) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 222) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 223) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 224) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 933) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 934) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 17) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 18) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 19) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 20) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 441) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 442) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 443) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 444) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 445) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 446) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 447) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 2133) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 2134) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 2135) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 2136) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1900) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1901) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1902) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1903) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1904) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1905) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1906) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1907) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1908) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1909) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1066) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1067) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1068) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1069) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1070) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
+//                    if (item.itemTemplate.id != 220) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 221) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 222) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 223) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 224) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 933) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 934) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 17) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 18) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 19) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 20) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 441) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 442) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 443) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 444) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 445) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 446) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 447) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 2133) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 2134) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 2135) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 2136) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1900) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1901) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1902) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1903) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1904) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1905) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1906) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1907) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1908) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1909) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1066) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1067) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1068) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1069) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1070) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
                     // hút skh
                     if (item.itemTemplate.id != 1982) {
                         ItemMapService.gI().pickItem(player, item.itemMapId, true);
@@ -621,120 +621,120 @@ public class Mob {
         } else {
             if (((Pet) player).master.charms.tdThuHut > System.currentTimeMillis()) {
                 for (ItemMap item : items) {
-                    if (item.itemTemplate.id != 590) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 220) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 221) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 222) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 223) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 224) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 933) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 934) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 17) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 18) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 19) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 20) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 441) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 442) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 443) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 444) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 445) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 446) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 447) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 2133) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 2134) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 2135) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 2136) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1900) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1901) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1902) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1903) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1904) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1905) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1906) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1907) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1908) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1909) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1066) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1067) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1068) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1069) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
-                    if (item.itemTemplate.id != 1070) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
+//                    if (item.itemTemplate.id != 590) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 220) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 221) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 222) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 223) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 224) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 933) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 934) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 17) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 18) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 19) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 20) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 441) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 442) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 443) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 444) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 445) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 446) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 447) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 2133) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 2134) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 2135) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 2136) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1900) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1901) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1902) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1903) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1904) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1905) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1906) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1907) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1908) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1909) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1066) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1067) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1068) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1069) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.id != 1070) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
                     // hút skh
                     if (item.itemTemplate.id != 1982) {
                         ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
@@ -808,271 +808,271 @@ public class Mob {
                     }
                   }                
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL3(zone, Util.nextInt(1992, 1992), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL4(zone, Util.nextInt(1992, 1992), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL5(zone, Util.nextInt(1992, 1992), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL6(zone, Util.nextInt(1993, 1993), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL7(zone, Util.nextInt(1993, 1993), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL8(zone, Util.nextInt(1993, 1993), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL9(zone, Util.nextInt(1994, 1994), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL10(zone, Util.nextInt(1994, 1994), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL11(zone, Util.nextInt(1994, 1994), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL12(zone, Util.nextInt(1995, 1995), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL13(zone, Util.nextInt(1995, 1995), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL14(zone, Util.nextInt(1995, 1995), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL15(zone, Util.nextInt(1996, 1996), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL16(zone, Util.nextInt(1996, 1996), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 17) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL17(zone, Util.nextInt(1996, 1996), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1,100)) {
                         ItemMap itemMap = Util.ratiDTL18(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL19(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL20(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL21(zone, Util.nextInt(1988, 1988), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   } 
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL22(zone, Util.nextInt(1988, 1988), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL23(zone, Util.nextInt(1988, 1988), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL24(zone, Util.nextInt(1989, 1989), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL25(zone, Util.nextInt(1989, 1989), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL26(zone, Util.nextInt(1989, 1989), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL27(zone, Util.nextInt(1990, 1990), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL28(zone, Util.nextInt(1990, 1990), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL29(zone, Util.nextInt(1990, 1990), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL30(zone, Util.nextInt(1991, 1991), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL322(zone, Util.nextInt(1991, 1991), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 3) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL31(zone, Util.nextInt(1991, 1991), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL33(zone, Util.nextInt(1982, 1982), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL34(zone, Util.nextInt(1982, 1982), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL35(zone, Util.nextInt(1982, 1982), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL36(zone, Util.nextInt(1983, 1983), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL37(zone, Util.nextInt(1983, 1983), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1,100)) {
                         ItemMap itemMap = Util.ratiDTL38(zone, Util.nextInt(1983, 1983), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL39(zone, Util.nextInt(1984, 1984), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL40(zone, Util.nextInt(1984, 1984), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL41(zone, Util.nextInt(1984, 1984), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL42(zone, Util.nextInt(1985, 1985), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL43(zone, Util.nextInt(1985, 1985), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL44(zone, Util.nextInt(1985, 1985), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL45(zone, Util.nextInt(1986, 1986), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL46(zone, Util.nextInt(1986, 1986), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }
                   }
                 if (mapid == 11) {
-                if (Util.isTrue(1, 5)) {
+                if (Util.isTrue(1, 100)) {
                         ItemMap itemMap = Util.ratiDTL47(zone, Util.nextInt(1986, 1986), 1, player.location.x, player.location.y, player.id);
                         Service.getInstance().dropItemMap(zone, itemMap);
                     }

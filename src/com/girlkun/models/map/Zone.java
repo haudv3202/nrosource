@@ -21,6 +21,8 @@ import com.girlkun.services.Service;
 import com.girlkun.services.TaskService;
 import com.girlkun.services.InventoryServiceNew;
 import com.girlkun.services.NgocRongNamecService;
+import static com.girlkun.services.NgocRongNamecService.TIME_BL;
+import static com.girlkun.services.NgocRongNamecService.TIME_OP;
 import com.girlkun.services.func.TopService;
 import com.girlkun.utils.FileIO;
 import com.girlkun.utils.Logger;
@@ -217,6 +219,7 @@ public class Zone {
         return null;
     }
 
+    
     public void pickItem(Player player, int itemMapId) {
         ItemMap itemMap = getItemMapByItemMapId(itemMapId);
         if (itemMap != null) {
@@ -251,7 +254,7 @@ public class Zone {
                                     case 357:
                                     case 358:
                                     case 359:
-                                        if(System.currentTimeMillis() >= NgocRongNamecService.gI().tOpenNrNamec ) {
+                                        if(System.currentTimeMillis() >= TIME_OP && System.currentTimeMillis() <= TIME_BL) {
                                             if(player.idNRNM == -1 ){
                                                 PlayerService.gI().changeAndSendTypePK(player, ConstPlayer.PK_ALL);
                                                 player.idNRNM = item.template.id;
@@ -337,12 +340,14 @@ public class Zone {
                 Service.getInstance().sendThongBao(player, "Không thể nhặt vật phẩm của người khác");
             }
         } else {
+               Logger.warning("Login thành công player " + itemMap +" ms\n");
             Service.getInstance().sendThongBao(player, "Không thể thực hiện");
         }
         TaskService.gI().checkDoneTaskPickItem(player, itemMap);
         TaskService.gI().checkDoneSideTaskPickItem(player, itemMap);
     }
 
+    
     public void addItem(ItemMap itemMap) {
         if (itemMap != null && !items.contains(itemMap)) {
             items.add(0, itemMap);

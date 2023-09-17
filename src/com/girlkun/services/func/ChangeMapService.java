@@ -793,30 +793,10 @@ public class ChangeMapService {
                         return null;
                     }
                     break;
-                case 69: //vực cấm
-                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_2) {
-                        Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
-                    }
-                    break;
-                case 70: //núi appule
-                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_3) {
-                        Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
-                    }
-                    break;
-                case 71: //căn cứ rasphery
-                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_4) {
-                        Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
-                    }
-                    break;
-                case 72: //thung lũng rasphery
-                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_5) {
-                        Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
-                        return null;
-                    }
-                    break;
+                case 69: 
+                case 70: 
+                case 71:
+                case 72: 
                 case 64: //núi dây leo
                     if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_6) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
