@@ -798,7 +798,7 @@ public class ChangeMapService {
 //                case 71:
 //                case 72: 
 //                case 64: //núi dây leo
-                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_6) {
+                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_20_1) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
                         zoneJoin = null;
                     }
