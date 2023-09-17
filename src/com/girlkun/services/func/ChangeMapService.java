@@ -812,7 +812,7 @@ public class ChangeMapService {
                 case 75: //khe núi tử thần
                 case 76: //núi đá
                 case 77: //rừng đá
-                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_19_0) {
+                    if (TaskService.gI().getIdTask(player) < ConstTask.TASK_21_0) {
                         Service.gI().sendThongBao(player, "Vui lòng hoàn thành nhiệm vụ trước khi tới đây!");
                         return null;
                     }

@@ -340,8 +340,8 @@ public class Zone {
                 Service.getInstance().sendThongBao(player, "Không thể nhặt vật phẩm của người khác");
             }
         } else {
-               Logger.warning("Login thành công player " + itemMap +" ms\n");
-            Service.getInstance().sendThongBao(player, "Không thể thực hiện");
+//               Logger.warning("Login thành công player " + itemMap +" ms\n");
+            Service.getInstance().sendThongBao(player, "Không thể thực hiện" + itemMap);
         }
         TaskService.gI().checkDoneTaskPickItem(player, itemMap);
         TaskService.gI().checkDoneSideTaskPickItem(player, itemMap);
