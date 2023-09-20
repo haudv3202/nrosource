@@ -927,7 +927,7 @@ if (player.getSession() != null && text.equals("i4")) {
             
             if (text.equals("ad")) {
                 NpcService.gI().createMenuConMeo(player, ConstNpc.MENU_ADMIN, -1, "Admin Barcoll " +"\n"+ "Số người online: " + Client.gI().getPlayers().size() + "\n"+ "Current thread: " + Thread.activeCount(),
-                        "Ngọc rồng", "Đệ tử", "Bảo trì", "Tìm kiếm\nngười chơi", "Boss","Giftcode", "TNSM SERVER","item 1","tiem 2", "Call\nBoss","Đóng");
+                        "Ngọc rồng", "Đệ tử", "Bảo trì", "Tìm kiếm\nngười chơi", "Boss","Giftcode", "TNSM SERVER","item 1","tiem 2", "Call\nBoss","Quét đồ buff","Đóng");
                 return;
             } else if (text.equals("tnsmserver")){
                 Input.gI().createFormChangeTNSMServer(player);

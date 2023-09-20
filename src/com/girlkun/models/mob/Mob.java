@@ -802,241 +802,245 @@ public class Mob {
             //        }
             //      }
             if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
-                if (Util.isTrue(1, 30)) {
+                if (Util.isTrue(1, 50)) {
                     ItemMap itemMap = Util.ratiDTL2(zone, Util.nextInt(441, 447), 1, player.location.x, player.location.y, player.id);
                     Service.getInstance().dropItemMap(zone, itemMap);
                 }
             }
-            if (mapid == 17) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL3(zone, Util.nextInt(1992, 1992), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL4(zone, Util.nextInt(1992, 1992), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL5(zone, Util.nextInt(1992, 1992), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL6(zone, Util.nextInt(1993, 1993), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL7(zone, Util.nextInt(1993, 1993), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL8(zone, Util.nextInt(1993, 1993), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else  if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL9(zone, Util.nextInt(1994, 1994), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else   if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL10(zone, Util.nextInt(1994, 1994), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL11(zone, Util.nextInt(1994, 1994), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else  if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL12(zone, Util.nextInt(1995, 1995), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else  if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL13(zone, Util.nextInt(1995, 1995), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL14(zone, Util.nextInt(1995, 1995), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL15(zone, Util.nextInt(1996, 1996), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL16(zone, Util.nextInt(1996, 1996), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }else  if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL17(zone, Util.nextInt(1996, 1996), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
+//            if (mapid == 17) {
+//                if (Util.isTrue(80, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL3(zone, 1992, 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL3(zone, Util.nextInt(1992, 1992), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL4(zone, Util.nextInt(1992, 1992), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL5(zone, Util.nextInt(1992, 1992), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL6(zone, Util.nextInt(1993, 1993), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL7(zone, Util.nextInt(1993, 1993), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL8(zone, Util.nextInt(1993, 1993), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else  if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL9(zone, Util.nextInt(1994, 1994), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else   if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL10(zone, Util.nextInt(1994, 1994), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL11(zone, Util.nextInt(1994, 1994), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else  if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL12(zone, Util.nextInt(1995, 1995), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else  if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL13(zone, Util.nextInt(1995, 1995), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL14(zone, Util.nextInt(1995, 1995), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL15(zone, Util.nextInt(1996, 1996), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL16(zone, Util.nextInt(1996, 1996), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }else  if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL17(zone, Util.nextInt(1996, 1996), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
        
-            
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL18(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL19(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL20(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL21(zone, Util.nextInt(1988, 1988), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL22(zone, Util.nextInt(1988, 1988), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL23(zone, Util.nextInt(1988, 1988), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL24(zone, Util.nextInt(1989, 1989), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL25(zone, Util.nextInt(1989, 1989), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL26(zone, Util.nextInt(1989, 1989), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL27(zone, Util.nextInt(1990, 1990), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL28(zone, Util.nextInt(1990, 1990), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL29(zone, Util.nextInt(1990, 1990), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL30(zone, Util.nextInt(1991, 1991), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL322(zone, Util.nextInt(1991, 1991), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 3) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL31(zone, Util.nextInt(1991, 1991), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL33(zone, Util.nextInt(1982, 1982), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL34(zone, Util.nextInt(1982, 1982), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL35(zone, Util.nextInt(1982, 1982), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL36(zone, Util.nextInt(1983, 1983), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL37(zone, Util.nextInt(1983, 1983), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL38(zone, Util.nextInt(1983, 1983), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL39(zone, Util.nextInt(1984, 1984), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL40(zone, Util.nextInt(1984, 1984), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL41(zone, Util.nextInt(1984, 1984), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL42(zone, Util.nextInt(1985, 1985), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL43(zone, Util.nextInt(1985, 1985), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL44(zone, Util.nextInt(1985, 1985), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL45(zone, Util.nextInt(1986, 1986), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL46(zone, Util.nextInt(1986, 1986), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
-            if (mapid == 11) {
-                if (Util.isTrue(1, 100)) {
-                    ItemMap itemMap = Util.ratiDTL47(zone, Util.nextInt(1986, 1986), 1, player.location.x, player.location.y, player.id);
-                    Service.getInstance().dropItemMap(zone, itemMap);
-                }
-            }
+//            
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL18(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL19(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL20(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL21(zone, Util.nextInt(1988, 1988), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL22(zone, Util.nextInt(1988, 1988), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL23(zone, Util.nextInt(1988, 1988), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL24(zone, Util.nextInt(1989, 1989), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL25(zone, Util.nextInt(1989, 1989), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL26(zone, Util.nextInt(1989, 1989), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL27(zone, Util.nextInt(1990, 1990), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL28(zone, Util.nextInt(1990, 1990), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL29(zone, Util.nextInt(1990, 1990), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL30(zone, Util.nextInt(1991, 1991), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL322(zone, Util.nextInt(1991, 1991), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 3) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL31(zone, Util.nextInt(1991, 1991), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL33(zone, Util.nextInt(1982, 1982), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL34(zone, Util.nextInt(1982, 1982), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL35(zone, Util.nextInt(1982, 1982), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL36(zone, Util.nextInt(1983, 1983), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL37(zone, Util.nextInt(1983, 1983), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL38(zone, Util.nextInt(1983, 1983), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL39(zone, Util.nextInt(1984, 1984), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL40(zone, Util.nextInt(1984, 1984), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL41(zone, Util.nextInt(1984, 1984), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL42(zone, Util.nextInt(1985, 1985), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL43(zone, Util.nextInt(1985, 1985), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL44(zone, Util.nextInt(1985, 1985), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL45(zone, Util.nextInt(1986, 1986), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL46(zone, Util.nextInt(1986, 1986), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
+//            if (mapid == 11) {
+//                if (Util.isTrue(1, 100)) {
+//                    ItemMap itemMap = Util.ratiDTL47(zone, Util.nextInt(1986, 1986), 1, player.location.x, player.location.y, player.id);
+//                    Service.getInstance().dropItemMap(zone, itemMap);
+//                }
+//            }
             if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
                 if (Util.isTrue(1, 300)) {
                     ItemMap itemMap = Util.ratiDTL48(zone, Util.nextInt(17, 20), 1, player.location.x, player.location.y, player.id);

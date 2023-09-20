@@ -223,6 +223,20 @@ public class PlayerService {
         playerBaned.iDMark.setLastTimeBan(System.currentTimeMillis());
         playerBaned.iDMark.setBan(true);
     }
+    
+    public void banPlayers(String idPlayers,String NamePlayersBan) {
+        try {
+            GirlkunDB.executeUpdate("update account set ban = 1 where id IN ("+ idPlayers +")");
+        } catch (Exception e) {
+        }
+        
+         Service.getInstance().sendThongBaoAllPlayer("Hệ thống đã ban người chơi " + NamePlayersBan
+                    + "vì lí do lạm dụng lỗi để chuộc lợi bản thân!Thân Admin Hậu");
+//        Service.getInstance().sendThongBao(playerBaned,
+//                "Tài khoản của bạn đã bị khóa\nGame sẽ mất kết nối sau 5 giây...");
+//        playerBaned.iDMark.setLastTimeBan(System.currentTimeMillis());
+//        playerBaned.iDMark.setBan(true);
+    }
 
     private static final int COST_GOLD_HOI_SINH = 100;
     private static final int COST_GEM_HOI_SINH = 1;

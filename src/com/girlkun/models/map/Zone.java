@@ -221,6 +221,7 @@ public class Zone {
 
     
     public void pickItem(Player player, int itemMapId) {
+//        itemMapId
         ItemMap itemMap = getItemMapByItemMapId(itemMapId);
         if (itemMap != null) {
             if (itemMap.playerId == player.id || itemMap.playerId == -1) {
@@ -340,8 +341,7 @@ public class Zone {
                 Service.getInstance().sendThongBao(player, "Không thể nhặt vật phẩm của người khác");
             }
         } else {
-//               Logger.warning("Login thành công player " + itemMap +" ms\n");
-            Service.getInstance().sendThongBao(player, "Không thể thực hiện" + itemMap);
+            Service.getInstance().sendThongBao(player, "Không thể thực hiện");
         }
         TaskService.gI().checkDoneTaskPickItem(player, itemMap);
         TaskService.gI().checkDoneSideTaskPickItem(player, itemMap);

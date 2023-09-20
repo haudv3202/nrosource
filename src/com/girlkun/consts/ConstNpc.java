@@ -228,6 +228,7 @@ public class ConstNpc {
     public static final int menunm = 520;
     public static final int menuxd = 521;
     public static final int CONFIRM_TELE_NAMEC = 522;
+       public static final int MENU_TOOL_SCAN= 560;
 
     public static final int MENU_OPTION_USE_ITEM2000 = 2000;
     public static final int MENU_OPTION_USE_ITEM2001 = 2001;

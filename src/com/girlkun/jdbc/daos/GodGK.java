@@ -373,7 +373,11 @@ public class GodGK {
                             int iconMeal = Integer.parseInt(String.valueOf(dataArray.get(8)));
                             int timeBanhTet = Integer.parseInt(String.valueOf(dataArray.get(9)));
                             int timeBanhChung = Integer.parseInt(String.valueOf(dataArray.get(10)));
-
+                            int timeCuongNo2 = Integer.parseInt(String.valueOf(dataArray.get(13)));
+                            int timeBoHuyet2 = Integer.parseInt(String.valueOf(dataArray.get(14)));
+                            int timeBoKhi2 = Integer.parseInt(String.valueOf(dataArray.get(15)));
+                            int timeGiapXen2 = Integer.parseInt(String.valueOf(dataArray.get(16)));
+                            int timeAnDanh2 = Integer.parseInt(String.valueOf(dataArray.get(17)));
                             int timeUseTDLT = 0;
                             if (dataArray.size() == 10) {
                                 timeUseTDLT = Integer.parseInt(String.valueOf(dataArray.get(9)));
@@ -385,11 +389,11 @@ public class GodGK {
                             player.itemTime.lastTimeGiapXen = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeGiapXen);
                             player.itemTime.lastTimeCuongNo = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeCuongNo);
                             player.itemTime.lastTimeAnDanh = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeAnDanh);
-                            player.itemTime.lastTimeBoHuyet2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBoHuyet);
-                            player.itemTime.lastTimeBoKhi2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBoKhi);
-                            player.itemTime.lastTimeGiapXen2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeGiapXen);
-                            player.itemTime.lastTimeCuongNo2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeCuongNo);
-                            player.itemTime.lastTimeAnDanh2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeAnDanh);
+                            player.itemTime.lastTimeBoHuyet2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBoHuyet2);
+                            player.itemTime.lastTimeBoKhi2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBoKhi2);
+                            player.itemTime.lastTimeGiapXen2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeGiapXen2);
+                            player.itemTime.lastTimeCuongNo2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeCuongNo2);
+                            player.itemTime.lastTimeAnDanh2 = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeAnDanh2);
                             player.itemTime.lastTimeOpenPower = System.currentTimeMillis() - (ItemTime.TIME_OPEN_POWER - timeOpenPower);
                             player.itemTime.lastTimeUseMayDo = System.currentTimeMillis() - (ItemTime.TIME_MAY_DO - timeMayDo);
                             player.itemTime.lastTimeBanhTet = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhTet);
@@ -406,11 +410,11 @@ public class GodGK {
                             player.itemTime.isUseGiapXen = timeGiapXen != 0;
                             player.itemTime.isUseCuongNo = timeCuongNo != 0;
                             player.itemTime.isUseAnDanh = timeAnDanh != 0;
-                            player.itemTime.isUseBoHuyet2 = timeBoHuyet != 0;
-                            player.itemTime.isUseBoKhi2 = timeBoKhi != 0;
-                            player.itemTime.isUseGiapXen2 = timeGiapXen != 0;
-                            player.itemTime.isUseCuongNo2 = timeCuongNo != 0;
-                            player.itemTime.isUseAnDanh2 = timeAnDanh != 0;
+                            player.itemTime.isUseBoHuyet2 = timeBoHuyet2 != 0;
+                            player.itemTime.isUseBoKhi2 = timeBoKhi2 != 0;
+                            player.itemTime.isUseGiapXen2 = timeGiapXen2 != 0;
+                            player.itemTime.isUseCuongNo2 = timeCuongNo2 != 0;
+                            player.itemTime.isUseAnDanh2 = timeAnDanh2 != 0;
                             player.itemTime.isOpenPower = timeOpenPower != 0;
                             player.itemTime.isUseMayDo = timeMayDo != 0;
                             player.itemTime.isUseMayDo2 = timeMayDo2 != 0;
@@ -630,7 +634,6 @@ public class GodGK {
         return player;
     }
 
-    
     public static void checkDo() {
         long st = System.currentTimeMillis();
         JSONValue jv = new JSONValue();

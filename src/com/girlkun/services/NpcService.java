@@ -7,6 +7,7 @@ import com.girlkun.models.player.Player;
 import com.girlkun.server.Manager;
 import com.girlkun.network.io.Message;
 import com.girlkun.utils.Logger;
+import java.util.List;
 
 
 public class NpcService {
@@ -32,6 +33,12 @@ public class NpcService {
     public void createMenuConMeo(Player player, int indexMenu, int avatar, String npcSay, String[] menuSelect, Object object) {
         NpcFactory.PLAYERID_OBJECT.put(player.id, object);
         createMenuConMeo(player, indexMenu, avatar, npcSay, menuSelect);
+    }
+    
+     
+      public void createMenuConMeoScan(Player player, int indexMenu, int avatar, String npcSay, String[] menuSelect, List<String[]>infoPlayers) {
+          NpcFactory.PLAYERID_OBJECT.put(player.id, infoPlayers);
+          createMenuConMeo(player, indexMenu, avatar, npcSay, menuSelect);
     }
 
     private void createMenu(Player player, int indexMenu, byte npcTempId, int avatar, String npcSay, String... menuSelect) {
