@@ -453,7 +453,7 @@ public class Mob {
         if (!player.isPet && !player.isNewPet) {
             if (player.charms.tdThuHut > System.currentTimeMillis()) {
                 for (ItemMap item : items) {
-                    if (item.itemTemplate.id != 590) {
+                    if (item.itemTemplate.id  != 590) {
                         ItemMapService.gI().pickItem(player, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 220) {
@@ -613,15 +613,18 @@ public class Mob {
                     if (item.itemTemplate.id != 1996) {
                         ItemMapService.gI().pickItem(player, item.itemMapId, true);
                     }
-                    if (item.itemTemplate.id != 380) {
-                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
-                    }
+//                    if (item.itemTemplate.id != 380 || item.itemTemplate.id >=0) {
+//                        ItemMapService.gI().pickItem(player, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.type >= 0 || item.itemTemplate.type >= 999) {
+//                        ItemMapService.gI().pickItem(player, item.itemMaptype, true);
+//                    }
                 }
             }
         } else {
             if (((Pet) player).master.charms.tdThuHut > System.currentTimeMillis()) {
                 for (ItemMap item : items) {
-                    if (item.itemTemplate.id != 590) {
+                    if (item.itemTemplate.type >= 0) {
                         ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 220) {
@@ -781,9 +784,12 @@ public class Mob {
                     if (item.itemTemplate.id != 1996) {
                         ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
                     }
-                    if (item.itemTemplate.id != 380) {
-                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
-                    }
+//                    if (item.itemTemplate.id != 380 || item.itemTemplate.id >=0) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMapId, true);
+//                    }
+//                    if (item.itemTemplate.type >= 0 || item.itemTemplate.id <= 999) {
+//                        ItemMapService.gI().pickItem(((Pet) player).master, item.itemMaptype, true);
+//                    }
                 }
             }
         }
@@ -862,7 +868,7 @@ public class Mob {
        
 //            
 //            if (mapid == 3) {
-//                if (Util.isTrue(1, 100)) {
+//                if (Util.isTrue(100, 100)) {
 //                    ItemMap itemMap = Util.ratiDTL18(zone, Util.nextInt(1987, 1987), 1, player.location.x, player.location.y, player.id);
 //                    Service.getInstance().dropItemMap(zone, itemMap);
 //                }
