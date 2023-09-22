@@ -26,6 +26,7 @@ public class ItemMap {
 
     public boolean isBlackBall;
     public boolean isNamecBall;
+    public int itemMaptype;
 
     public ItemMap(Zone zone, int tempId, int quantity, int x, int y, long playerId) {
         this.zone = zone;
