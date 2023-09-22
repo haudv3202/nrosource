@@ -761,7 +761,7 @@ public class Controller implements IMessageHandler {
     }
 
     private void sendThongBaoServer(Player player) {
-        Service.getInstance().sendThongBaoFromAdmin(player, "Barcoll Không Được Đẹp Trai Chúc Mọi Người Chơi Game VUI VẼ\nYOUTUBE: ENZEEFX NRO Là Kênh Của Mình\nĐăng Kí Kênh Ủng Hộ Mình Với Nhé");
+        Service.getInstance().sendThongBaoFromAdmin(player, "NRO TAGON Chúc bạn chơi game vui vẻ!Nhớ yêu thương nhau thật nhiều <3");
     }
 
     private void clearVTSK(Player player) {

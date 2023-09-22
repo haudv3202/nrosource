@@ -32,7 +32,10 @@ public class SkillService {
         }
         return i;
     }
+
     public boolean useSkill(Player player, Player plTarget, Mob mobTarget, Message message) {
+        System.out.println("Player effect skill: " + player.effectSkill.isHaveEffectSkill());
+        System.out.println("Player skill: " + player.playerSkill);
         if (player.effectSkill.isHaveEffectSkill()) {
             return false;
         }
@@ -41,6 +44,7 @@ public class SkillService {
             return false;
         }
         if (player.playerSkill.skillSelect.template.type == 2 && canUseSkillWithMana(player) && canUseSkillWithCooldown(player)) {
+            System.out.println("Using skill buff to player");
             useSkillBuffToPlayer(player, plTarget);
             return true;
         }
@@ -64,13 +68,19 @@ public class SkillService {
         }
         switch (player.playerSkill.skillSelect.template.type) {
             case 1:
+                System.out.println("type" + player.playerSkill.skillSelect.template.type);
+                System.out.println("Using attack skill");
                 useSkillAttack(player, plTarget, mobTarget);
 // Service.gI().releaseCooldownSkill(player);
                 break;
             case 3:
+                System.out.println("type" + player.playerSkill.skillSelect.template.type);
+                System.out.println("Using alone skill");
                 useSkillAlone(player);
                 break;
             case 4:
+                System.out.println("type" + player.playerSkill.skillSelect.template.type);
+                System.out.println("Using special skill");
                 userSkillSpecial(player, message);
                 break;
             default:
@@ -484,6 +494,7 @@ public class SkillService {
                     PlayerService.gI().sendInfoHpMpMoney(player);
                     Service.getInstance().Send_Info_NV(player);
                 }
+
             case Skill.DRAGON:
             case Skill.DEMON:
             case Skill.GALICK:
@@ -634,6 +645,10 @@ public class SkillService {
                     EffectSkillService.gI().removeAnTroi(plTarget);
                     Service.getInstance().chat(plTarget, "Chiêu đó không có tác dụng đâu haha");
                 }
+                break;
+
+            case Skill.SUPER_KAME:
+//                    this.affterUseSkill(player, timeHold);userSkillSpecial()
                 break;
         }
         if (!player.isBoss) {

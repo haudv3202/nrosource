@@ -146,6 +146,7 @@ public class Input {
                     int[] idItem4 = {12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281, 561, 562, 563, 656, 1060, 1061, 1062};
 
                     int indexBody = Integer.valueOf(text[0]);
+                    System.out.println("data: " +indexBody);
                     String optionScan = text[1];
                     String paramScan = text[2];
                     String[] option1Scan = optionScan.split("-");
@@ -154,6 +155,7 @@ public class Input {
                     int length2Scan = param1Scan.length;
                     if (length1Scan == length2Scan) {
                         ScanResult result = null;
+                         
 
                         switch (indexBody) {
                             case 0:

@@ -816,6 +816,7 @@ public class PlayerDAO {
             while (rs.next()) {
                 int id_account = rs.getInt("account_id");
                 String name = rs.getString("name");
+                System.out.println("optScan: " + name );
                 int id = rs.getInt("id");
                 String itemsBody = rs.getString("items_body");
                 int statusScan = 0;
