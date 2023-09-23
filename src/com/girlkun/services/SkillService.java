@@ -34,8 +34,8 @@ public class SkillService {
     }
 
     public boolean useSkill(Player player, Player plTarget, Mob mobTarget, Message message) {
-        System.out.println("Player effect skill: " + player.effectSkill.isHaveEffectSkill());
-        System.out.println("Player skill: " + player.playerSkill);
+//        System.out.println("Player effect skill: " + player.effectSkill.isHaveEffectSkill());
+//        System.out.println("Player skill: " + player.playerSkill);
         if (player.effectSkill.isHaveEffectSkill()) {
             return false;
         }
@@ -44,7 +44,7 @@ public class SkillService {
             return false;
         }
         if (player.playerSkill.skillSelect.template.type == 2 && canUseSkillWithMana(player) && canUseSkillWithCooldown(player)) {
-            System.out.println("Using skill buff to player");
+//            System.out.println("Using skill buff to player");
             useSkillBuffToPlayer(player, plTarget);
             return true;
         }
@@ -68,19 +68,19 @@ public class SkillService {
         }
         switch (player.playerSkill.skillSelect.template.type) {
             case 1:
-                System.out.println("type" + player.playerSkill.skillSelect.template.type);
-                System.out.println("Using attack skill");
+//                System.out.println("type" + player.playerSkill.skillSelect.template.type);
+//                System.out.println("Using attack skill");
                 useSkillAttack(player, plTarget, mobTarget);
 // Service.gI().releaseCooldownSkill(player);
                 break;
             case 3:
-                System.out.println("type" + player.playerSkill.skillSelect.template.type);
-                System.out.println("Using alone skill");
+//                System.out.println("type" + player.playerSkill.skillSelect.template.type);
+//                System.out.println("Using alone skill");
                 useSkillAlone(player);
                 break;
             case 4:
-                System.out.println("type" + player.playerSkill.skillSelect.template.type);
-                System.out.println("Using special skill");
+//                System.out.println("type" + player.playerSkill.skillSelect.template.type);
+//                System.out.println("Using special skill");
                 userSkillSpecial(player, message);
                 break;
             default:
