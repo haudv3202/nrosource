@@ -615,6 +615,7 @@ public class Mob {
                     }
                 }
             }
+            
         } else {
             if (((Pet) player).master.charms.tdThuHut > System.currentTimeMillis()) {
                 for (ItemMap item : items) {
