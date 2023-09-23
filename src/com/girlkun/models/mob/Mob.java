@@ -2163,7 +2163,7 @@ public class Mob {
             }
 
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Quanthanlinh = ItemService.gI().createNewItem((short) (556));
                 Quanthanlinh.itemOptions.add(new Item.ItemOption(22, Util.nextInt(55, 65)));
                 Quanthanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2173,7 +2173,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Quanthanlinhxd = ItemService.gI().createNewItem((short) (560));
                 Quanthanlinhxd.itemOptions.add(new Item.ItemOption(22, Util.nextInt(45, 55)));
                 Quanthanlinhxd.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2183,7 +2183,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Quanthanlinhnm = ItemService.gI().createNewItem((short) (558));
                 Quanthanlinhnm.itemOptions.add(new Item.ItemOption(22, Util.nextInt(45, 60)));
                 Quanthanlinhnm.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2193,7 +2193,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Aothanlinh = ItemService.gI().createNewItem((short) (555));
                 Aothanlinh.itemOptions.add(new Item.ItemOption(47, Util.nextInt(500, 600)));
                 Aothanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2203,7 +2203,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Aothanlinhnm = ItemService.gI().createNewItem((short) (557));
                 Aothanlinhnm.itemOptions.add(new Item.ItemOption(47, Util.nextInt(400, 550)));
                 Aothanlinhnm.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2213,7 +2213,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Aothanlinhxd = ItemService.gI().createNewItem((short) (559));
                 Aothanlinhxd.itemOptions.add(new Item.ItemOption(47, Util.nextInt(600, 700)));
                 Aothanlinhxd.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2224,7 +2224,7 @@ public class Mob {
         }
 
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Gangthanlinh = ItemService.gI().createNewItem((short) (562));
                 Gangthanlinh.itemOptions.add(new Item.ItemOption(0, Util.nextInt(6000, 7000)));
                 Gangthanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2234,7 +2234,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Gangthanlinhxd = ItemService.gI().createNewItem((short) (566));
                 Gangthanlinhxd.itemOptions.add(new Item.ItemOption(0, Util.nextInt(6500, 7500)));
                 Gangthanlinhxd.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2244,7 +2244,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Gangthanlinhnm = ItemService.gI().createNewItem((short) (564));
                 Gangthanlinhnm.itemOptions.add(new Item.ItemOption(0, Util.nextInt(5500, 6500)));
                 Gangthanlinhnm.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2254,7 +2254,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Giaythanlinh = ItemService.gI().createNewItem((short) (563));
                 Giaythanlinh.itemOptions.add(new Item.ItemOption(23, Util.nextInt(50, 60)));
                 Giaythanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2264,7 +2264,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Giaythanlinhxd = ItemService.gI().createNewItem((short) (567));
                 Giaythanlinhxd.itemOptions.add(new Item.ItemOption(23, Util.nextInt(55, 65)));
                 Giaythanlinhxd.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2274,7 +2274,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Giaythanlinhnm = ItemService.gI().createNewItem((short) (565));
                 Giaythanlinhnm.itemOptions.add(new Item.ItemOption(23, Util.nextInt(65, 75)));
                 Giaythanlinhnm.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
@@ -2284,7 +2284,7 @@ public class Mob {
             }
         }
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
-            if (Util.isTrue(1, 100)) {
+            if (Util.isTrue(1, 1000)) {
                 Item Nhanthanlinh = ItemService.gI().createNewItem((short) (561));
                 Nhanthanlinh.itemOptions.add(new Item.ItemOption(14, Util.nextInt(13, 16)));
                 Nhanthanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
