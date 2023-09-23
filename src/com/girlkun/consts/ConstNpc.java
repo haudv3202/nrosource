@@ -145,7 +145,7 @@ public class ConstNpc {
     public static final byte MABU = 104;
     public static final byte BROOK= 111;
     public static final byte CHOPPER= 109;
- 
+    public static final byte BLACKROSE= 112;
     
 
     //----------------------index menu------------------------------------------

@@ -960,7 +960,40 @@ public class NpcFactory {
             }
         };
     }
-    ///////////////////////////////////////////NPC Quy Lão Kame///////////////////////////////////////////
+    ///////////////////////////////////////////NPC Black ró se///////////////////////////////////////////
+
+    public static Npc blackrosegoku(int mapId, int status, int cx, int cy, int tempId, int avartar) {
+        return new Npc(mapId, status, cx, cy, tempId, avartar) {
+            @Override
+            public void openBaseMenu(Player player) {
+                if (canOpenNpc(player)) {
+                    if (this.mapId == 5) {
+                        this.createOtherMenu(player, ConstNpc.BASE_MENU,
+                                "Ngươi muốn gì ở ta?",
+                                "SHOP VIP", "ĐỔI TIỀN\nMẶT","Đóng");
+                    }
+                }
+            }
+
+            @Override
+            public void confirmMenu(Player player, int select) {
+                if (canOpenNpc(player)) {
+                    if (this.mapId == 5) {
+                        switch (select) {
+                            case 0:
+                                ShopServiceNew.gI().opendShop(player, "GOKUROSE", false);
+                                break;
+
+                            case 1:
+                                Service.gI().sendThongBao(player, "Đang phát triển");
+                                break;
+                        }
+                    }
+                }
+            }
+        };
+    }
+///////////////////////////////////////////NPC Quy Lão Kame///////////////////////////////////////////
 
     private static Npc quyLaoKame(int mapId, int status, int cx, int cy, int tempId, int avartar) {
         return new Npc(mapId, status, cx, cy, tempId, avartar) {
@@ -6256,6 +6289,8 @@ public class NpcFactory {
                     return rong1_to_7s(mapId, status, cx, cy, tempId, avatar);
                 case ConstNpc.TO_SU_KAIO:
                     return tosukaio(mapId, status, cx, cy, tempId, avatar);
+                case ConstNpc.BLACKROSE:
+                    return blackrosegoku(mapId, status, cx, cy, tempId, avatar);
                 case ConstNpc.BILL:
                     return bill(mapId, status, cx, cy, tempId, avatar);
                 case ConstNpc.NPC_64:
@@ -6754,7 +6789,7 @@ public class NpcFactory {
                         List<String[]> retrievedInfoPlayers = (List<String[]>) PLAYERID_OBJECT.get(player.id);
 
                         if (retrievedInfoPlayers != null) {
-                            ArrayList<String> firstElm = new ArrayList<>();                            
+                            ArrayList<String> firstElm = new ArrayList<>();
                             ArrayList<String> firstName = new ArrayList<>();
 
                             switch (select) {
@@ -6763,18 +6798,18 @@ public class NpcFactory {
 //                                    String[] selects = new String[]{"Đồng ý", "Hủy"};
 //                                    NpcService.gI().createMenuConMeo(player, ConstNpc.BAN_PLAYER, -1,
 //                                            "Bạn có chắc chắn muốn ban " + "Người chơi", selects);
-                                     
+
 //                            Service.getInstance().sendThongBao(player, "Ban người chơi " + ((Player) PLAYERID_OBJECT.get(player.id)).name + " thành công");
-                                     for(String[] playinfo : retrievedInfoPlayers){
+                                    for (String[] playinfo : retrievedInfoPlayers) {
 //                                         for(String info : playinfo){
-                                            firstElm.add(playinfo[0]);
-                                            firstName.add(playinfo[1]);
+                                        firstElm.add(playinfo[0]);
+                                        firstName.add(playinfo[1]);
 //                                             System.out.println("data: " + Arrays.toString(playinfo));
 //                                         }
-                                     }
-                                      String idPlayers = String.join(",",firstElm );
-                                       String namePlayers = String.join(",",firstName );
-                                      PlayerService.gI().banPlayers(idPlayers,namePlayers);
+                                    }
+                                    String idPlayers = String.join(",", firstElm);
+                                    String namePlayers = String.join(",", firstName);
+                                    PlayerService.gI().banPlayers(idPlayers, namePlayers);
                                     break;
                             }
                         }

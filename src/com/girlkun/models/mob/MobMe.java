@@ -68,7 +68,7 @@ public final class MobMe extends Mob {
                     msg.writer().writeInt((int) mob.id);
                     mob.point.sethp(mob.point.gethp() - this.point.dame);
                     msg.writer().writeInt(Util.TamkjllGH(mob.point.gethp()));
-                    msg.writer().writeInt(1);
+                    msg.writer().writeInt(Util.TamkjllGH(this.point.dame));
 //                    Util.TamkjllGH(this.point.dame)
                     Service.getInstance().sendMessAllPlayerInMap(this.zone, msg);
                     msg.cleanup();
