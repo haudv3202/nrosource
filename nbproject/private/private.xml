@@ -14,6 +14,7 @@
         <group>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/services/ItemMapService.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/shop/ShopServiceNew.java</file>
+            <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/player/NPoint.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/skill/PlayerSkill.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/services/func/ChangeMapService.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/jdbc/daos/GodGK.java</file>
@@ -25,6 +26,7 @@
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/services/SkillService.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/skill/Skill.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/npc/NpcFactory.java</file>
+            <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/player/SetClothes.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/models/mob/Mob.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/src/com/girlkun/server/io/MySession.java</file>
             <file>file:/C:/xampp/htdocs/nrobaroll/data/girlkun/girlkun.properties</file>
