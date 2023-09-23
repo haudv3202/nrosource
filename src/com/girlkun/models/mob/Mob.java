@@ -453,7 +453,7 @@ public class Mob {
         if (!player.isPet && !player.isNewPet) {
             if (player.charms.tdThuHut > System.currentTimeMillis()) {
                 for (ItemMap item : items) {
-                    if (item.itemTemplate.id  != 590) {
+                    if (item.itemTemplate.id != 590) {
                         ItemMapService.gI().pickItem(player, item.itemMapId, true);
                     }
                     if (item.itemTemplate.id != 220) {
@@ -615,7 +615,7 @@ public class Mob {
                     }
                 }
             }
-            
+
         } else {
             if (((Pet) player).master.charms.tdThuHut > System.currentTimeMillis()) {
                 for (ItemMap item : items) {
@@ -860,1159 +860,1159 @@ public class Mob {
                     }
                 }
             }
-            if (Util.isTrue(1, 30)) {               //barcoll Hirudegarn
-                if (Util.isTrue(1, 30)) {
-                    if (tempId == 70) { // hirudegan 
-                        ItemMap tv = new ItemMap(zone, 568, Util.nextInt(1, 1), player.location.x, player.location.y, player.id);
-                        itemReward.add(tv);
-                    }
-                }
-            }
-            if (Util.isTrue(1, 50)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap aotl = new ItemMap(zone, 555, Util.nextInt(1, 1), player.location.x, player.location.y, player.id);
-                    aotl.options.add(new Item.ItemOption(47, Util.nextInt(500, 700)));
-                    aotl.options.add(new Item.ItemOption(21, Util.nextInt(19, 19)));
-                    aotl.options.add(new Item.ItemOption(86, Util.nextInt(1, 1)));
-                    itemReward.add(aotl);
-                }
-            }
-            if (Util.isTrue(1, 50)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap aotl = new ItemMap(zone, 560, Util.nextInt(1, 1), player.location.x, player.location.y, player.id);
-                    aotl.options.add(new Item.ItemOption(47, Util.nextInt(500, 700)));
-                    aotl.options.add(new Item.ItemOption(21, Util.nextInt(19, 19)));
-                    aotl.options.add(new Item.ItemOption(86, Util.nextInt(1, 1)));
-                    itemReward.add(aotl);
-                }
-            }
-            if (Util.isTrue(1, 50)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap aotl = new ItemMap(zone, 557, Util.nextInt(1, 1), player.location.x, player.location.y, player.id);
-                    aotl.options.add(new Item.ItemOption(47, Util.nextInt(500, 700)));
-                    aotl.options.add(new Item.ItemOption(21, Util.nextInt(19, 19)));
-                    aotl.options.add(new Item.ItemOption(86, Util.nextInt(1, 1)));
-                    itemReward.add(aotl);
-                }
-            }
-
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            if (Util.isTrue(100, 100)) {
-                if (tempId == 70) { // hirudegan 
-                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-
-            //  mảnh tl
-            if (mapid == 105 || mapid == 106 || mapid == 108 || mapid == 108 || mapid == 109 || mapid == 110) {
-                if (Util.isTrue(1, 40)) {
-                    ItemMap tv = new ItemMap(zone, Util.nextInt(1900, 1904), 1, player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // mảnh hd
-            if (mapid == 208 || mapid == 209 || mapid == 210) {
-                if (Util.isTrue(1, 50)) {
-                    ItemMap tv = new ItemMap(zone, Util.nextInt(1905, 1909), 1, player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // mảnh ts
-            if (mapid == 218) {
-                if (Util.isTrue(1, 80)) {
-                    ItemMap tv = new ItemMap(zone, Util.nextInt(1066, 1070), 1, player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-
-            //  mảnh btc2
-            if (mapid == 156) {
-                if (Util.isTrue(1, 20)) {
-                    ItemMap tv = new ItemMap(zone, 2133, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // mảnh btc3
-            if (mapid == 157) {
-                if (Util.isTrue(1, 20)) {
-                    ItemMap tv = new ItemMap(zone, 2134, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // mảnh btc4
-            if (mapid == 158) {
-                if (Util.isTrue(1, 20)) {
-                    ItemMap tv = new ItemMap(zone, 2135, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // mảnh btc5
-            if (mapid == 159) {
-                if (Util.isTrue(1, 20)) {
-                    ItemMap tv = new ItemMap(zone, 2136, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-
-            //  vỏ sò
-            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2137, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // vỏ ốc
-            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2138, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // da thú
-            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2139, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // lông thú
-            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2140, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // hạt giống
-            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2141, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-            // lông linh thú
-            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2142, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-                }
-            }
-
-            if (Util.isTrue(15, 100)) {
-                if (Util.isTrue(1, 10)) {
-                    if (tempId == 0) { // mộc nhân 
-                        ItemMap tv = new ItemMap(zone, 933, 1, player.location.x, player.location.y, player.id);
-                        itemReward.add(tv);
-                    }
-                }
-                if (tempId == 0) { // mộc nhân 
-                    ItemMap tv = new ItemMap(zone, 934, 1, player.location.x, player.location.y, player.id);
-                    itemReward.add(tv);
-
-                    /// mảnh thiên thần linh, thiên sứ hủy diệt
-                }
-            }
+//            if (Util.isTrue(1, 30)) {               //barcoll Hirudegarn
+//                if (Util.isTrue(1, 30)) {
+//                    if (tempId == 70) { // hirudegan 
+//                        ItemMap tv = new ItemMap(zone, 568, Util.nextInt(1, 1), player.location.x, player.location.y, player.id);
+//                        itemReward.add(tv);
+//                    }
+//                }
+//            }
+//            if (Util.isTrue(1, 50)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap aotl = new ItemMap(zone, 555, Util.nextInt(1, 1), player.location.x, player.location.y, player.id);
+//                    aotl.options.add(new Item.ItemOption(47, Util.nextInt(500, 700)));
+//                    aotl.options.add(new Item.ItemOption(21, Util.nextInt(19, 19)));
+//                    aotl.options.add(new Item.ItemOption(86, Util.nextInt(1, 1)));
+//                    itemReward.add(aotl);
+//                }
+//            }
+//            if (Util.isTrue(1, 50)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap aotl = new ItemMap(zone, 560, Util.nextInt(1, 1), player.location.x, player.location.y, player.id);
+//                    aotl.options.add(new Item.ItemOption(47, Util.nextInt(500, 700)));
+//                    aotl.options.add(new Item.ItemOption(21, Util.nextInt(19, 19)));
+//                    aotl.options.add(new Item.ItemOption(86, Util.nextInt(1, 1)));
+//                    itemReward.add(aotl);
+//                }
+//            }
+//            if (Util.isTrue(1, 50)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap aotl = new ItemMap(zone, 557, Util.nextInt(1, 1), player.location.x, player.location.y, player.id);
+//                    aotl.options.add(new Item.ItemOption(47, Util.nextInt(500, 700)));
+//                    aotl.options.add(new Item.ItemOption(21, Util.nextInt(19, 19)));
+//                    aotl.options.add(new Item.ItemOption(86, Util.nextInt(1, 1)));
+//                    itemReward.add(aotl);
+//                }
+//            }
+//
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 76, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 188, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 189, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            if (Util.isTrue(100, 100)) {
+//                if (tempId == 70) { // hirudegan 
+//                    ItemMap tv = new ItemMap(zone, 190, Util.nextInt(1, 10), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//
+//            //  mảnh tl
+//            if (mapid == 105 || mapid == 106 || mapid == 108 || mapid == 108 || mapid == 109 || mapid == 110) {
+//                if (Util.isTrue(1, 40)) {
+//                    ItemMap tv = new ItemMap(zone, Util.nextInt(1900, 1904), 1, player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // mảnh hd
+//            if (mapid == 208 || mapid == 209 || mapid == 210) {
+//                if (Util.isTrue(1, 50)) {
+//                    ItemMap tv = new ItemMap(zone, Util.nextInt(1905, 1909), 1, player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // mảnh ts
+//            if (mapid == 218) {
+//                if (Util.isTrue(1, 80)) {
+//                    ItemMap tv = new ItemMap(zone, Util.nextInt(1066, 1070), 1, player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//
+//            //  mảnh btc2
+//            if (mapid == 156) {
+//                if (Util.isTrue(1, 20)) {
+//                    ItemMap tv = new ItemMap(zone, 2133, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // mảnh btc3
+//            if (mapid == 157) {
+//                if (Util.isTrue(1, 20)) {
+//                    ItemMap tv = new ItemMap(zone, 2134, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // mảnh btc4
+//            if (mapid == 158) {
+//                if (Util.isTrue(1, 20)) {
+//                    ItemMap tv = new ItemMap(zone, 2135, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // mảnh btc5
+//            if (mapid == 159) {
+//                if (Util.isTrue(1, 20)) {
+//                    ItemMap tv = new ItemMap(zone, 2136, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//
+//            //  vỏ sò
+//            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
+//                if (Util.isTrue(1, 4000)) {
+//                    ItemMap tv = new ItemMap(zone, 2137, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // vỏ ốc
+//            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
+//                if (Util.isTrue(1, 4000)) {
+//                    ItemMap tv = new ItemMap(zone, 2138, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // da thú
+//            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
+//                if (Util.isTrue(1, 4000)) {
+//                    ItemMap tv = new ItemMap(zone, 2139, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // lông thú
+//            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
+//                if (Util.isTrue(1, 4000)) {
+//                    ItemMap tv = new ItemMap(zone, 2140, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // hạt giống
+//            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
+//                if (Util.isTrue(1, 4000)) {
+//                    ItemMap tv = new ItemMap(zone, 2141, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//            // lông linh thú
+//            if (mapid == 1 || mapid == 2 || mapid == 3 || mapid == 4 || mapid == 5 || mapid == 6 || mapid == 8 || mapid == 9 || mapid == 10 || mapid == 11 || mapid == 12 || mapid == 13 || mapid == 15 || mapid == 17 || mapid == 18 || mapid == 19 || mapid == 20 || mapid == 27 || mapid == 28 || mapid == 29 || mapid == 30 || mapid == 31 || mapid == 32 || mapid == 33 || mapid == 34 || mapid == 35 || mapid == 36 || mapid == 37 || mapid == 38 || mapid == 30) {
+//                if (Util.isTrue(1, 4000)) {
+//                    ItemMap tv = new ItemMap(zone, 2142, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//                }
+//            }
+//
+//            if (Util.isTrue(15, 100)) {
+//                if (Util.isTrue(1, 10)) {
+//                    if (tempId == 0) { // mộc nhân 
+//                        ItemMap tv = new ItemMap(zone, 933, 1, player.location.x, player.location.y, player.id);
+//                        itemReward.add(tv);
+//                    }
+//                }
+//                if (tempId == 0) { // mộc nhân 
+//                    ItemMap tv = new ItemMap(zone, 934, 1, player.location.x, player.location.y, player.id);
+//                    itemReward.add(tv);
+//
+//                    /// mảnh thiên thần linh, thiên sứ hủy diệt
+//                }
+//            }
 
             if (itemTask != null) {
                 itemReward.add(itemTask);
@@ -2066,6 +2066,233 @@ public class Mob {
         if (player.itemTime.isUseMayDo2 && Util.isTrue(1, 1) && this.tempId > 1) {
             list.add(new ItemMap(zone, 861, 0, x, player.location.y, player.id));// cai nay sua sau nha
         }
+        
+        // da thú
+            if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
+                if (Util.isTrue(1, 4000)) {
+                    ItemMap tv = new ItemMap(zone, 2139, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+            // lông thú
+            if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
+                if (Util.isTrue(1, 4000)) {
+                    ItemMap tv = new ItemMap(zone, 2140, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+            // hạt giống
+            if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
+                if (Util.isTrue(1, 4000)) {
+                    ItemMap tv = new ItemMap(zone, 2141, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+            // lông linh thú
+            if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
+                if (Util.isTrue(1, 4000)) {
+                    ItemMap tv = new ItemMap(zone, 2142, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+
+            if (Util.isTrue(15, 100)) {
+                if (Util.isTrue(1, 10)) {
+                    if (tempId == 0) { // mộc nhân 
+                        ItemMap tv = new ItemMap(zone, 933, 1, player.location.x, player.location.y, player.id);
+                        list.add(tv);
+                    }
+                }
+                if (tempId == 0) { // mộc nhân 
+                    ItemMap tv = new ItemMap(zone, 934, 1, player.location.x, player.location.y, player.id);
+                    list.add(tv);
+
+                    /// mảnh thiên thần linh, thiên sứ hủy diệt
+                }
+            }
+            
+//                mảnh tl
+            if (this.zone.map.mapId == 105 || this.zone.map.mapId == 106 || this.zone.map.mapId == 108 || this.zone.map.mapId == 108 || this.zone.map.mapId == 109 || this.zone.map.mapId == 110) {
+                if (Util.isTrue(1, 40)) {
+                    ItemMap tv = new ItemMap(zone, Util.nextInt(1900, 1904), 1, player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+            // mảnh hd
+            if (this.zone.map.mapId == 208 || this.zone.map.mapId == 209 || this.zone.map.mapId == 210) {
+                if (Util.isTrue(1, 50)) {
+                    ItemMap tv = new ItemMap(zone, Util.nextInt(1905, 1909), 1, player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+            // mảnh ts
+            if (this.zone.map.mapId == 218) {
+                if (Util.isTrue(1, 80)) {
+                    ItemMap tv = new ItemMap(zone, Util.nextInt(1066, 1070), 1, player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+
+            //  mảnh btc2
+            if (this.zone.map.mapId == 156) {
+                if (Util.isTrue(1, 20)) {
+                    ItemMap tv = new ItemMap(zone, 2133, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+            // mảnh btc3
+            if (this.zone.map.mapId == 157) {
+                if (Util.isTrue(1, 20)) {
+                    ItemMap tv = new ItemMap(zone, 2134, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+            // mảnh btc4
+            if (this.zone.map.mapId == 158) {
+                if (Util.isTrue(1, 20)) {
+                    ItemMap tv = new ItemMap(zone, 2135, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+            // mảnh btc5
+            if (this.zone.map.mapId == 159) {
+                if (Util.isTrue(1, 20)) {
+                    ItemMap tv = new ItemMap(zone, 2136, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                    list.add(tv);
+                }
+            }
+
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Quanthanlinh = ItemService.gI().createNewItem((short) (556));
+                Quanthanlinh.itemOptions.add(new Item.ItemOption(22, Util.nextInt(55, 65)));
+                Quanthanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Quanthanlinh);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Quanthanlinh.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Quanthanlinhxd = ItemService.gI().createNewItem((short) (560));
+                Quanthanlinhxd.itemOptions.add(new Item.ItemOption(22, Util.nextInt(45, 55)));
+                Quanthanlinhxd.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Quanthanlinhxd);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Quanthanlinhxd.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Quanthanlinhnm = ItemService.gI().createNewItem((short) (558));
+                Quanthanlinhnm.itemOptions.add(new Item.ItemOption(22, Util.nextInt(45, 60)));
+                Quanthanlinhnm.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Quanthanlinhnm);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Quanthanlinhnm.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Aothanlinh = ItemService.gI().createNewItem((short) (555));
+                Aothanlinh.itemOptions.add(new Item.ItemOption(47, Util.nextInt(500, 600)));
+                Aothanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Aothanlinh);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Aothanlinh.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Aothanlinhnm = ItemService.gI().createNewItem((short) (557));
+                Aothanlinhnm.itemOptions.add(new Item.ItemOption(47, Util.nextInt(400, 550)));
+                Aothanlinhnm.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Aothanlinhnm);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Aothanlinhnm.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Aothanlinhxd = ItemService.gI().createNewItem((short) (559));
+                Aothanlinhxd.itemOptions.add(new Item.ItemOption(47, Util.nextInt(600, 700)));
+                Aothanlinhxd.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Aothanlinhxd);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Aothanlinhxd.template.name);
+            }
+        }
+
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Gangthanlinh = ItemService.gI().createNewItem((short) (562));
+                Gangthanlinh.itemOptions.add(new Item.ItemOption(0, Util.nextInt(6000, 7000)));
+                Gangthanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Gangthanlinh);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Gangthanlinh.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Gangthanlinhxd = ItemService.gI().createNewItem((short) (566));
+                Gangthanlinhxd.itemOptions.add(new Item.ItemOption(0, Util.nextInt(6500, 7500)));
+                Gangthanlinhxd.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Gangthanlinhxd);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Gangthanlinhxd.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Gangthanlinhnm = ItemService.gI().createNewItem((short) (564));
+                Gangthanlinhnm.itemOptions.add(new Item.ItemOption(0, Util.nextInt(5500, 6500)));
+                Gangthanlinhnm.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Gangthanlinhnm);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Gangthanlinhnm.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Giaythanlinh = ItemService.gI().createNewItem((short) (563));
+                Giaythanlinh.itemOptions.add(new Item.ItemOption(23, Util.nextInt(50, 60)));
+                Giaythanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Giaythanlinh);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Giaythanlinh.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Giaythanlinhxd = ItemService.gI().createNewItem((short) (567));
+                Giaythanlinhxd.itemOptions.add(new Item.ItemOption(23, Util.nextInt(55, 65)));
+                Giaythanlinhxd.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Giaythanlinhxd);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Giaythanlinhxd.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Giaythanlinhnm = ItemService.gI().createNewItem((short) (565));
+                Giaythanlinhnm.itemOptions.add(new Item.ItemOption(23, Util.nextInt(65, 75)));
+                Giaythanlinhnm.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Giaythanlinhnm);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Giaythanlinhnm.template.name);
+            }
+        }
+        if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
+            if (Util.isTrue(1, 100)) {
+                Item Nhanthanlinh = ItemService.gI().createNewItem((short) (561));
+                Nhanthanlinh.itemOptions.add(new Item.ItemOption(14, Util.nextInt(13, 16)));
+                Nhanthanlinh.itemOptions.add(new Item.ItemOption(21, Util.nextInt(15, 17)));
+                InventoryServiceNew.gI().addItemBag(player, Nhanthanlinh);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.gI().sendThongBao(player, "Bạn vừa nhận được " + Nhanthanlinh.template.name);
+            }
+        }
 
 //        if (player.getSession().actived && Util.isTrue(100, 100)) {
 //            list.add(new ItemMap(zone, 3, 1, x, player.location.y, player.id));
@@ -2079,10 +2306,16 @@ public class Mob {
 //            if (Util.nextInt(0,1) < 1){
 //            list.add(new ItemMap(zone, 1248, 1, x, player.location.y, player.id));
 //        }
-        if (this.tempId == 70) {
-            if (Util.isTrue(1, 50)) {
-                ItemMap it = new ItemMap(this.zone, 568, 1, x + Util.nextInt(-70, 70), player.location.y, player.id);
+        if (this.zone.map.mapId == 70) {
+            if (Util.isTrue(2, 50)) {
+                ItemMap it = new ItemMap(zone, 568, 1, player.location.x, player.location.y, player.id);
                 list.add(it);
+                Service.gI().sendThongBao(player, "Bạn đã nhận được quả trứng");
+            }else if (Util.isTrue(10, 100)) {
+                int totalgold = Util.nextInt(1, 10);
+                ItemMap it = new ItemMap(zone, 457, totalgold, player.location.x, player.location.y, player.id);
+                list.add(it);
+                Service.gI().sendThongBao(player, "Bạn đã nhận được " + totalgold + " Thỏi vàng");
             }
 //            if (Util.isTrue(40, 100)) {
 //                ItemMap it = new ItemMap(this.zone, 568, 1, x, player.location.y, player.id);
@@ -2092,6 +2325,22 @@ public class Mob {
 //        if (this.tempId == 0 && (this.zone.map.mapId == 0 || this.zone.map.mapId == 7 || this.zone.map.mapId == 14) && player.cFlag != 0) {
 //            ItemMap it = new ItemMap(this.zone, 590, 1, x, player.location.y, player.id);
 //            list.add(it);
+        }
+
+        if (this.zone.map.mapId == 232) {
+            if (Util.isTrue(2, 100)) {
+                ItemMap it = new ItemMap(zone, 2000, 1, player.location.x, player.location.y, player.id);
+                list.add(it);
+            }
+            if (Util.isTrue(2, 100)) {
+                ItemMap it = new ItemMap(zone, 2001, 1, player.location.x, player.location.y, player.id);
+                list.add(it);
+            }
+
+            if (Util.isTrue(2, 100)) {
+                ItemMap it = new ItemMap(zone, 2002, 1, player.location.x, player.location.y, player.id);
+                list.add(it);
+            }
         }
         if (player.setClothes.godClothes && MapService.gI().isMapCold(this.zone.map) && Util.isTrue(3, 100)) {
             list.add(new ItemMap(this.zone, Util.nextInt(663, 667), 1, player.location.x, player.location.y, player.id));
