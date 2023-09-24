@@ -27,6 +27,7 @@ public class NPoint {
     public static final byte MAX_LIMIT = 19;
 
     private Player player;
+
     public NPoint(Player player) {
         this.player = player;
         this.tlHp = new ArrayList<>();
@@ -63,7 +64,7 @@ public class NPoint {
     public byte speed = 8;
 
     public boolean teleport;
-    
+
     public boolean isDraburaFrost; //Cải trang Dracula Frost
     public boolean isBillbingo; //Cải trang Dracula Frost
     public boolean isDrabura; //Cải trang Dracula Frost
@@ -165,6 +166,7 @@ public class NPoint {
 
     public short multicationChuong;
     public long lastTimeMultiChuong;
+
     /*-------------------------------------------------------------------------*/
     /**
      * Tính toán mọi chỉ số sau khi có thay đổi
@@ -315,12 +317,12 @@ public class NPoint {
                                     this.mpHoiCute += io.param;
                                     break;
                                 case 173: //Phục hồi #% HP và KI cho đồng đội
-                            this.tlHpHoiBanThanVaDongDoi += io.param;
-                            this.tlMpHoiBanThanVaDongDoi += io.param;
-                            break;
-                        case 211: //test
-                            this.test += io.param;
-                            break;
+                                    this.tlHpHoiBanThanVaDongDoi += io.param;
+                                    this.tlMpHoiBanThanVaDongDoi += io.param;
+                                    break;
+                                case 211: //test
+                                    this.test += io.param;
+                                    break;
                             }
                         }
                     }
@@ -428,7 +430,7 @@ public class NPoint {
                         case 109: //Hôi, giảm #% HP
                             this.tlHpGiamODo += io.param;
                             break;
-                           
+
                         case 116: //Kháng thái dương hạ san
                             this.khangTDHS = true;
                             break;
@@ -450,10 +452,10 @@ public class NPoint {
                             this.tlHpHoiBanThanVaDongDoi += io.param;
                             this.tlMpHoiBanThanVaDongDoi += io.param;
                             break;
-                         case 211: //test
+                        case 211: //test
                             this.test += io.param;
-                            break; 
-                       case 26: //Dracula hóa đá
+                            break;
+                        case 26: //Dracula hóa đá
                             this.isDrabura = true;
                             break;
                         case 212: // Dracula Frost
@@ -494,7 +496,7 @@ public class NPoint {
                                 break;
                             case 108: //#% Né đòn
                                 this.tlNeDon += io.param;
-                                
+
                         }
                     }
                     break;
@@ -607,7 +609,7 @@ public class NPoint {
         setDameTrainArmor();
         setBasePoint();
     }
-    
+
     private void setDameTrainArmor() {
         if (!this.player.isPet && !this.player.isBoss) {
             if (this.player.inventory.itemsBody.size() < 7) {
@@ -695,7 +697,7 @@ public class NPoint {
                 this.hpMax += (this.hpMax * percent / 100);
             }
         }
-        
+
         // chỉ số bông tai barcoll
         //pet mabư
         if (this.player.isPet && ((Pet) this.player).typePet == 1
@@ -722,10 +724,12 @@ public class NPoint {
         if (this.player.isPet && ((Pet) this.player).typePet == 2// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3)) {
             this.hpMax += (this.hpMax * 40 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 2// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 2// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA4)) {
             this.hpMax += (this.hpMax * 40 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 2// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 2// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.hpMax += (this.hpMax * 40 / 100);//chi so hp
         }
@@ -736,10 +740,12 @@ public class NPoint {
         if (this.player.isPet && ((Pet) this.player).typePet == 4// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3)) {
             this.hpMax += (this.hpMax * 30 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 4// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 4// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA4)) {
             this.hpMax += (this.hpMax * 30 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 4// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 4// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.hpMax += (this.hpMax * 30 / 100);//chi so hp
         }
@@ -750,10 +756,12 @@ public class NPoint {
         if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3)) {
             this.hpMax += (this.hpMax * 40 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA4)) {
             this.hpMax += (this.hpMax * 40 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.hpMax += (this.hpMax * 40 / 100);//chi so hp
         }
@@ -780,10 +788,12 @@ public class NPoint {
         if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3)) {
             this.hpMax += (this.hpMax * 60 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA4)) {
             this.hpMax += (this.hpMax * 60 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.hpMax += (this.hpMax * 60 / 100);//chi so hp
         }
@@ -976,8 +986,7 @@ public class NPoint {
         if (this.player.fusion.typeFusion != 0) {
             this.mpMax += this.player.pet.nPoint.mpMax;
         }
-        
-        
+
         //BTc2
         if (this.player.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA2) {
             this.mpMax *= 1.1;
@@ -1032,10 +1041,12 @@ public class NPoint {
         if (this.player.isPet && ((Pet) this.player).typePet == 1
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3)) {
             this.dame += (this.dame * 10 / 100);
-        }if (this.player.isPet && ((Pet) this.player).typePet == 1
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 1
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA4)) {
             this.dame += (this.dame * 10 / 100);
-        }if (this.player.isPet && ((Pet) this.player).typePet == 1
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 1
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.dame += (this.dame * 10 / 100);
         }
@@ -1079,10 +1090,12 @@ public class NPoint {
         if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3)) {
             this.dame += (this.dame * 40 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA4)) {
             this.dame += (this.dame * 40 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 5// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.dame += (this.dame * 40 / 100);//chi so hp
         }
@@ -1097,20 +1110,24 @@ public class NPoint {
         if (this.player.isPet && ((Pet) this.player).typePet == 6// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA4)) {
             this.dame += (this.dame * 50 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 6// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 6// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.dame += (this.dame * 50 / 100);//chi so hp
         }
         if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA2)) {
             this.dame += (this.dame * 60 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA3)) {
             this.dame += (this.dame * 60 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA4)) {
             this.dame += (this.dame * 60 / 100);//chi so hp
-        }if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
+        }
+        if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.dame += (this.dame * 60 / 100);//chi so dame
         }
@@ -1377,6 +1394,9 @@ public class NPoint {
                 break;
             case Skill.KAIOKEN:
                 percentDameSkill = skillSelect.damage;
+                if (this.player.setClothes.kirin == 5) {
+                    percentDameSkill *= 2;
+                }
                 break;
             case Skill.LIEN_HOAN:
                 if (intrinsic.id == 13) {
@@ -1398,9 +1418,7 @@ public class NPoint {
                 return dameSkill;
             case Skill.QUA_CAU_KENH_KHI:
                 float dame = this.dame * 40;
-                if (this.player.setClothes.kirin == 5) {
-                    dame *= 2;
-                }
+
                 dame = dame + (Util.nextInt(-5, 5) * dame / 100);
                 return dame;
         }
@@ -1572,7 +1590,7 @@ public class NPoint {
     }
 
     /*------------------------------------------------------------------------*/
-     public boolean canOpenPower() {
+    public boolean canOpenPower() {
         return this.power >= getPowerLimit();
     }
 
@@ -1617,7 +1635,7 @@ public class NPoint {
             case 18:
                 return 912000000000L;
             case 19:
-                return 1012000000000L;    
+                return 1012000000000L;
             default:
                 return 0;
         }
@@ -1664,7 +1682,7 @@ public class NPoint {
             case 18:
                 return 912000000000L;
             case 19:
-                return 1012000000000L;    
+                return 1012000000000L;
             default:
                 return 0;
         }
@@ -2002,7 +2020,6 @@ public class NPoint {
         }
         return false;
     }
-
 
     //--------------------------------------------------------------------------
     private long lastTimeHoiPhuc;
