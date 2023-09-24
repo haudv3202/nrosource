@@ -964,6 +964,26 @@ public class NpcFactory {
 
     public static Npc blackrosegoku(int mapId, int status, int cx, int cy, int tempId, int avartar) {
         return new Npc(mapId, status, cx, cy, tempId, avartar) {
+            public void chatWithNpc(Player player) {
+                String[] chat = {
+                   "Thằng nào có tiền",
+                    "Nạp tiền vào donate cho anh",
+                    "Ít thì 5 quả trứng",
+                    "Nhiều thì 1 tên lửa",
+                    "Chúng mày hiểu chưa",
+                    "Hiểu chưa"
+                };
+                Timer timer = new Timer();
+                timer.scheduleAtFixedRate(new TimerTask() {
+                    int index = 0;
+
+                    @Override
+                    public void run() {
+                        npcChat(player, chat[index]);
+                        index = (index + 1) % chat.length;
+                    }
+                }, 10000, 10000);
+            }
             @Override
             public void openBaseMenu(Player player) {
                 if (canOpenNpc(player)) {
@@ -987,7 +1007,7 @@ public class NpcFactory {
 
                                 case 1:
                                     this.createOtherMenu(player, 1,
-                                            "Rất tán dương tinh thần cày cuốc của con\nCon đã thu thập đủ vật phẩm ta cần chưa\n Ta sẽ trả lương cho con <3",
+                                            "Rất tán dương tinh thần cày cuốc của ngươi\nNgươi đã thu thập đủ vật phẩm ta cần chưa\n Ta sẽ trả lương cho ngươi <3",
                                             "Đổi coin Bạc", "Đổi coin Vàng", "Đổi coin Đỏ", "Đổi coin\n Bạch Kim", "Đóng");
                                     break;
                             }
@@ -995,25 +1015,350 @@ public class NpcFactory {
                             switch (select) {
                                 case 0:
                                     this.createOtherMenu(player, 2,
-                                            "Tỉ lệ quy đổi như sau \n 1000 coin bạc => 100 coin vàng\n 10000 coin bạc => 1000 coin vàng \n 100000 coin bạc => 10000 coin vàng",
-                                            "100 coin vàng", "1000 coin vàng", "10000 coin vàng", "Đóng");
+                                            "Tỉ lệ quy đổi như sau \n 1000 coin bạc => 100 coin vàng\n 10000 coin bạc => 1000 coin vàng \n 90000 coin bạc => 9000 coin vàng",
+                                            "100 coin vàng", "1000 coin vàng", "9000 coin vàng", "Đóng");
                                     break;
 
                                 case 1:
                                     this.createOtherMenu(player, 3,
-                                            "Tỉ lệ quy đổi như sau \n 1000 coin vàng => 50 coin Đỏ\n 10000 coin Vàng => 500 coin Đỏ \n 100000 coin vàng => 5000 coin đỏ",
-                                            "50 coin đỏ", "500 coin đỏ", "5000 coin đỏ", "Đóng");
+                                            "Tỉ lệ quy đổi như sau \n 1000 coin vàng => 50 coin Đỏ\n 10000 coin Vàng => 500 coin Đỏ \n 90000 coin vàng => 4500 coin đỏ",
+                                            "50 coin đỏ", "500 coin đỏ", "4500 coin đỏ", "Đóng");
                                     break;
                                 case 2:
                                     this.createOtherMenu(player, 4,
-                                            "Tỉ lệ quy đổi như sau \n 1200 coin đỏ => 30 coin bạch kim\n 12000 coin đỏ => 300 coin bạch kim \n 120000 coin đỏ => 3000 coin bạch kim\n 100 coin bạch kim => 40 thỏi vàng\n 500 coin bạch kim => 200 thỏi vàng",
-                                            "30 coin bạch kim", "300 coin bạch kim", "3000 coin bạch kim", "40 thỏi vàng","200 thỏi vàng", "Đóng");
+                                            "Tỉ lệ quy đổi như sau \n 1200 coin đỏ => 30 coin bạch kim\n 12000 coin đỏ => 300 coin bạch kim \n 80000 coin đỏ => 2000 coin bạch kim\n 100 coin bạch kim => 40 thỏi vàng\n 500 coin bạch kim => 200 thỏi vàng",
+                                            "30 coin bạch kim", "300 coin bạch kim", "2000 coin bạch kim", "40 thỏi vàng", "200 thỏi vàng", "Đóng");
                                     break;
                                 case 3:
                                     this.createOtherMenu(player, 5,
                                             "Tỉ lệ quy đổi như sau \n 100 coin bạch kim => 10k VND\n 500 coin bạch kim => 50k VND \n 1000 coin bạch kim => 100k VND",
-                                            "10k VND", "50k VND","100k VND", "Đóng");
+                                            "10k VND", "50k VND", "100k VND", "Đóng");
                                     break;
+                            }
+                        } else if (player.iDMark.getIndexMenu() == 2) {
+                            Item coinBac = null;
+                             Item coinVangVip = null;
+                            switch (select) {
+                                case 0:
+                                    try {
+                                    coinBac = InventoryServiceNew.gI().findItemBag(player, 1348);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinBac == null || coinBac.quantity < 1000) {
+                                    this.npcChat(player, "|1|Bạn không đủ x1000 coin bạc");
+                                } else if (player.inventory.gold < 100_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 100 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 100_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinBac, 1000);
+                                    Service.getInstance().sendMoney(player);
+                                    Item coinDo = ItemService.gI().createNewItem((short) 1349, 100);
+                                    InventoryServiceNew.gI().addItemBag(player, coinDo);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 100 coin Vàng");
+                                }
+                                break;
+                                case 1:
+                                    try {
+                                    coinBac = InventoryServiceNew.gI().findItemBag(player, 1348);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinBac == null || coinBac.quantity < 10000) {
+                                    this.npcChat(player, "|1|Bạn không đủ x10000 coin bạc");
+                                } else if (player.inventory.gold < 100_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 100 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 100_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinBac, 10000);
+                                    Service.getInstance().sendMoney(player);
+                                    Item coinDo = ItemService.gI().createNewItem((short) 1349, 1000);
+                                    InventoryServiceNew.gI().addItemBag(player, coinDo);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 1000 coin Vàng");
+                                }
+                                break;
+                                case 2:
+                                    try {
+                                    coinBac = InventoryServiceNew.gI().findItemBag(player, 1348);
+                                    coinVangVip =  InventoryServiceNew.gI().findItemBag(player, 1349);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+//                                    if (coinVangVip == null || coinVangVip.quantity >= 999) {
+//                                    Service.gI().sendThongBao(player, "Số lượng vượt quá số cần đổi !Hãy đổi số coin của bạn sang coin đỏ trước");
+//                                } 
+                                if (coinBac == null || coinBac.quantity < 90000) {
+                                    this.npcChat(player, "|1|Bạn không đủ x90000 coin bạc");
+                                } else if (player.inventory.gold < 100_000_000) {
+                                    this.npcChat(player, "|3|Bạn không đủ 100 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|4|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 100_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinBac, 90000);
+                                    Service.getInstance().sendMoney(player);
+                                    Item coinDo = ItemService.gI().createNewItem((short) 1349, 9000);
+                                    InventoryServiceNew.gI().addItemBag(player, coinDo);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 9000 coin Vàng");
+                                }
+                                break;
+                            }
+                        } else if (player.iDMark.getIndexMenu() == 3) {
+                            Item coinVang = null;
+                            switch (select) {
+                                case 0:
+                                    try {
+                                    coinVang = InventoryServiceNew.gI().findItemBag(player, 1349);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinVang == null || coinVang.quantity < 1000) {
+                                    this.npcChat(player, "|1|Bạn không đủ x1000 coin vàng");
+                                } else if (player.inventory.gold < 200_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 200 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 200_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinVang, 1000);
+                                    Service.getInstance().sendMoney(player);
+                                    Item coinDo = ItemService.gI().createNewItem((short) 1347, 50);
+                                    InventoryServiceNew.gI().addItemBag(player, coinDo);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 50 coin Đỏ");
+                                }
+                                break;
+                                case 1:
+                                    try {
+                                    coinVang = InventoryServiceNew.gI().findItemBag(player, 1349);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinVang == null || coinVang.quantity < 10000) {
+                                    this.npcChat(player, "|1|Bạn không đủ x10000 coin vàng");
+                                } else if (player.inventory.gold < 200_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 200 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 200_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinVang, 10000);
+                                    Service.getInstance().sendMoney(player);
+                                    Item coinDo = ItemService.gI().createNewItem((short) 1347, 500);
+                                    InventoryServiceNew.gI().addItemBag(player, coinDo);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 500 coin Đỏ");
+                                }
+                                break;
+                                case 2:
+                                    try {
+                                    coinVang = InventoryServiceNew.gI().findItemBag(player, 1349);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinVang == null || coinVang.quantity < 90000) {
+                                    this.npcChat(player, "|1|Bạn không đủ x90000 coin Vàng");
+                                } else if (player.inventory.gold < 200_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 200 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 200_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinVang, 90000);
+                                    Service.getInstance().sendMoney(player);
+                                    Item coinDo = ItemService.gI().createNewItem((short) 1347, 4500);
+                                    InventoryServiceNew.gI().addItemBag(player, coinDo);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 4500 coin Đỏ");
+                                }
+                                break;
+                            }
+                        } else if (player.iDMark.getIndexMenu() == 4) {
+                            Item coinDo = null;
+                            Item coinBachKimtv = null;
+                            switch (select) {
+                                case 0:
+                                    try {
+                                    coinDo = InventoryServiceNew.gI().findItemBag(player, 1347);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinDo == null || coinDo.quantity < 1200) {
+                                    this.npcChat(player, "|1|Bạn không đủ x1000 coin đỏ");
+                                } else if (player.inventory.gold < 400_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 400 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 400_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinDo, 1200);
+                                    Service.getInstance().sendMoney(player);
+                                    Item coinBachKim = ItemService.gI().createNewItem((short) 1350, 30);
+                                    InventoryServiceNew.gI().addItemBag(player, coinBachKim);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 30 coin Bạch kim");
+                                }
+                                break;
+                                case 1:
+                                    try {
+                                    coinDo = InventoryServiceNew.gI().findItemBag(player, 1347);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinDo == null || coinDo.quantity < 12000) {
+                                    this.npcChat(player, "|1|Bạn không đủ x12000 coin đỏ");
+                                } else if (player.inventory.gold < 400_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 400 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 400_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinDo, 12000);
+                                    Service.getInstance().sendMoney(player);
+                                    Item coinBachKim = ItemService.gI().createNewItem((short) 1350, 300);
+                                    InventoryServiceNew.gI().addItemBag(player, coinBachKim);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 300 coin Bạch kim");
+                                }
+                                break;
+                                case 2:
+                                    try {
+                                    coinDo = InventoryServiceNew.gI().findItemBag(player, 1347);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinDo == null || coinDo.quantity < 80000) {
+                                    this.npcChat(player, "|1|Bạn không đủ x80000 coin Đỏ");
+                                } else if (player.inventory.gold < 400_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 400 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 200_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinDo, 80000);
+                                    Service.getInstance().sendMoney(player);
+                                    Item coinBachKim = ItemService.gI().createNewItem((short) 1350, 2000);
+                                    InventoryServiceNew.gI().addItemBag(player, coinBachKim);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 2000 coin Bạch kim");
+                                }
+                                break;
+                                case 3:
+                             
+                                    try {
+                                    coinBachKimtv = InventoryServiceNew.gI().findItemBag(player, 1350);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinBachKimtv == null || coinBachKimtv.quantity < 100) {
+                                    this.npcChat(player, "|1|Bạn không đủ x100 coin Bạch kim");
+                                } else if (player.inventory.gold < 100_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 100 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 100_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinBachKimtv, 100);
+                                    Service.getInstance().sendMoney(player);
+                                    Item tv = ItemService.gI().createNewItem((short) 457, 40);
+                                    InventoryServiceNew.gI().addItemBag(player, tv);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 40 thỏi vàng");
+                                }
+                                break;
+                                case 4:
+                                    try {
+                                    coinBachKimtv = InventoryServiceNew.gI().findItemBag(player, 1350);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinBachKimtv == null || coinBachKimtv.quantity < 500) {
+                                    this.npcChat(player, "|1|Bạn không đủ x500 coin Bạch kim");
+                                } else if (player.inventory.gold < 100_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 100 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 100_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinBachKimtv, 500);
+                                    Service.getInstance().sendMoney(player);
+                                    Item tv = ItemService.gI().createNewItem((short) 457, 200);
+                                    InventoryServiceNew.gI().addItemBag(player, tv);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được 200 thỏi vàng");
+                                }
+                                break;
+                            }
+                        } else if (player.iDMark.getIndexMenu() == 5) {
+                            Item coinBachkim = null;
+                            switch (select) {
+                                case 0:
+                                    try {
+                                    coinBachkim = InventoryServiceNew.gI().findItemBag(player, 1350);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinBachkim == null || coinBachkim.quantity < 100) {
+                                    this.npcChat(player, "|1|Bạn không đủ x1000 coin Bạch kim");
+                                } else if (player.inventory.gold < 500_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 500 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 500_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinBachkim, 100);
+                                    Service.getInstance().sendMoney(player);
+                                    PlayerDAO.addvnd(player, 10000);
+                                    Service.gI().sendThongBao(player, "Bạn đã được cộng 10k vào tk nạp");
+                                }
+                                break;
+                                case 1:
+                                    try {
+                                    coinBachkim = InventoryServiceNew.gI().findItemBag(player, 1350);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinBachkim == null || coinBachkim.quantity < 500) {
+                                    this.npcChat(player, "|1|Bạn không đủ x500 coin vàng");
+                                } else if (player.inventory.gold < 500_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 500 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 500_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinBachkim, 500);
+                                    Service.getInstance().sendMoney(player);
+                                    PlayerDAO.addvnd(player, 50000);
+                                    Service.gI().sendThongBao(player, "Bạn đã được cộng 50k vào tk nạp");
+                                }
+                                break;
+                                case 2:
+                                    try {
+                                    coinBachkim = InventoryServiceNew.gI().findItemBag(player, 1350);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinBachkim == null || coinBachkim.quantity < 1000) {
+                                    this.npcChat(player, "|1|Bạn không đủ x1000 coin Vàng");
+                                } else if (player.inventory.gold < 500_000_000) {
+                                    this.npcChat(player, "|1|Bạn không đủ 500 triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    this.npcChat(player, "|1|Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= 500_000_000;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinBachkim, 1000);
+                                    Service.getInstance().sendMoney(player);
+                                    PlayerDAO.addvnd(player, 100000);
+                                    Service.gI().sendThongBao(player, "Bạn đã được cộng 100k vào tk nạp");
+                                }
+                                break;
                             }
                         }
 

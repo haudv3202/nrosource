@@ -23,7 +23,6 @@ public class ShopServiceNew {
     private static final byte COST_RUBY = 3;
     private static final byte COST_COUPON = 4;
 
-
     private static final byte NORMAL_SHOP = 0;
     private static final byte SPEC_SHOP = 3;
     private static final byte BOX = 4;

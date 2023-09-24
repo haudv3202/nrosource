@@ -738,7 +738,7 @@ public class InventoryServiceNew {
             }
         }
 
-        //item tăng số lượng
+        //item gộp vật phẩm
 
         if (itemAdd.template.isUpToUp) {
             for (Item it : items) {
@@ -746,20 +746,20 @@ public class InventoryServiceNew {
                     continue;
                 }
                 //457-thỏi vàng; 590-bí kiếp
-                if (itemAdd.template.id == 457 || itemAdd.template.id == 590 || itemAdd.template.id == 610 || itemAdd.template.type == 14) {
+                if (itemAdd.template.id == 457 || itemAdd.template.id == 590 || itemAdd.template.id == 610 || itemAdd.template.type == 14|| itemAdd.template.type == 1348 || itemAdd.template.type == 1349 || itemAdd.template.type == 1347 || itemAdd.template.type == 1350) {
                     it.quantity += itemAdd.quantity;
                     itemAdd.quantity = 0;
                     return true;
                 }
 
-                if (it.quantity < 9999) {
-                    int add = 9999 - it.quantity;
+                if (it.quantity < 100000) {
+                    int add = 100000 - it.quantity;
                     if (itemAdd.quantity <= add) {
                         it.quantity += itemAdd.quantity;
                         itemAdd.quantity = 0;
                         return true;
                     } else {
-                        it.quantity = 99999;
+                        it.quantity = 10000;
                         itemAdd.quantity -= add;
                     }
                 }

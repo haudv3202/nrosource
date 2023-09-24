@@ -25,6 +25,7 @@ public class Inventory {
     public int gem;
     public int ruby;
     public int coupon;
+      public int coin;
     public int event;
 
     public Inventory() {
