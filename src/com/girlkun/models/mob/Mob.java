@@ -2066,101 +2066,135 @@ public class Mob {
         if (player.itemTime.isUseMayDo2 && Util.isTrue(1, 1) && this.tempId > 1) {
             list.add(new ItemMap(zone, 861, 0, x, player.location.y, player.id));// cai nay sua sau nha
         }
-        
+
         // da thú
-            if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2139, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
+        if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
+            if (Util.isTrue(1, 4000)) {
+                ItemMap tv = new ItemMap(zone, 2139, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
             }
-            // lông thú
-            if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2140, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
-            }
-            // hạt giống
-            if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2141, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
-            }
-            // lông linh thú
-            if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
-                if (Util.isTrue(1, 4000)) {
-                    ItemMap tv = new ItemMap(zone, 2142, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
-            }
+        }
 
-            if (Util.isTrue(15, 100)) {
-                if (Util.isTrue(1, 10)) {
-                    if (tempId == 0) { // mộc nhân 
-                        ItemMap tv = new ItemMap(zone, 933, 1, player.location.x, player.location.y, player.id);
-                        list.add(tv);
-                    }
-                }
+        if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2
+                || this.zone.map.mapId == 3 || this.zone.map.mapId == 4
+                || this.zone.map.mapId == 5 || this.zone.map.mapId == 6
+                || this.zone.map.mapId == 8 || this.zone.map.mapId == 9
+                || this.zone.map.mapId == 10 || this.zone.map.mapId == 11
+                || this.zone.map.mapId == 12 || this.zone.map.mapId == 13
+                || this.zone.map.mapId == 15 || this.zone.map.mapId == 17
+                || this.zone.map.mapId == 18 || this.zone.map.mapId == 19
+                || this.zone.map.mapId == 20 || this.zone.map.mapId == 27
+                || this.zone.map.mapId == 28 || this.zone.map.mapId == 29
+                || this.zone.map.mapId == 30 || this.zone.map.mapId == 31
+                || this.zone.map.mapId == 32 || this.zone.map.mapId == 33
+                || this.zone.map.mapId == 34 || this.zone.map.mapId == 35
+                || this.zone.map.mapId == 36 || this.zone.map.mapId == 37
+                || this.zone.map.mapId == 38 || this.zone.map.mapId == 30
+                || this.zone.map.mapId == 30 || (this.zone.map.mapId >= 92 && this.zone.map.mapId <= 94)
+                || (this.zone.map.mapId >= 96 && this.zone.map.mapId <= 100)
+                || (this.zone.map.mapId >= 68 && this.zone.map.mapId <= 72)
+                || (this.zone.map.mapId >= 63 && this.zone.map.mapId <= 64)
+                || (this.zone.map.mapId >= 66 && this.zone.map.mapId <= 67)
+                 || (this.zone.map.mapId >= 73 && this.zone.map.mapId <= 77)
+                 || (this.zone.map.mapId >= 81 && this.zone.map.mapId <= 83)
+                 || (this.zone.map.mapId >= 79 && this.zone.map.mapId <= 80)
+                || (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110)
+                || (this.zone.map.mapId >= 208 && this.zone.map.mapId <= 211)
+                || this.zone.map.mapId >= 155
+                  || this.zone.map.mapId >= 218
+                ) {
+            if (Util.isTrue(40, 100)) {
+                ItemMap tv = new ItemMap(zone, 1348, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
+            }
+        }
+        // lông thú
+        if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
+            if (Util.isTrue(1, 4000)) {
+                ItemMap tv = new ItemMap(zone, 2140, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
+            }
+        }
+        // hạt giống
+        if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
+            if (Util.isTrue(1, 4000)) {
+                ItemMap tv = new ItemMap(zone, 2141, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
+            }
+        }
+        // lông linh thú
+        if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
+            if (Util.isTrue(1, 4000)) {
+                ItemMap tv = new ItemMap(zone, 2142, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
+            }
+        }
+
+        if (Util.isTrue(15, 100)) {
+            if (Util.isTrue(1, 10)) {
                 if (tempId == 0) { // mộc nhân 
-                    ItemMap tv = new ItemMap(zone, 934, 1, player.location.x, player.location.y, player.id);
+                    ItemMap tv = new ItemMap(zone, 933, 1, player.location.x, player.location.y, player.id);
                     list.add(tv);
-
-                    /// mảnh thiên thần linh, thiên sứ hủy diệt
                 }
             }
-            
+            if (tempId == 0) { // mộc nhân 
+                ItemMap tv = new ItemMap(zone, 934, 1, player.location.x, player.location.y, player.id);
+                list.add(tv);
+
+                /// mảnh thiên thần linh, thiên sứ hủy diệt
+            }
+        }
+
 //                mảnh tl
-            if (this.zone.map.mapId == 105 || this.zone.map.mapId == 106 || this.zone.map.mapId == 108 || this.zone.map.mapId == 108 || this.zone.map.mapId == 109 || this.zone.map.mapId == 110) {
-                if (Util.isTrue(1, 40)) {
-                    ItemMap tv = new ItemMap(zone, Util.nextInt(1900, 1904), 1, player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
+        if (this.zone.map.mapId == 105 || this.zone.map.mapId == 106 || this.zone.map.mapId == 108 || this.zone.map.mapId == 108 || this.zone.map.mapId == 109 || this.zone.map.mapId == 110) {
+            if (Util.isTrue(1, 40)) {
+                ItemMap tv = new ItemMap(zone, Util.nextInt(1900, 1904), 1, player.location.x, player.location.y, player.id);
+                list.add(tv);
             }
-            // mảnh hd
-            if (this.zone.map.mapId == 208 || this.zone.map.mapId == 209 || this.zone.map.mapId == 210) {
-                if (Util.isTrue(1, 50)) {
-                    ItemMap tv = new ItemMap(zone, Util.nextInt(1905, 1909), 1, player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
+        }
+        // mảnh hd
+        if (this.zone.map.mapId == 208 || this.zone.map.mapId == 209 || this.zone.map.mapId == 210) {
+            if (Util.isTrue(1, 50)) {
+                ItemMap tv = new ItemMap(zone, Util.nextInt(1905, 1909), 1, player.location.x, player.location.y, player.id);
+                list.add(tv);
             }
-            // mảnh ts
-            if (this.zone.map.mapId == 218) {
-                if (Util.isTrue(1, 80)) {
-                    ItemMap tv = new ItemMap(zone, Util.nextInt(1066, 1070), 1, player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
+        }
+        // mảnh ts
+        if (this.zone.map.mapId == 218) {
+            if (Util.isTrue(1, 80)) {
+                ItemMap tv = new ItemMap(zone, Util.nextInt(1066, 1070), 1, player.location.x, player.location.y, player.id);
+                list.add(tv);
             }
+        }
 
-            //  mảnh btc2
-            if (this.zone.map.mapId == 156) {
-                if (Util.isTrue(1, 20)) {
-                    ItemMap tv = new ItemMap(zone, 2133, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
+        //  mảnh btc2
+        if (this.zone.map.mapId == 156) {
+            if (Util.isTrue(1, 20)) {
+                ItemMap tv = new ItemMap(zone, 2133, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
             }
-            // mảnh btc3
-            if (this.zone.map.mapId == 157) {
-                if (Util.isTrue(1, 20)) {
-                    ItemMap tv = new ItemMap(zone, 2134, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
+        }
+        // mảnh btc3
+        if (this.zone.map.mapId == 157) {
+            if (Util.isTrue(1, 20)) {
+                ItemMap tv = new ItemMap(zone, 2134, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
             }
-            // mảnh btc4
-            if (this.zone.map.mapId == 158) {
-                if (Util.isTrue(1, 20)) {
-                    ItemMap tv = new ItemMap(zone, 2135, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
+        }
+        // mảnh btc4
+        if (this.zone.map.mapId == 158) {
+            if (Util.isTrue(1, 20)) {
+                ItemMap tv = new ItemMap(zone, 2135, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
             }
-            // mảnh btc5
-            if (this.zone.map.mapId == 159) {
-                if (Util.isTrue(1, 20)) {
-                    ItemMap tv = new ItemMap(zone, 2136, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
-                    list.add(tv);
-                }
+        }
+        // mảnh btc5
+        if (this.zone.map.mapId == 159) {
+            if (Util.isTrue(1, 20)) {
+                ItemMap tv = new ItemMap(zone, 2136, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
             }
+        }
 
         if (this.zone.map.mapId >= 105 && this.zone.map.mapId <= 110) {
             if (Util.isTrue(1, 1000)) {
@@ -2311,7 +2345,7 @@ public class Mob {
                 ItemMap it = new ItemMap(zone, 568, 1, player.location.x, player.location.y, player.id);
                 list.add(it);
                 Service.gI().sendThongBao(player, "Bạn đã nhận được quả trứng");
-            }else if (Util.isTrue(10, 100)) {
+            } else if (Util.isTrue(10, 100)) {
                 int totalgold = Util.nextInt(1, 10);
                 ItemMap it = new ItemMap(zone, 457, totalgold, player.location.x, player.location.y, player.id);
                 list.add(it);
