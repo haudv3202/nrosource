@@ -970,7 +970,7 @@ public class NpcFactory {
                     if (this.mapId == 5) {
                         this.createOtherMenu(player, ConstNpc.BASE_MENU,
                                 "Ngươi muốn gì ở ta?",
-                                "SHOP VIP", "ĐỔI TIỀN\nMẶT","Đóng");
+                                "SHOP VIP", "ĐỔI TIỀN\nMẶT", "Đóng");
                     }
                 }
             }
@@ -979,15 +979,44 @@ public class NpcFactory {
             public void confirmMenu(Player player, int select) {
                 if (canOpenNpc(player)) {
                     if (this.mapId == 5) {
-                        switch (select) {
-                            case 0:
-                                ShopServiceNew.gI().opendShop(player, "GOKUROSE", false);
-                                break;
+                        if (player.iDMark.isBaseMenu() && this.mapId == 5) {
+                            switch (select) {
+                                case 0:
+                                    ShopServiceNew.gI().opendShop(player, "GOKUROSE", false);
+                                    break;
 
-                            case 1:
-                                Service.gI().sendThongBao(player, "Đang phát triển");
-                                break;
+                                case 1:
+                                    this.createOtherMenu(player, 1,
+                                            "Rất tán dương tinh thần cày cuốc của con\nCon đã thu thập đủ vật phẩm ta cần chưa\n Ta sẽ trả lương cho con <3",
+                                            "Đổi coin Bạc", "Đổi coin Vàng", "Đổi coin Đỏ", "Đổi coin\n Bạch Kim", "Đóng");
+                                    break;
+                            }
+                        } else if (player.iDMark.getIndexMenu() == 1) {
+                            switch (select) {
+                                case 0:
+                                    this.createOtherMenu(player, 2,
+                                            "Tỉ lệ quy đổi như sau \n 1000 coin bạc => 100 coin vàng\n 10000 coin bạc => 1000 coin vàng \n 100000 coin bạc => 10000 coin vàng",
+                                            "100 coin vàng", "1000 coin vàng", "10000 coin vàng", "Đóng");
+                                    break;
+
+                                case 1:
+                                    this.createOtherMenu(player, 3,
+                                            "Tỉ lệ quy đổi như sau \n 1000 coin vàng => 50 coin Đỏ\n 10000 coin Vàng => 500 coin Đỏ \n 100000 coin vàng => 5000 coin đỏ",
+                                            "50 coin đỏ", "500 coin đỏ", "5000 coin đỏ", "Đóng");
+                                    break;
+                                case 2:
+                                    this.createOtherMenu(player, 4,
+                                            "Tỉ lệ quy đổi như sau \n 1200 coin đỏ => 30 coin bạch kim\n 12000 coin đỏ => 300 coin bạch kim \n 120000 coin đỏ => 3000 coin bạch kim\n 100 coin bạch kim => 40 thỏi vàng\n 500 coin bạch kim => 200 thỏi vàng",
+                                            "30 coin bạch kim", "300 coin bạch kim", "3000 coin bạch kim", "40 thỏi vàng","200 thỏi vàng", "Đóng");
+                                    break;
+                                case 3:
+                                    this.createOtherMenu(player, 5,
+                                            "Tỉ lệ quy đổi như sau \n 100 coin bạch kim => 10k VND\n 500 coin bạch kim => 50k VND \n 1000 coin bạch kim => 100k VND",
+                                            "10k VND", "50k VND","100k VND", "Đóng");
+                                    break;
+                            }
                         }
+
                     }
                 }
             }

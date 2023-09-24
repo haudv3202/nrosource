@@ -273,11 +273,11 @@ public class BossManager implements Runnable {
 //        if (!player.isAdmin()) {
 //            return;
 //        }
-        Message msg;
+      Message msg;
         try {
             msg = new Message(-96);
             msg.writer().writeByte(0);
-            msg.writer().writeUTF("Danh Sách Boss");
+            msg.writer().writeUTF("Boss");
             msg.writer().writeByte((int) bosses.stream().filter(boss -> !MapService.gI().isMapMaBu(boss.data[0].getMapJoin()[0]) && !MapService.gI().isMapBlackBallWar(boss.data[0].getMapJoin()[0])).count());
             for (int i = 0; i < bosses.size(); i++) {
                 Boss boss = this.bosses.get(i);
@@ -285,7 +285,7 @@ public class BossManager implements Runnable {
                     continue;
                 }
                 msg.writer().writeInt(i);
-                msg.writer().writeInt(0);
+                msg.writer().writeInt(i);
                 msg.writer().writeShort(boss.data[0].getOutfit()[0]);
                 if (player.getSession().version > 214) {
                     msg.writer().writeShort(-1);
@@ -294,11 +294,11 @@ public class BossManager implements Runnable {
                 msg.writer().writeShort(boss.data[0].getOutfit()[2]);
                 msg.writer().writeUTF(boss.data[0].getName());
                 if (boss.zone != null) {
-                    msg.writer().writeUTF("On");
+                    msg.writer().writeUTF("Sống");
                     msg.writer().writeUTF(boss.zone.map.mapName + "(" + boss.zone.map.mapId + ") khu " + boss.zone.zoneId + "");
                 } else {
-                    msg.writer().writeUTF("Off");
-                    msg.writer().writeUTF("Chưa có thông tin !");
+                    msg.writer().writeUTF("Chết");
+                    msg.writer().writeUTF("Chết rồi");
                 }
             }
             player.sendMessage(msg);

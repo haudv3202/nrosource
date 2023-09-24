@@ -2306,7 +2306,7 @@ public class Mob {
 //            if (Util.nextInt(0,1) < 1){
 //            list.add(new ItemMap(zone, 1248, 1, x, player.location.y, player.id));
 //        }
-        if (this.zone.map.mapId == 70) {
+        if (this.zone.map.mapId == 212) {
             if (Util.isTrue(2, 50)) {
                 ItemMap it = new ItemMap(zone, 568, 1, player.location.x, player.location.y, player.id);
                 list.add(it);

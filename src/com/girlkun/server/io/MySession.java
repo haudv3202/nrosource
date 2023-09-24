@@ -67,7 +67,7 @@ public class MySession extends Session {
         super(socket);
         this.isRIcon = false;
         Logger.success(
-                "PLAYER LOGIN THÀNH CÔNG: " + socket.getPort() + "___ IP: " + ipAddress + "___VÀO GAME: " + actived + "\n");
+                "PLAYER LOGIN THÀNH CÔNG: " + socket.getPort() + " VÀO GAME: " + actived + "\n");
     }
 
     public void initItemsReward() {
