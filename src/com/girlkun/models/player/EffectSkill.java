@@ -5,7 +5,6 @@ import com.girlkun.services.EffectSkillService;
 import com.girlkun.services.ItemTimeService;
 import com.girlkun.utils.Util;
 
-
 public class EffectSkill {
 
     private Player player;
@@ -13,21 +12,21 @@ public class EffectSkill {
     public boolean isBang;
     public long lastTimeHoaBang;
     public int timeBang;
-    
+
     //Cải trang Dracula hóa đá
     public boolean isDa;
     public long lastTimeHoaDa;
     public int timeDa;
-    
+
     //Cải trang Thỏ Đại Ca
     public boolean isCarot;
     public long lastTimeHoaCarot;
     public int timeCarot;
-    
+
     public boolean isBinh;
     public long lastTimeHoaBinh;
     public int timeBinh;
-    
+
     //thái dương hạ san
     public boolean isStun;
     public long lastTimeStartStun;
@@ -37,7 +36,7 @@ public class EffectSkill {
     public boolean isShielding;
     public long lastTimeShieldUp;
     public int timeShield;
-    
+
     //biến khỉ
     public boolean isMonkey;
     public byte levelMonkey;
@@ -57,13 +56,14 @@ public class EffectSkill {
     public long lastTimeThoiMien;
     public int timeThoiMien;
 
-    
-      //QCKK
+    //QCKK
     public boolean isQCKK;
     public long lastTimeQCKK;
     public int timeQCKK;
-    
-    
+
+    public boolean isTUSAT;
+    public long lastTimeTUSAT;
+    public int timeTUSAT;
     //trói
     public boolean useTroi;
     public boolean anTroi;
@@ -108,8 +108,12 @@ public class EffectSkill {
         if (isThoiMien) {
             EffectSkillService.gI().removeThoiMien(this.player);
         }
-        
-          if (isQCKK) {
+
+        if (isQCKK) {
+            EffectSkillService.gI().removeThoiMien(this.player);
+        }
+
+        if (isTUSAT) {
             EffectSkillService.gI().removeThoiMien(this.player);
         }
         if (isBlindDCTT) {
@@ -141,8 +145,12 @@ public class EffectSkill {
         if (isThoiMien && (Util.canDoWithTime(lastTimeThoiMien, timeThoiMien))) {
             EffectSkillService.gI().removeThoiMien(this.player);
         }
+
+        if (isQCKK && (Util.canDoWithTime(lastTimeQCKK, timeQCKK))) {
+            EffectSkillService.gI().removeThoiMien(this.player);
+        }
         
-         if (isQCKK && (Util.canDoWithTime(lastTimeQCKK, timeQCKK))) {
+        if (isTUSAT && (Util.canDoWithTime(lastTimeTUSAT, timeTUSAT))) {
             EffectSkillService.gI().removeThoiMien(this.player);
         }
         if (isBlindDCTT && (Util.canDoWithTime(lastTimeBlindDCTT, timeBlindDCTT))) {
@@ -151,14 +159,14 @@ public class EffectSkill {
         if (isSocola && (Util.canDoWithTime(lastTimeSocola, timeSocola))) {
             EffectSkillService.gI().removeSocola(this.player);
         }
-        if (isBang && (Util.canDoWithTime(lastTimeHoaBang, 5000)) ) {
-              EffectSkillService.gI().removeBang(this.player);
+        if (isBang && (Util.canDoWithTime(lastTimeHoaBang, 5000))) {
+            EffectSkillService.gI().removeBang(this.player);
         }
-        if (isDa && (Util.canDoWithTime(lastTimeHoaDa, 5000)) ) {
-              EffectSkillService.gI().removeDa(this.player);
+        if (isDa && (Util.canDoWithTime(lastTimeHoaDa, 5000))) {
+            EffectSkillService.gI().removeDa(this.player);
         }
-        if (isCarot && (Util.canDoWithTime(lastTimeHoaCarot, 30000)) ) {
-              EffectSkillService.gI().removeCarot(this.player);
+        if (isCarot && (Util.canDoWithTime(lastTimeHoaCarot, 30000))) {
+            EffectSkillService.gI().removeCarot(this.player);
         }
         if (tiLeHPHuytSao != 0 && Util.canDoWithTime(lastTimeHuytSao, 30000)) {
             EffectSkillService.gI().removeHuytSao(this.player);
@@ -166,10 +174,10 @@ public class EffectSkill {
     }
 
     public boolean isHaveEffectSkill() {
-        return isStun || isBlindDCTT || anTroi || isThoiMien || isQCKK || isBang;
+        return isStun || isBlindDCTT || anTroi || isThoiMien || isQCKK || isTUSAT || isBang;
     }
-    
-    public void dispose(){
+
+    public void dispose() {
         this.player = null;
     }
 }

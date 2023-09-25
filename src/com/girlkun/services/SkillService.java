@@ -68,7 +68,6 @@ public class SkillService {
         }
         switch (player.playerSkill.skillSelect.template.type) {
             case 1:
-//                System.out.println("type" + player.playerSkill.skillSelect.template.type);
 //                System.out.println("Using attack skill");
                 useSkillAttack(player, plTarget, mobTarget);
 // Service.gI().releaseCooldownSkill(player);
@@ -79,6 +78,7 @@ public class SkillService {
                 useSkillAlone(player);
                 break;
             case 4:
+                
 //                System.out.println("type" + player.playerSkill.skillSelect.template.type);
 //                System.out.println("Using special skill");
                 userSkillSpecial(player, message);
@@ -648,6 +648,7 @@ public class SkillService {
                 break;
 
             case Skill.SUPER_KAME:
+                
 //                    this.affterUseSkill(player, timeHold);userSkillSpecial()
                 break;
         }
