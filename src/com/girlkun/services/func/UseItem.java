@@ -190,7 +190,7 @@ public class UseItem {
         if (item.template.strRequire <= pl.nPoint.power) {
             switch (item.template.type) {
                 case 33:
-                    UseCard(pl,item);
+                    UseCard(pl, item);
                     break;
 //                case 27:
 //                    switch (item.template.id) {
@@ -225,7 +225,7 @@ public class UseItem {
                 case 12: //ngọc rồng các loại
                     controllerCallRongThan(pl, item);
                     break;
-                    
+
                 case 23: //thú cưỡi mới
                 case 24: //thú cưỡi cũ
                     InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
@@ -247,14 +247,14 @@ public class UseItem {
                     switch (item.template.id) {
                         case 457:
                             if (pl.inventory.gold + 500000000 > Inventory.LIMIT_GOLD) {
-                Service.getInstance().sendThongBao(pl, "Vàng sau khi bán vượt quá giới hạn");
-                return;
-            } else {
-                            pl.inventory.gold += 500000000;
-                            Service.getInstance().sendMoney(pl);
-                            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-                            InventoryServiceNew.gI().sendItemBags(pl);
-                            break;
+                                Service.getInstance().sendThongBao(pl, "Vàng sau khi bán vượt quá giới hạn");
+                                return;
+                            } else {
+                                pl.inventory.gold += 500000000;
+                                Service.getInstance().sendMoney(pl);
+                                InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+                                InventoryServiceNew.gI().sendItemBags(pl);
+                                break;
                             }
                         case 992:
                             pl.type = 1;
@@ -303,17 +303,17 @@ public class UseItem {
                             break;
                         case 1311: // Gà 9 cựa
                             InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
-                            PetService.Pet2(pl, 1419	,1420	,1421);
+                            PetService.Pet2(pl, 1419, 1420, 1421);
                             Service.gI().point(pl);
                             break;
                         case 1312: // Ngựa 9 hồng mao
                             InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
-                            PetService.Pet2(pl, 1422	,1423	,1424);
+                            PetService.Pet2(pl, 1422, 1423, 1424);
                             Service.gI().point(pl);
                             break;
                         case 1313: // Voi 9 ngà
                             InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
-                            PetService.Pet2(pl, 1425,1426,1427);
+                            PetService.Pet2(pl, 1425, 1426, 1427);
                             Service.gI().point(pl);
                             break;
                         case 1416: // Pet Minions
@@ -321,36 +321,51 @@ public class UseItem {
                             PetService.Pet2(pl, 1254, 1255, 1256);
                             Service.gI().point(pl);
                             break;
-                         case 1224: // Pet búp bê
+                        case 1224: // Pet búp bê
                             InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
-                            PetService.Pet2(pl, 934,	935,	936);
+                            PetService.Pet2(pl, 934, 935, 936);
                             Service.gI().point(pl);
                             break;
-                         case 1225: // Pet ma chơi
+                        case 1225: // Pet ma chơi
                             InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
-                            PetService.Pet2(pl, 897,	898,	899);
+                            PetService.Pet2(pl, 897, 898, 899);
                             Service.gI().point(pl);
-                            break;  
+                            break;
                         case 1226: // Pet bí ma vương
                             InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
-                            PetService.Pet2(pl, 894,	895,	896);
+                            PetService.Pet2(pl, 894, 895, 896);
                             Service.gI().point(pl);
-                            break;    
+                            break;
+                        case 1974: // Pet bí ma vương
+                            InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
+                            PetService.Pet2(pl, 1422, 1423, 1424);
+                            Service.gI().point(pl);
+                            break;
+                        case 1973: // Pet bí ma vương
+                            InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
+                            PetService.Pet2(pl, 1419, 1420, 1421);
+                            Service.gI().point(pl);
+                            break;
+                        case 1975: // Pet bí ma vương
+                            InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
+                            PetService.Pet2(pl, 1425, 1426, 1427);
+                            Service.gI().point(pl);
+                            break;
                         case 1227: // Pet hồn ma
                             InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
-                            PetService.Pet2(pl, 891,	892,	893);
+                            PetService.Pet2(pl, 891, 892, 893);
                             Service.gI().point(pl);
                             break;
                         case 1228: // Pet hồn ma
                             InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
-                            PetService.Pet2(pl, 1158,	1159,	1160);
+                            PetService.Pet2(pl, 1158, 1159, 1160);
                             Service.gI().point(pl);
-                            break; 
+                            break;
                         case 1223: // Pet hồn ma
                             InventoryServiceNew.gI().itemBagToBody(pl, indexBag);
-                            PetService.Pet2(pl, 1280,	1281,	1282);
+                            PetService.Pet2(pl, 1280, 1281, 1282);
                             Service.gI().point(pl);
-                            break;     
+                            break;
                         case 1177:
                             if (pl.lastTimeTitle1 == 0) {
                                 pl.lastTimeTitle1 += System.currentTimeMillis() + (1000 * 60 * 60 * 24 * 3);
@@ -396,7 +411,7 @@ public class UseItem {
                             Openhopct(pl, item);
                             break;
                         case 1998://hop qua leo 
-                             Openhopflagbag(pl, item);
+                            Openhopflagbag(pl, item);
                             break;
                         case 1999://hop qua linh thú
                             Openhoppet(pl, item);
@@ -406,13 +421,13 @@ public class UseItem {
                             break;
                         case 2152://hop qua pet
                             tuicaitrang(pl, item);
-                            break;    
+                            break;
                         case 2146://túi ngọc đỏ
                             tuingoc(pl, item);
                             break;
                         case 2147://hòm kho báu
                             hombau(pl, item);
-                            break;    
+                            break;
                         case 1197://hop qua ca
                             Openhopca(pl, item);
                             break;
@@ -422,54 +437,54 @@ public class UseItem {
                         case 1255:
                             ItemService.gI().openHopQuaHeTHUONG(pl, item);
                             break;
-                        case 1256 : 
-                            randomcthit(pl,item);
+                        case 1256:
+                            randomcthit(pl, item);
                             break;
-                        case 1257 : 
-                            randomcthp(pl,item);
+                        case 1257:
+                            randomcthp(pl, item);
                             break;
-                        case 1258 : 
-                            randomcode(pl,item);
-                            break;                            
-                        case 1267 : 
-                            AHDtd(pl,item);
-                            break;                            
-                        case 1268 :
-                            QHDtd(pl,item);
+                        case 1258:
+                            randomcode(pl, item);
                             break;
-                        case 1269 : 
-                            AHDnm(pl,item);
+                        case 1267:
+                            AHDtd(pl, item);
                             break;
-                        case 1270 : 
-                            QHDnm(pl,item);
-                            break;                            
-                        case 1271 :
-                            AHDxd(pl,item);
-                            break;                            
-                        case 1272 :
-                            QHDxd(pl,item);
-                            break;                            
-                        case 1273 :
-                            NHD(pl,item);
-                            break;                         
-                        case 1274 : 
-                            GHDtd(pl,item);
-                            break;                            
-                        case 1275 :
-                            JHDtd(pl,item);
+                        case 1268:
+                            QHDtd(pl, item);
                             break;
-                        case 1276 : 
-                            GHDnm(pl,item);
+                        case 1269:
+                            AHDnm(pl, item);
                             break;
-                        case 1277 : 
-                            JHDnm(pl,item);
-                            break;                            
-                        case 1278 :
-                            GHDxd(pl,item);
-                            break;                            
-                        case 1279  :
-                            JHDxd(pl,item);
-                            break;                            
+                        case 1270:
+                            QHDnm(pl, item);
+                            break;
+                        case 1271:
+                            AHDxd(pl, item);
+                            break;
+                        case 1272:
+                            QHDxd(pl, item);
+                            break;
+                        case 1273:
+                            NHD(pl, item);
+                            break;
+                        case 1274:
+                            GHDtd(pl, item);
+                            break;
+                        case 1275:
+                            JHDtd(pl, item);
+                            break;
+                        case 1276:
+                            GHDnm(pl, item);
+                            break;
+                        case 1277:
+                            JHDnm(pl, item);
+                            break;
+                        case 1278:
+                            GHDxd(pl, item);
+                            break;
+                        case 1279:
+                            JHDxd(pl, item);
+                            break;
                         case 342:
                         case 343:
                         case 344:
@@ -514,15 +529,17 @@ public class UseItem {
                         case 1130:
                             openDaNangCap(pl, item);
                             break;
-                        case 1131 : ChangeSkill2_3(pl,item);
+                        case 1131:
+                            ChangeSkill2_3(pl, item);
                             break;
-                        case 1979 : changeskill4(pl,item);
+                        case 1979:
+                            changeskill4(pl, item);
                             break;
                         case 1236:
                             openManhTS(pl, item);
                             break;
                         case 570:
-                            openWoodChest(pl,item);
+                            openWoodChest(pl, item);
                             break;
                         case 521: //tdlt
                             useTDLT(pl, item);
@@ -532,7 +549,7 @@ public class UseItem {
                             break;
                         case 2132: //bông tai c2
                             pl.fusion.isBTC2 = item.template.id == 2132;
-                            UseItem.gI().usePorata2(pl);                           
+                            UseItem.gI().usePorata2(pl);
                             break;
                         case 2129: //bông tai c3
                             UseItem.gI().usePorata3(pl);
@@ -542,7 +559,7 @@ public class UseItem {
                             break;
                         case 2131: //bông tai c5
                             UseItem.gI().usePorata5(pl);
-                            break;    
+                            break;
                         case 193: //gói 10 viên capsule
                             InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
                         case 194: //capsule đặc biệt
@@ -551,7 +568,7 @@ public class UseItem {
                         case 401: //đổi đệ tử
                             changePet(pl, item);
                             break;
-                            case 574:
+                        case 574:
                             UseItem.gI().useruonggioto(pl);
                             break;
                         case 1108: //đổi đệ tử
@@ -590,16 +607,16 @@ public class UseItem {
                             } else {
                                 InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
                                 Item PET = ItemService.gI().createNewItem((short) Util.nextInt(1311, 1313));
-                                PET.itemOptions.add(new Item.ItemOption(50, Util.nextInt(5,20)));
-                                PET.itemOptions.add(new Item.ItemOption(77, Util.nextInt(5,20)));
-                                PET.itemOptions.add(new Item.ItemOption(103, Util.nextInt(5,20)));
+                                PET.itemOptions.add(new Item.ItemOption(50, Util.nextInt(5, 20)));
+                                PET.itemOptions.add(new Item.ItemOption(77, Util.nextInt(5, 20)));
+                                PET.itemOptions.add(new Item.ItemOption(103, Util.nextInt(5, 20)));
                                 InventoryServiceNew.gI().addItemBag(pl, PET);
                                 InventoryServiceNew.gI().sendItemBags(pl);
                                 Service.getInstance().sendThongBao(pl, "Chúc mừng bạn nhận được  " + PET.template.name);
                             }
                         }
                         break;
-                                
+
                         case 2028: {
                             if (InventoryServiceNew.gI().getCountEmptyBag(pl) == 0) {
                                 Service.getInstance().sendThongBao(pl, "Hành trang không đủ chỗ trống");
@@ -679,218 +696,226 @@ public class UseItem {
             Service.getInstance().sendThongBao(player, "Không thể thực hiện");
         }
     }
+
     private void Openhopct(Player pl, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdct = new int[]{1290,1291,1281,1302,1282,1296,1297,1298,1295,1301,1300,1307,1306,1308,1309,1310};
-    int[] rdop = new int[]{5, 14, 94, 108, 97};
-    int randomct = new Random().nextInt(rdct.length);
-    int randomop = new Random().nextInt(rdop.length);
-    Item ct = ItemService.gI().createNewItem((short) rdct[randomct]);
-    Item vt = ItemService.gI().createNewItem((short) Util.nextInt(342, 345));
-        if (id <= 90){           
-            ct.itemOptions.add(new Item.ItemOption(50, Util.nextInt(25, 30)));
-            ct.itemOptions.add(new Item.ItemOption(77, Util.nextInt(25, 30)));
-            ct.itemOptions.add(new Item.ItemOption(103, Util.nextInt(25, 30)));
-            ct.itemOptions.add(new Item.ItemOption(93,Util.nextInt(3, 30)));            
-        } else {                      
-            ct.itemOptions.add(new Item.ItemOption(50, Util.nextInt(25, 30)));
-            ct.itemOptions.add(new Item.ItemOption(77, Util.nextInt(25, 30)));
-            ct.itemOptions.add(new Item.ItemOption(103, Util.nextInt(25, 30)));           
+            int id = Util.nextInt(0, 100);
+            int[] rdct = new int[]{1290, 1291, 1281, 1302, 1282, 1296, 1297, 1298, 1295, 1301, 1300, 1307, 1306, 1308, 1309, 1310};
+            int[] rdop = new int[]{5, 14, 94, 108, 97};
+            int randomct = new Random().nextInt(rdct.length);
+            int randomop = new Random().nextInt(rdop.length);
+            Item ct = ItemService.gI().createNewItem((short) rdct[randomct]);
+            Item vt = ItemService.gI().createNewItem((short) Util.nextInt(342, 345));
+            if (id <= 90) {
+                ct.itemOptions.add(new Item.ItemOption(50, Util.nextInt(25, 30)));
+                ct.itemOptions.add(new Item.ItemOption(77, Util.nextInt(25, 30)));
+                ct.itemOptions.add(new Item.ItemOption(103, Util.nextInt(25, 30)));
+                ct.itemOptions.add(new Item.ItemOption(93, Util.nextInt(3, 30)));
+            } else {
+                ct.itemOptions.add(new Item.ItemOption(50, Util.nextInt(25, 30)));
+                ct.itemOptions.add(new Item.ItemOption(77, Util.nextInt(25, 30)));
+                ct.itemOptions.add(new Item.ItemOption(103, Util.nextInt(25, 30)));
+            }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, ct);
+            InventoryServiceNew.gI().addItemBag(pl, vt);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + ct.template.name + " và " + vt.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, ct);
-        InventoryServiceNew.gI().addItemBag(pl, vt);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + ct.template.name + " và " + vt.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
     }
-    }
+
     private void Openhopflagbag(Player pl, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdfl = new int[]{1330,1331,1332,1333,1334,1335,1336,1337,1338,1339,1340,1341,1342,1343,1344,1345,1346};
-    int[] rdop = new int[]{50, 77, 103};
-    int randomfl = new Random().nextInt(rdfl.length);
-    int randomop = new Random().nextInt(rdop.length);
-    Item fl = ItemService.gI().createNewItem((short) rdfl[randomfl]);
-    Item vt = ItemService.gI().createNewItem((short) Util.nextInt(342, 345));
-        if (id <= 90){           
-            fl.itemOptions.add(new Item.ItemOption(rdop[randomop], Util.nextInt(5, 15)));           
-            fl.itemOptions.add(new Item.ItemOption(93,Util.nextInt(3, 30)));            
-        } else {                      
-            fl.itemOptions.add(new Item.ItemOption(rdop[randomop], Util.nextInt(5, 15)));       
+            int id = Util.nextInt(0, 100);
+            int[] rdfl = new int[]{1330, 1331, 1332, 1333, 1334, 1335, 1336, 1337, 1338, 1339, 1340, 1341, 1342, 1343, 1344, 1345, 1346};
+            int[] rdop = new int[]{50, 77, 103};
+            int randomfl = new Random().nextInt(rdfl.length);
+            int randomop = new Random().nextInt(rdop.length);
+            Item fl = ItemService.gI().createNewItem((short) rdfl[randomfl]);
+            Item vt = ItemService.gI().createNewItem((short) Util.nextInt(342, 345));
+            if (id <= 90) {
+                fl.itemOptions.add(new Item.ItemOption(rdop[randomop], Util.nextInt(5, 15)));
+                fl.itemOptions.add(new Item.ItemOption(93, Util.nextInt(3, 30)));
+            } else {
+                fl.itemOptions.add(new Item.ItemOption(rdop[randomop], Util.nextInt(5, 15)));
+            }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, fl);
+            InventoryServiceNew.gI().addItemBag(pl, vt);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + fl.template.name + " và " + vt.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, fl);
-        InventoryServiceNew.gI().addItemBag(pl, vt);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + fl.template.name+ " và " + vt.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
     }
-    }
+
     private void Openhoppet(Player pl, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdpet = new int[]{1235,1236,1237,1238,1239,1240,1241,1242,1243,1244,1245,1246,1247,1248};
-    int[] rdop = new int[]{50, 77, 103};
-    int randompet = new Random().nextInt(rdpet.length);
-    int randomop = new Random().nextInt(rdop.length);
-    Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
-    Item vt = ItemService.gI().createNewItem((short) Util.nextInt(342, 345));
-        if (id <= 90){           
-            pet.itemOptions.add(new Item.ItemOption(50,13));
-            pet.itemOptions.add(new Item.ItemOption(77,12));
-            pet.itemOptions.add(new Item.ItemOption(103,14));      
-            pet.itemOptions.add(new Item.ItemOption(93,Util.nextInt(3, 15)));
-        } else {                      
-           pet.itemOptions.add(new Item.ItemOption(50,13));
-            pet.itemOptions.add(new Item.ItemOption(77,12));
-            pet.itemOptions.add(new Item.ItemOption(103,14));
-            
+            int id = Util.nextInt(0, 100);
+            int[] rdpet = new int[]{1235, 1236, 1237, 1238, 1239, 1240, 1241, 1242, 1243, 1244, 1245, 1246, 1247, 1248};
+            int[] rdop = new int[]{50, 77, 103};
+            int randompet = new Random().nextInt(rdpet.length);
+            int randomop = new Random().nextInt(rdop.length);
+            Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
+            Item vt = ItemService.gI().createNewItem((short) Util.nextInt(342, 345));
+            if (id <= 90) {
+                pet.itemOptions.add(new Item.ItemOption(50, 13));
+                pet.itemOptions.add(new Item.ItemOption(77, 12));
+                pet.itemOptions.add(new Item.ItemOption(103, 14));
+                pet.itemOptions.add(new Item.ItemOption(93, Util.nextInt(3, 15)));
+            } else {
+                pet.itemOptions.add(new Item.ItemOption(50, 13));
+                pet.itemOptions.add(new Item.ItemOption(77, 12));
+                pet.itemOptions.add(new Item.ItemOption(103, 14));
+
+            }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, pet);
+            InventoryServiceNew.gI().addItemBag(pl, vt);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name + " và " + vt.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, pet);
-        InventoryServiceNew.gI().addItemBag(pl, vt);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name+ " và " + vt.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
     }
-    }
+
     private void Openhoppet1(Player pl, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdpet = new int[]{1223, 1224, 1225, 1226, 1227};
-    int[] rdop = new int[]{50, 77, 103};
-    int randompet = new Random().nextInt(rdpet.length);
-    int randomop = new Random().nextInt(rdop.length);
-    Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
-    Item vt = ItemService.gI().createNewItem((short) Util.nextInt(17,20));
-        if (id <= 90){           
-            pet.itemOptions.add(new Item.ItemOption(50,13));
-            pet.itemOptions.add(new Item.ItemOption(77,12));
-            pet.itemOptions.add(new Item.ItemOption(103,14));      
-            pet.itemOptions.add(new Item.ItemOption(93,Util.nextInt(3, 15)));
-        } else {                      
-           pet.itemOptions.add(new Item.ItemOption(50,13));
-            pet.itemOptions.add(new Item.ItemOption(77,12));
-            pet.itemOptions.add(new Item.ItemOption(103,14));
-            
+            int id = Util.nextInt(0, 100);
+            int[] rdpet = new int[]{1223, 1224, 1225, 1226, 1227};
+            int[] rdop = new int[]{50, 77, 103};
+            int randompet = new Random().nextInt(rdpet.length);
+            int randomop = new Random().nextInt(rdop.length);
+            Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
+            Item vt = ItemService.gI().createNewItem((short) Util.nextInt(17, 20));
+            if (id <= 90) {
+                pet.itemOptions.add(new Item.ItemOption(50, 13));
+                pet.itemOptions.add(new Item.ItemOption(77, 12));
+                pet.itemOptions.add(new Item.ItemOption(103, 14));
+                pet.itemOptions.add(new Item.ItemOption(93, Util.nextInt(3, 15)));
+            } else {
+                pet.itemOptions.add(new Item.ItemOption(50, 13));
+                pet.itemOptions.add(new Item.ItemOption(77, 12));
+                pet.itemOptions.add(new Item.ItemOption(103, 14));
+
+            }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, pet);
+            InventoryServiceNew.gI().addItemBag(pl, vt);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name + " và " + vt.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, pet);
-        InventoryServiceNew.gI().addItemBag(pl, vt);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name+ " và " + vt.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
     }
-  }
+
     private void tuicaitrang(Player pl, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdpet = new int[]{1320, 1321, 1322};
-    int[] rdop = new int[]{50, 77, 103};
-    int randompet = new Random().nextInt(rdpet.length);
-    int randomop = new Random().nextInt(rdop.length);
-    Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
-    Item vt = ItemService.gI().createNewItem((short) Util.nextInt(220,224));
-        if (id <= 90){           
-            pet.itemOptions.add(new Item.ItemOption(50,25));
-            pet.itemOptions.add(new Item.ItemOption(77,22));
-            pet.itemOptions.add(new Item.ItemOption(103,23));      
-            pet.itemOptions.add(new Item.ItemOption(93,Util.nextInt(1, 5)));
-        } else {                      
-           pet.itemOptions.add(new Item.ItemOption(50,25));
-            pet.itemOptions.add(new Item.ItemOption(77,22));
-            pet.itemOptions.add(new Item.ItemOption(103,23));
-            
+            int id = Util.nextInt(0, 100);
+            int[] rdpet = new int[]{1320, 1321, 1322};
+            int[] rdop = new int[]{50, 77, 103};
+            int randompet = new Random().nextInt(rdpet.length);
+            int randomop = new Random().nextInt(rdop.length);
+            Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
+            Item vt = ItemService.gI().createNewItem((short) Util.nextInt(220, 224));
+            if (id <= 90) {
+                pet.itemOptions.add(new Item.ItemOption(50, 25));
+                pet.itemOptions.add(new Item.ItemOption(77, 22));
+                pet.itemOptions.add(new Item.ItemOption(103, 23));
+                pet.itemOptions.add(new Item.ItemOption(93, Util.nextInt(1, 5)));
+            } else {
+                pet.itemOptions.add(new Item.ItemOption(50, 25));
+                pet.itemOptions.add(new Item.ItemOption(77, 22));
+                pet.itemOptions.add(new Item.ItemOption(103, 23));
+
+            }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, pet);
+            InventoryServiceNew.gI().addItemBag(pl, vt);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name + " và " + vt.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, pet);
-        InventoryServiceNew.gI().addItemBag(pl, vt);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name+ " và " + vt.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
     }
-  }
+
     private void tuingoc(Player pl, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdpet = new int[]{77, 861};
-    int[] rdop = new int[]{30};
-    int randompet = new Random().nextInt(rdpet.length);
-    int randomop = new Random().nextInt(rdop.length);
-    Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
-        if (id <= 90){           
-            pet.itemOptions.add(new Item.ItemOption(30,0));
-        } else {                      
-           pet.itemOptions.add(new Item.ItemOption(30,0));
-            
+            int id = Util.nextInt(0, 100);
+            int[] rdpet = new int[]{77, 861};
+            int[] rdop = new int[]{30};
+            int randompet = new Random().nextInt(rdpet.length);
+            int randomop = new Random().nextInt(rdop.length);
+            Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
+            if (id <= 90) {
+                pet.itemOptions.add(new Item.ItemOption(30, 0));
+            } else {
+                pet.itemOptions.add(new Item.ItemOption(30, 0));
+
+            }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, pet);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, pet);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
     }
-    }
+
     private void hombau(Player pl, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdpet = new int[]{76, 188, 189, 190};
-    int[] rdop = new int[]{30};
-    int randompet = new Random().nextInt(rdpet.length);
-    int randomop = new Random().nextInt(rdop.length);
-    Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
-        if (id <= 90){           
-            pet.itemOptions.add(new Item.ItemOption(30,0));
-        } else {                      
-           pet.itemOptions.add(new Item.ItemOption(30,0));
-            
+            int id = Util.nextInt(0, 100);
+            int[] rdpet = new int[]{76, 188, 189, 190};
+            int[] rdop = new int[]{30};
+            int randompet = new Random().nextInt(rdpet.length);
+            int randomop = new Random().nextInt(rdop.length);
+            Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
+            if (id <= 90) {
+                pet.itemOptions.add(new Item.ItemOption(30, 0));
+            } else {
+                pet.itemOptions.add(new Item.ItemOption(30, 0));
+
+            }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, pet);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, pet);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
     }
-    }
+
     private void Openhopca(Player pl, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdpet = new int[]{1155,1156,1157,1158,1159,1160,1161,1162,1145,1146,1143};
-    int[] rdop = new int[]{50, 77, 103};
-    int randompet = new Random().nextInt(rdpet.length);
-    int randomop = new Random().nextInt(rdop.length);
-    Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
-    Item vt = ItemService.gI().createNewItem((short) Util.nextInt(16,17));
-        if (id <= 90){           
-            pet.itemOptions.add(new Item.ItemOption(50,13));
-            pet.itemOptions.add(new Item.ItemOption(77,12));
-            pet.itemOptions.add(new Item.ItemOption(103,14));      
-            pet.itemOptions.add(new Item.ItemOption(93,Util.nextInt(3, 15)));
-        } else {                      
-           pet.itemOptions.add(new Item.ItemOption(50,13));
-            pet.itemOptions.add(new Item.ItemOption(77,12));
-            pet.itemOptions.add(new Item.ItemOption(103,14));
-            
+            int id = Util.nextInt(0, 100);
+            int[] rdpet = new int[]{1155, 1156, 1157, 1158, 1159, 1160, 1161, 1162, 1145, 1146, 1143};
+            int[] rdop = new int[]{50, 77, 103};
+            int randompet = new Random().nextInt(rdpet.length);
+            int randomop = new Random().nextInt(rdop.length);
+            Item pet = ItemService.gI().createNewItem((short) rdpet[randompet]);
+            Item vt = ItemService.gI().createNewItem((short) Util.nextInt(16, 17));
+            if (id <= 90) {
+                pet.itemOptions.add(new Item.ItemOption(50, 13));
+                pet.itemOptions.add(new Item.ItemOption(77, 12));
+                pet.itemOptions.add(new Item.ItemOption(103, 14));
+                pet.itemOptions.add(new Item.ItemOption(93, Util.nextInt(3, 15)));
+            } else {
+                pet.itemOptions.add(new Item.ItemOption(50, 13));
+                pet.itemOptions.add(new Item.ItemOption(77, 12));
+                pet.itemOptions.add(new Item.ItemOption(103, 14));
+
+            }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, pet);
+            InventoryServiceNew.gI().addItemBag(pl, vt);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name + " và " + vt.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, pet);
-        InventoryServiceNew.gI().addItemBag(pl, vt);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + pet.template.name+ " và " + vt.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
     }
-  }
 
     private void changePetBerus(Player player, Item item) {
         if (player.pet != null) {
@@ -939,7 +964,8 @@ public class UseItem {
         InventoryServiceNew.gI().sendItemBags(pl);
         PlayerService.gI().sendCurrentStamina(pl);
     }
-        private void openDaBaoVe(Player player, Item item) {
+
+    private void openDaBaoVe(Player player, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(player) > 0) {
             short[] possibleItems = {987, 987};
             byte selectedIndex = (byte) Util.nextInt(0, possibleItems.length - 2);
@@ -1022,6 +1048,7 @@ public class UseItem {
             Service.gI().sendThongBao(player, "Hàng trang đã đầy");
         }
     }
+
     private void openCSKB(Player pl, Item item) {
         if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
             short[] temp = {76, 188, 189, 190, 381, 382, 383, 384, 385};
@@ -1050,6 +1077,7 @@ public class UseItem {
             Service.getInstance().sendThongBao(pl, "Hàng trang đã đầy");
         }
     }
+
     private void useItemTime(Player pl, Item item) {
         switch (item.template.id) {
             case 753:
@@ -1137,7 +1165,7 @@ public class UseItem {
         if (tempId >= SummonDragon.NGOC_RONG_1_SAO && tempId <= SummonDragon.NGOC_RONG_7_SAO) {
             switch (tempId) {
                 case SummonDragon.NGOC_RONG_1_SAO:
- //               case SummonDragon.NGOC_RONG_2_SAO:
+                    //               case SummonDragon.NGOC_RONG_2_SAO:
 //                case SummonDragon.NGOC_RONG_3_SAO:
                     SummonDragon.gI().openMenuSummonShenron(pl, (byte) (tempId - 13));
                     break;
@@ -1148,7 +1176,6 @@ public class UseItem {
             }
         }
     }
-   
 
     private void learnSkill(Player pl, Item item) {
         Message msg;
@@ -1228,7 +1255,7 @@ public class UseItem {
             }
         }
     }
-    
+
     private void usePorata3(Player pl) {
         if (pl.pet == null || pl.fusion.typeFusion == 4 || pl.fusion.typeFusion == 6 || pl.fusion.typeFusion == 8 || pl.fusion.typeFusion == 12 || pl.fusion.typeFusion == 14) {
             Service.getInstance().sendThongBao(pl, "Không thể thực hiện");
@@ -1274,79 +1301,82 @@ public class UseItem {
             short[] icon = new short[2];
             Item ruonggioto = null;
             for (Item item : player.inventory.itemsBag) {
-                if (item.isNotNullItem() && item.template.id ==  574) {
-                    ruonggioto= item;
+                if (item.isNotNullItem() && item.template.id == 574) {
+                    ruonggioto = item;
                     break;
                 }
             }
-            if (ruonggioto != null){
-            int rd2 = Util.nextInt(0, 100);
-            int rac2 = 60;
-            int ruby2 = 15;
-            int tv2 = 20;
-            int ct2 = 5;          
-            Item item = randomRac2(true);
-            if (rd2 <= rac2){
-                item = randomRac2(true);
-            } else if (rd2 <= rac2 + ruby2){
-                item = hongngocrdv2();
-            } else if (rd2 <= rac2 + ruby2 + tv2) {
-                item = thoivangrdv2(true);
-            } else if (rd2 <= rac2 + ruby2 + tv2 + ct2) {
-                item = caitrangrdv2(true);
-            }
-            icon[0] = ruonggioto.template.iconID;
-            icon[1] = item.template.iconID;
-            InventoryServiceNew.gI().subQuantityItemsBag(player, ruonggioto, 1);
-            InventoryServiceNew.gI().addItemBag(player, item);
-            InventoryServiceNew.gI().sendItemBags(player);
-            Service.getInstance().sendThongBao(player, "Bạn đã nhận được " + item.template.name);
-            CombineServiceNew.gI().sendEffectOpenItem(player, icon[0], icon[1]); 
+            if (ruonggioto != null) {
+                int rd2 = Util.nextInt(0, 100);
+                int rac2 = 60;
+                int ruby2 = 15;
+                int tv2 = 20;
+                int ct2 = 5;
+                Item item = randomRac2(true);
+                if (rd2 <= rac2) {
+                    item = randomRac2(true);
+                } else if (rd2 <= rac2 + ruby2) {
+                    item = hongngocrdv2();
+                } else if (rd2 <= rac2 + ruby2 + tv2) {
+                    item = thoivangrdv2(true);
+                } else if (rd2 <= rac2 + ruby2 + tv2 + ct2) {
+                    item = caitrangrdv2(true);
+                }
+                icon[0] = ruonggioto.template.iconID;
+                icon[1] = item.template.iconID;
+                InventoryServiceNew.gI().subQuantityItemsBag(player, ruonggioto, 1);
+                InventoryServiceNew.gI().addItemBag(player, item);
+                InventoryServiceNew.gI().sendItemBags(player);
+                Service.getInstance().sendThongBao(player, "Bạn đã nhận được " + item.template.name);
+                CombineServiceNew.gI().sendEffectOpenItem(player, icon[0], icon[1]);
             }
         } catch (Exception e) {
             e.printStackTrace();
         }
     }
+
     public Item randomRac2(boolean rating) {
-        short[] rac2 = {1227,1228,1229,1230,1236,1237,1238};
+        short[] rac2 = {1227, 1228, 1229, 1230, 1236, 1237, 1238};
         Item item = ItemService.gI().createNewItem(rac2[Util.nextInt(rac2.length - 1)], 1);
         item.itemOptions.add(new Item.ItemOption(76, 1));//VIP
-        item.itemOptions.add(new Item.ItemOption(77, Util.nextInt(70,100)));//hp 50%
-        item.itemOptions.add(new Item.ItemOption(103, Util.nextInt(70,100)));//ki 50%
-        item.itemOptions.add(new Item.ItemOption(147, Util.nextInt(50,110)));//sd 50%
-        item.itemOptions.add(new Item.ItemOption(101, Util.nextInt(100,160)));//smtn + 500%
+        item.itemOptions.add(new Item.ItemOption(77, Util.nextInt(70, 100)));//hp 50%
+        item.itemOptions.add(new Item.ItemOption(103, Util.nextInt(70, 100)));//ki 50%
+        item.itemOptions.add(new Item.ItemOption(147, Util.nextInt(50, 110)));//sd 50%
+        item.itemOptions.add(new Item.ItemOption(101, Util.nextInt(100, 160)));//smtn + 500%
         item.itemOptions.add(new Item.ItemOption(30, 0)); //k thể gd
         item.itemOptions.add(new Item.ItemOption(106, 0)); //k ảnh hưởng bới cái lạnh
         if (Util.isTrue(995, 1000) && rating) {// tỉ lệ ra hsd
             item.itemOptions.add(new Item.ItemOption(93, Util.nextInt(20) + 1));//hsd
-       }
+        }
         return item;
     }
+
     public Item caitrangrdv2(boolean rating) {
-       short[] ct2 = {1222,1223};
+        short[] ct2 = {1222, 1223};
         Item item = ItemService.gI().createNewItem(ct2[Util.nextInt(ct2.length - 1)], 1);
         item.itemOptions.add(new Item.ItemOption(76, 1));//VIP
-        item.itemOptions.add(new Item.ItemOption(77, Util.nextInt(70,150)));//hp 50%
-        item.itemOptions.add(new Item.ItemOption(103, Util.nextInt(70,120)));//ki 50%
-        item.itemOptions.add(new Item.ItemOption(147, Util.nextInt(80,100)));//sd 50%
-        item.itemOptions.add(new Item.ItemOption(101, Util.nextInt(160,170)));//smtn + 500%
+        item.itemOptions.add(new Item.ItemOption(77, Util.nextInt(70, 150)));//hp 50%
+        item.itemOptions.add(new Item.ItemOption(103, Util.nextInt(70, 120)));//ki 50%
+        item.itemOptions.add(new Item.ItemOption(147, Util.nextInt(80, 100)));//sd 50%
+        item.itemOptions.add(new Item.ItemOption(101, Util.nextInt(160, 170)));//smtn + 500%
         item.itemOptions.add(new Item.ItemOption(106, 0)); //k ảnh hưởng bới cái lạnh
         if (Util.isTrue(1, 2) && rating) {// tỉ lệ ra hsd
             item.itemOptions.add(new Item.ItemOption(93, Util.nextInt(50) + 1));//hsd
         }
         return item;
     }
+
     public Item hongngocrdv2() {
-        Item item = ItemService.gI().createNewItem((short)861);
-        item.quantity = Util.nextInt(1000,1500);
+        Item item = ItemService.gI().createNewItem((short) 861);
+        item.quantity = Util.nextInt(1000, 1500);
         return item;
     }
-    public Item thoivangrdv2(boolean rating) {
-         short[] thoivangrdv2 = {14,15,16,17,18,19,20};
-        Item item = ItemService.gI().createNewItem(thoivangrdv2[Util.nextInt(thoivangrdv2.length - 1)],30 );
-       return item;
-        }
 
+    public Item thoivangrdv2(boolean rating) {
+        short[] thoivangrdv2 = {14, 15, 16, 17, 18, 19, 20};
+        Item item = ItemService.gI().createNewItem(thoivangrdv2[Util.nextInt(thoivangrdv2.length - 1)], 30);
+        return item;
+    }
 
     private void openCapsuleUI(Player pl) {
         pl.iDMark.setTypeChangeMap(ConstMap.CHANGE_CAPSULE);
@@ -1465,7 +1495,7 @@ public class UseItem {
                     } else {
                         Service.getInstance().sendThongBao(pl, "Không thể thực hiện");
                     }
-                    break;    
+                    break;
 
             }
 
@@ -1485,57 +1515,58 @@ public class UseItem {
     private void Hopts(Player pl, Item item) {//hop qua do huy diet
         NpcService.gI().createMenuConMeo(pl, item.template.id, -1, "Chọn hành tinh của mày đi", "Set trái đất", "Set namec", "Set xayda", "Từ chổi");
     }
-     private void openWoodChest(Player pl, Item item) {
+
+    private void openWoodChest(Player pl, Item item) {
         int time = (int) TimeUtil.diffDate(new Date(), new Date(item.createTime), TimeUtil.DAY);
         if (time != 0) {
             Item itemReward = null;
             int param = item.itemOptions.size();
             int gold = 0;
-        int[] listItem = {441, 442, 443, 444, 445, 446, 447, 220, 221, 222, 223, 224, 225};
-        int[] listClothesReward;
-        int[] listItemReward;
-        String text = "Bạn nhận được\n";
-        if (param < 8) {
-            gold = 100000 * param;
-            listClothesReward = new int[]{randClothes(param)};
-            listItemReward = Util.pickNRandInArr(listItem, 3);
-        } else if (param < 10) {
-            gold = 250000 * param;
-            listClothesReward = new int[]{randClothes(param), randClothes(param)};
-            listItemReward = Util.pickNRandInArr(listItem, 4);
-        } else {
-            gold = 500000 * param;
-            listClothesReward = new int[]{randClothes(param), randClothes(param), randClothes(param)};
-            listItemReward = Util.pickNRandInArr(listItem, 5);
-            int ruby = Util.nextInt(1, 5);
-            pl.inventory.ruby += ruby;
-            pl.textRuongGo.add(text + "|1| " + ruby + " Hồng Ngọc");
-        }
-        for (int i : listClothesReward) {
-            itemReward = ItemService.gI().createNewItem((short) i);
-            RewardService.gI().initBaseOptionClothes(itemReward.template.id, itemReward.template.type, itemReward.itemOptions);
-            RewardService.gI().initStarOption(itemReward, new RewardService.RatioStar[]{new RewardService.RatioStar((byte) 1, 1, 2), new RewardService.RatioStar((byte) 2, 1, 3), new RewardService.RatioStar((byte) 3, 1, 4), new RewardService.RatioStar((byte) 4, 1, 5),});
-            InventoryServiceNew.gI().addItemBag(pl, itemReward);
-            pl.textRuongGo.add(text + itemReward.getInfoItem());
-        }
-        for (int i : listItemReward) {
-            itemReward = ItemService.gI().createNewItem((short) i);
-            RewardService.gI().initBaseOptionSaoPhaLe(itemReward);
-            itemReward.quantity = Util.nextInt(1, 5);
-            InventoryServiceNew.gI().addItemBag(pl, itemReward);
-            pl.textRuongGo.add(text + itemReward.getInfoItem());
-        }
-        if (param == 11) {
-            itemReward = ItemService.gI().createNewItem((short) 0);
-            itemReward.quantity = Util.nextInt(1, 3);
-            InventoryServiceNew.gI().addItemBag(pl, itemReward);
-            pl.textRuongGo.add(text + itemReward.getInfoItem());
-        }
-        NpcService.gI().createMenuConMeo(pl, ConstNpc.RUONG_GO, -1, "Bạn nhận được\n|1|+" + Util.numberToMoney(gold) + " vàng", "OK [" + pl.textRuongGo.size() + "]");
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        pl.inventory.addGold(gold);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        PlayerService.gI().sendInfoHpMpMoney(pl);
+            int[] listItem = {441, 442, 443, 444, 445, 446, 447, 220, 221, 222, 223, 224, 225};
+            int[] listClothesReward;
+            int[] listItemReward;
+            String text = "Bạn nhận được\n";
+            if (param < 8) {
+                gold = 100000 * param;
+                listClothesReward = new int[]{randClothes(param)};
+                listItemReward = Util.pickNRandInArr(listItem, 3);
+            } else if (param < 10) {
+                gold = 250000 * param;
+                listClothesReward = new int[]{randClothes(param), randClothes(param)};
+                listItemReward = Util.pickNRandInArr(listItem, 4);
+            } else {
+                gold = 500000 * param;
+                listClothesReward = new int[]{randClothes(param), randClothes(param), randClothes(param)};
+                listItemReward = Util.pickNRandInArr(listItem, 5);
+                int ruby = Util.nextInt(1, 5);
+                pl.inventory.ruby += ruby;
+                pl.textRuongGo.add(text + "|1| " + ruby + " Hồng Ngọc");
+            }
+            for (int i : listClothesReward) {
+                itemReward = ItemService.gI().createNewItem((short) i);
+                RewardService.gI().initBaseOptionClothes(itemReward.template.id, itemReward.template.type, itemReward.itemOptions);
+                RewardService.gI().initStarOption(itemReward, new RewardService.RatioStar[]{new RewardService.RatioStar((byte) 1, 1, 2), new RewardService.RatioStar((byte) 2, 1, 3), new RewardService.RatioStar((byte) 3, 1, 4), new RewardService.RatioStar((byte) 4, 1, 5),});
+                InventoryServiceNew.gI().addItemBag(pl, itemReward);
+                pl.textRuongGo.add(text + itemReward.getInfoItem());
+            }
+            for (int i : listItemReward) {
+                itemReward = ItemService.gI().createNewItem((short) i);
+                RewardService.gI().initBaseOptionSaoPhaLe(itemReward);
+                itemReward.quantity = Util.nextInt(1, 5);
+                InventoryServiceNew.gI().addItemBag(pl, itemReward);
+                pl.textRuongGo.add(text + itemReward.getInfoItem());
+            }
+            if (param == 11) {
+                itemReward = ItemService.gI().createNewItem((short) 0);
+                itemReward.quantity = Util.nextInt(1, 3);
+                InventoryServiceNew.gI().addItemBag(pl, itemReward);
+                pl.textRuongGo.add(text + itemReward.getInfoItem());
+            }
+            NpcService.gI().createMenuConMeo(pl, ConstNpc.RUONG_GO, -1, "Bạn nhận được\n|1|+" + Util.numberToMoney(gold) + " vàng", "OK [" + pl.textRuongGo.size() + "]");
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            pl.inventory.addGold(gold);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            PlayerService.gI().sendInfoHpMpMoney(pl);
         } else {
             Service.getInstance().sendThongBao(pl, "Vui lòng đợi 24h");
         }
@@ -1545,388 +1576,407 @@ public class UseItem {
         return LIST_ITEM_CLOTHES[Util.nextInt(0, 2)][Util.nextInt(0, 4)][level - 1];
     }
     public static final int[][][] LIST_ITEM_CLOTHES = {
-            // áo , quần , găng ,giày,rada
-            //td -> nm -> xd
-            {{0, 33, 3, 34, 136, 137, 138, 139, 230, 231, 232, 233, 555}, {6, 35, 9, 36, 140, 141, 142, 143, 242, 243, 244, 245, 556}, {21, 24, 37, 38, 144, 145, 146, 147, 254, 255, 256, 257, 562}, {27, 30, 39, 40, 148, 149, 150, 151, 266, 267, 268, 269, 563}, {12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281, 561}},
-            {{1, 41, 4, 42, 152, 153, 154, 155, 234, 235, 236, 237, 557}, {7, 43, 10, 44, 156, 157, 158, 159, 246, 247, 248, 249, 558}, {22, 46, 25, 45, 160, 161, 162, 163, 258, 259, 260, 261, 564}, {28, 47, 31, 48, 164, 165, 166, 167, 270, 271, 272, 273, 565}, {12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281, 561}},
-            {{2, 49, 5, 50, 168, 169, 170, 171, 238, 239, 240, 241, 559}, {8, 51, 11, 52, 172, 173, 174, 175, 250, 251, 252, 253, 560}, {23, 53, 26, 54, 176, 177, 178, 179, 262, 263, 264, 265, 566}, {29, 55, 32, 56, 180, 181, 182, 183, 274, 275, 276, 277, 567}, {12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281, 561}}
+        // áo , quần , găng ,giày,rada
+        //td -> nm -> xd
+        {{0, 33, 3, 34, 136, 137, 138, 139, 230, 231, 232, 233, 555}, {6, 35, 9, 36, 140, 141, 142, 143, 242, 243, 244, 245, 556}, {21, 24, 37, 38, 144, 145, 146, 147, 254, 255, 256, 257, 562}, {27, 30, 39, 40, 148, 149, 150, 151, 266, 267, 268, 269, 563}, {12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281, 561}},
+        {{1, 41, 4, 42, 152, 153, 154, 155, 234, 235, 236, 237, 557}, {7, 43, 10, 44, 156, 157, 158, 159, 246, 247, 248, 249, 558}, {22, 46, 25, 45, 160, 161, 162, 163, 258, 259, 260, 261, 564}, {28, 47, 31, 48, 164, 165, 166, 167, 270, 271, 272, 273, 565}, {12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281, 561}},
+        {{2, 49, 5, 50, 168, 169, 170, 171, 238, 239, 240, 241, 559}, {8, 51, 11, 52, 172, 173, 174, 175, 250, 251, 252, 253, 560}, {23, 53, 26, 54, 176, 177, 178, 179, 262, 263, 264, 265, 566}, {29, 55, 32, 56, 180, 181, 182, 183, 274, 275, 276, 277, 567}, {12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281, 561}}
     };
 
-   public void UseCard(Player pl, Item item){
+    public void UseCard(Player pl, Item item) {
         RadarCard radarTemplate = RadarService.gI().RADAR_TEMPLATE.stream().filter(c -> c.Id == item.template.id).findFirst().orElse(null);
-        if(radarTemplate == null) return;
-        if (radarTemplate.Require != -1){
-            RadarCard radarRequireTemplate = RadarService.gI().RADAR_TEMPLATE.stream().filter(r -> r.Id == radarTemplate.Require).findFirst().orElse(null); 
-            if(radarRequireTemplate == null) return;
-            Card cardRequire = pl.Cards.stream().filter(r -> r.Id == radarRequireTemplate.Id).findFirst().orElse(null);  
-            if (cardRequire == null || cardRequire.Level < radarTemplate.RequireLevel){
-                Service.gI().sendThongBao(pl,"Bạn cần sưu tầm "+radarRequireTemplate.Name+" ở cấp độ "+radarTemplate.RequireLevel+" mới có thể sử dụng thẻ này");
+        if (radarTemplate == null) {
+            return;
+        }
+        if (radarTemplate.Require != -1) {
+            RadarCard radarRequireTemplate = RadarService.gI().RADAR_TEMPLATE.stream().filter(r -> r.Id == radarTemplate.Require).findFirst().orElse(null);
+            if (radarRequireTemplate == null) {
+                return;
+            }
+            Card cardRequire = pl.Cards.stream().filter(r -> r.Id == radarRequireTemplate.Id).findFirst().orElse(null);
+            if (cardRequire == null || cardRequire.Level < radarTemplate.RequireLevel) {
+                Service.gI().sendThongBao(pl, "Bạn cần sưu tầm " + radarRequireTemplate.Name + " ở cấp độ " + radarTemplate.RequireLevel + " mới có thể sử dụng thẻ này");
                 return;
             }
         }
-        Card card = pl.Cards.stream().filter(r->r.Id == item.template.id).findFirst().orElse(null);
-        if (card == null){
-            Card newCard = new Card(item.template.id,(byte)1,radarTemplate.Max,(byte)-1,radarTemplate.Options);
-            if (pl.Cards.add(newCard)){
-                RadarService.gI().RadarSetAmount(pl,newCard.Id, newCard.Amount, newCard.MaxAmount);
-                RadarService.gI().RadarSetLevel(pl,newCard.Id, newCard.Level);
+        Card card = pl.Cards.stream().filter(r -> r.Id == item.template.id).findFirst().orElse(null);
+        if (card == null) {
+            Card newCard = new Card(item.template.id, (byte) 1, radarTemplate.Max, (byte) -1, radarTemplate.Options);
+            if (pl.Cards.add(newCard)) {
+                RadarService.gI().RadarSetAmount(pl, newCard.Id, newCard.Amount, newCard.MaxAmount);
+                RadarService.gI().RadarSetLevel(pl, newCard.Id, newCard.Level);
                 InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
                 InventoryServiceNew.gI().sendItemBags(pl);
             }
-        }else{
-            if (card.Level >= 2){
-                Service.gI().sendThongBao(pl,"Thẻ này đã đạt cấp tối đa");
+        } else {
+            if (card.Level >= 2) {
+                Service.gI().sendThongBao(pl, "Thẻ này đã đạt cấp tối đa");
                 return;
             }
             card.Amount++;
-            if (card.Amount >= card.MaxAmount){
+            if (card.Amount >= card.MaxAmount) {
                 card.Amount = 0;
-                if (card.Level == -1){
+                if (card.Level == -1) {
                     card.Level = 1;
-                }else {
+                } else {
                     card.Level++;
                 }
                 Service.gI().point(pl);
             }
-            RadarService.gI().RadarSetAmount(pl,card.Id, card.Amount, card.MaxAmount);
-            RadarService.gI().RadarSetLevel(pl,card.Id, card.Level);
+            RadarService.gI().RadarSetAmount(pl, card.Id, card.Amount, card.MaxAmount);
+            RadarService.gI().RadarSetLevel(pl, card.Id, card.Level);
             InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
             InventoryServiceNew.gI().sendItemBags(pl);
         }
     }
-   public void ChangeSkill2_3(Player player , Item item ){
-       if(player.pet == null ){
-           Service.gI().sendThongBao(player, "Mày làm gì có đệ ?");
-       }
-       if(player.pet.playerSkill.skills.get(1).skillId != -1 && player.pet.playerSkill.skills.get(2).skillId != -1){
-           player.pet.openSkill2();
-           player.pet.openSkill3();
-           InventoryServiceNew.gI().subQuantityItem(player.inventory.itemsBag, item, 1);
-           InventoryServiceNew.gI().sendItemBags(player);
-           Service.gI().sendThongBao(player,"Đổi chiêu đệ thành công");
-   }
-       else{
-           Service.gI().sendThongBao(player,"Đéo có chiêu thằng ngu");
-   
-       }}       
-   public void changeskill4(Player player , Item item ){
-       if(player.pet == null ){
-           Service.gI().sendThongBao(player, "Mày làm gì có đệ ?");
-       }
-       if(player.pet.playerSkill.skills.get(3).skillId != -1 && player.pet.playerSkill.skills.get(2).skillId != -1){
-           player.pet.openSkill4();
-           InventoryServiceNew.gI().subQuantityItem(player.inventory.itemsBag, item, 1);
-           InventoryServiceNew.gI().sendItemBags(player);
-           Service.gI().sendThongBao(player,"Đổi chiêu đệ thành công");
-   }
-       else{
-           Service.gI().sendThongBao(player,"Đéo có chiêu thằng ngu");
-           
-      }}
+
+    public void ChangeSkill2_3(Player player, Item item) {
+        if (player.pet == null) {
+            Service.gI().sendThongBao(player, "Mày làm gì có đệ ?");
+        }
+        if (player.pet.playerSkill.skills.get(1).skillId != -1 && player.pet.playerSkill.skills.get(2).skillId != -1) {
+            player.pet.openSkill2();
+            player.pet.openSkill3();
+            InventoryServiceNew.gI().subQuantityItem(player.inventory.itemsBag, item, 1);
+            InventoryServiceNew.gI().sendItemBags(player);
+            Service.gI().sendThongBao(player, "Đổi chiêu đệ thành công");
+        } else {
+            Service.gI().sendThongBao(player, "Đéo có chiêu thằng ngu");
+
+        }
+    }
+
+    public void changeskill4(Player player, Item item) {
+        if (player.pet == null) {
+            Service.gI().sendThongBao(player, "Mày làm gì có đệ ?");
+        }
+        if (player.pet.playerSkill.skills.get(3).skillId != -1 && player.pet.playerSkill.skills.get(2).skillId != -1) {
+            player.pet.openSkill4();
+            InventoryServiceNew.gI().subQuantityItem(player.inventory.itemsBag, item, 1);
+            InventoryServiceNew.gI().sendItemBags(player);
+            Service.gI().sendThongBao(player, "Đổi chiêu đệ thành công");
+        } else {
+            Service.gI().sendThongBao(player, "Đéo có chiêu thằng ngu");
+
+        }
+    }
+
     private void randomcthit(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdct = new int[]{884};
-    int randomct = new Random().nextInt(rdct.length);
-    Item ct = ItemService.gI().createNewItem((short) rdct[randomct]);
-        if (id <= 90){           
-            ct.itemOptions.add(new Item.ItemOption(50, Util.nextInt(1, 10)));                 
-            ct.itemOptions.add(new Item.ItemOption(5, Util.nextInt(40, 90)));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, ct);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + ct.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = Util.nextInt(0, 100);
+            int[] rdct = new int[]{884};
+            int randomct = new Random().nextInt(rdct.length);
+            Item ct = ItemService.gI().createNewItem((short) rdct[randomct]);
+            if (id <= 90) {
+                ct.itemOptions.add(new Item.ItemOption(50, Util.nextInt(1, 10)));
+                ct.itemOptions.add(new Item.ItemOption(5, Util.nextInt(40, 90)));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, ct);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + ct.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
-        private void randomcthp(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdct = new int[]{635};
-    int randomct = new Random().nextInt(rdct.length);
-    Item ct = ItemService.gI().createNewItem((short) rdct[randomct]);
-        if (id <= 90){           
-            ct.itemOptions.add(new Item.ItemOption(77, Util.nextInt(30, 80)));                 
-            ct.itemOptions.add(new Item.ItemOption(103, Util.nextInt(30, 80)));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, ct);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + ct.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+
+    private void randomcthp(Player pl, Item item) {
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = Util.nextInt(0, 100);
+            int[] rdct = new int[]{635};
+            int randomct = new Random().nextInt(rdct.length);
+            Item ct = ItemService.gI().createNewItem((short) rdct[randomct]);
+            if (id <= 90) {
+                ct.itemOptions.add(new Item.ItemOption(77, Util.nextInt(30, 80)));
+                ct.itemOptions.add(new Item.ItemOption(103, Util.nextInt(30, 80)));
             }
-        }        
-        private void randomcode(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = Util.nextInt(0, 100);
-    int[] rdct = new int[]{463};
-    int randomct = new Random().nextInt(rdct.length);
-    Item ct = ItemService.gI().createNewItem((short) rdct[randomct]);
-        if (id <= 90){           
-            ct.itemOptions.add(new Item.ItemOption(50, 50));
-            ct.itemOptions.add(new Item.ItemOption(77, 50));                 
-            ct.itemOptions.add(new Item.ItemOption(103, 50));
-            ct.itemOptions.add(new Item.ItemOption(93, 1));
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, ct);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + ct.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, ct);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + ct.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+    }
+
+    private void randomcode(Player pl, Item item) {
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = Util.nextInt(0, 100);
+            int[] rdct = new int[]{463};
+            int randomct = new Random().nextInt(rdct.length);
+            Item ct = ItemService.gI().createNewItem((short) rdct[randomct]);
+            if (id <= 90) {
+                ct.itemOptions.add(new Item.ItemOption(50, 50));
+                ct.itemOptions.add(new Item.ItemOption(77, 50));
+                ct.itemOptions.add(new Item.ItemOption(103, 50));
+                ct.itemOptions.add(new Item.ItemOption(93, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, ct);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + ct.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
         }
+    }
+
     private void AHDtd(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{650};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(47, Util.nextInt(2400, 2880)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{650};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(47, Util.nextInt(2400, 2880)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void QHDtd(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{651};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(22, Util.nextInt(110, 132)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{651};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(22, Util.nextInt(110, 132)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void GHDtd(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{657};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(0, Util.nextInt(8400, 10600)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{657};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(0, Util.nextInt(8400, 10600)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void JHDtd(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{658};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(23, Util.nextInt(100, 120)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{658};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(23, Util.nextInt(100, 120)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void NHD(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{656};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(14, Util.nextInt(20, 22)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{656};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(14, Util.nextInt(20, 22)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void AHDnm(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{652};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(47, Util.nextInt(2400, 2880)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{652};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(47, Util.nextInt(2400, 2880)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void QHDnm(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{653};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(22, Util.nextInt(100, 120)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{653};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(22, Util.nextInt(100, 120)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void GHDnm(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{659};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(0, Util.nextInt(8200, 10000)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{659};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(0, Util.nextInt(8200, 10000)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void JHDnm(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{660};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(23, Util.nextInt(120, 150)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{660};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(23, Util.nextInt(120, 150)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void AHDxd(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{654};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(47, Util.nextInt(2400, 2880)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{654};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(47, Util.nextInt(2400, 2880)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void QHDxd(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{655};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(22, Util.nextInt(120, 150)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{655};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(22, Util.nextInt(120, 150)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void GHDxd(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{661};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(0, Util.nextInt(9200, 11100)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{661};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(0, Util.nextInt(9200, 11100)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
+
     private void JHDxd(Player pl, Item item) {
-            if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
-    int id = (100);
-    int[] rdhd = new int[]{662};
-    int randomhd = new Random().nextInt(rdhd.length);
-    Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
-        if (id == 100){           
-        hd.itemOptions.add(new Item.ItemOption(23, Util.nextInt(100, 120)));                 
-        hd.itemOptions.add(new Item.ItemOption(21, 60));
-        hd.itemOptions.add(new Item.ItemOption(30, 1));
-        }
-        InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
-        InventoryServiceNew.gI().addItemBag(pl, hd);
-        InventoryServiceNew.gI().sendItemBags(pl);
-        Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
-    } else {
-        Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        if (InventoryServiceNew.gI().getCountEmptyBag(pl) > 0) {
+            int id = (100);
+            int[] rdhd = new int[]{662};
+            int randomhd = new Random().nextInt(rdhd.length);
+            Item hd = ItemService.gI().createNewItem((short) rdhd[randomhd]);
+            if (id == 100) {
+                hd.itemOptions.add(new Item.ItemOption(23, Util.nextInt(100, 120)));
+                hd.itemOptions.add(new Item.ItemOption(21, 60));
+                hd.itemOptions.add(new Item.ItemOption(30, 1));
             }
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+            InventoryServiceNew.gI().addItemBag(pl, hd);
+            InventoryServiceNew.gI().sendItemBags(pl);
+            Service.getInstance().sendThongBao(pl, "Bạn đã nhận được " + hd.template.name);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Bạn phải có ít nhất 1 ô trống trong hành trang.");
+        }
     }
 }
-
-
-
