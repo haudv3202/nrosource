@@ -302,7 +302,9 @@ public class PetService {
         player.pet.dispose();
         player.pet = null;
         createBerusPet(player, gender, limitPower);
-    } public void changePicPet(Player player) {
+    }
+    
+    public void changePicPet(Player player) {
         byte limitPower = player.pet.nPoint.limitPower;
         if (player.fusion.typeFusion != ConstPlayer.NON_FUSION) {
             player.pet.unFusion();

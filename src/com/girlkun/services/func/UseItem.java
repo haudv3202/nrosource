@@ -568,6 +568,18 @@ public class UseItem {
                         case 401: //đổi đệ tử
                             changePet(pl, item);
                             break;
+                        case 1351: //đổi đệ tử
+                            useGiftPet(pl, item);
+//                            int rd = 
+//                            int tileDewhis = 3;
+//                            int ramdomRac = 90;
+//                            int rd = Util.nextInt(1, 100);
+//                            if (rd <= tileDewhis) {
+//                                        useGiftPet(pl, item);
+//                            } else if (rd <= tileDewhis + ramdomRac) {
+//                                   openCSKB(pl, item);
+//                            }
+                            break;
                         case 574:
                             UseItem.gI().useruonggioto(pl);
                             break;
@@ -1160,6 +1172,18 @@ public class UseItem {
         InventoryServiceNew.gI().sendItemBags(pl);
     }
 
+    private void useGiftPet(Player pl, Item item) {
+        if (pl.pet != null) {
+            int gender = pl.pet.gender + 1;
+            if (gender > 2) {
+                gender = 0;
+            }
+            PetService.gI().changeBerusPet(pl, gender);
+            InventoryServiceNew.gI().subQuantityItemsBag(pl, item, 1);
+        } else {
+            Service.getInstance().sendThongBao(pl, "Không thể thực hiện");
+        }
+    }
     private void controllerCallRongThan(Player pl, Item item) {
         int tempId = item.template.id;
         if (tempId >= SummonDragon.NGOC_RONG_1_SAO && tempId <= SummonDragon.NGOC_RONG_7_SAO) {

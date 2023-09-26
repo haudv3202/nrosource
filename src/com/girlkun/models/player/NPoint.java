@@ -1334,9 +1334,13 @@ public class NPoint {
                     percentDameIntrinsic = intrinsic.param1;
                 }
                 percentDameSkill = skillSelect.damage;
-                if (this.player.setClothes.songoku == 5) {
-                    percentXDame = 100;
-                }
+
+                if (this.player.setClothes.songoku == 5 && this.player.setClothes.settl == 5) {
+                    percentXDame = 105;
+//                    System.err.println("check" + "đúng");
+                }else if (this.player.setClothes.songoku == 5) {
+                   percentXDame = 100;
+               }
                 if (player.isPl() || player.isPet) {
                     int dameX42 = player.inventory.getParam(player.inventory.itemsBody.get(5), 159);
                     if (dameX42 > 0) {
@@ -1352,8 +1356,10 @@ public class NPoint {
                     percentDameIntrinsic = intrinsic.param1;
                 }
                 percentDameSkill = skillSelect.damage;
-                if (this.player.setClothes.kakarot == 5) {
-                    percentXDame = 100;
+                if(this.player.setClothes.kakarot == 5 && this.player.setClothes.settl == 5){
+                   percentXDame = 105;
+                }else if (this.player.setClothes.kakarot == 5) {
+                       percentXDame = 100;
                 }
                 break;
             case Skill.ANTOMIC:
@@ -1394,7 +1400,9 @@ public class NPoint {
                 break;
             case Skill.KAIOKEN:
                 percentDameSkill = skillSelect.damage;
-                if (this.player.setClothes.kirin == 5) {
+                if(this.player.setClothes.kirin == 5 && this.player.setClothes.settl == 5){
+                    percentDameSkill *= 2.1;
+                }else if (this.player.setClothes.kirin == 5) {
                     percentDameSkill *= 2;
                 }
                 break;
@@ -1403,7 +1411,9 @@ public class NPoint {
                     percentDameIntrinsic = intrinsic.param1;
                 }
                 percentDameSkill = skillSelect.damage;
-                if (this.player.setClothes.ocTieu == 5) {
+                if(this.player.setClothes.ocTieu == 5 && this.player.setClothes.settl == 5){
+                    percentXDame = 105;
+                }else if (this.player.setClothes.ocTieu == 5) {
                     percentXDame = 100;
                 }
                 break;

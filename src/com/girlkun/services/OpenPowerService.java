@@ -133,102 +133,102 @@ public class OpenPowerService {
                 }
                 return true;
             }
-            if (player.nPoint.power >= 19900000000L && player.nPoint.limitPower < 2) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
-            if (player.nPoint.power >= 24900000000L && player.nPoint.limitPower < 3) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
-            if (player.nPoint.power >= 29900000000L && player.nPoint.limitPower < 4) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
-            if (player.nPoint.power >= 39900000000L && player.nPoint.limitPower < 5) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
-            if (player.nPoint.power >= 50000000000L && player.nPoint.limitPower < 6) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
-            if (player.nPoint.power >= 70000000000L && player.nPoint.limitPower < 7) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
-            if (player.nPoint.power >= 90000000000L && player.nPoint.limitPower < 8) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
-            if (player.nPoint.power >= 120000000000L && player.nPoint.limitPower < 9) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
+//            if (player.nPoint.power >= 19900000000L && player.nPoint.limitPower < 2) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
+//            if (player.nPoint.power >= 24900000000L && player.nPoint.limitPower < 3) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
+//            if (player.nPoint.power >= 29900000000L && player.nPoint.limitPower < 4) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
+//            if (player.nPoint.power >= 39900000000L && player.nPoint.limitPower < 5) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
+//            if (player.nPoint.power >= 50000000000L && player.nPoint.limitPower < 6) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
+//            if (player.nPoint.power >= 70000000000L && player.nPoint.limitPower < 7) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
+//            if (player.nPoint.power >= 90000000000L && player.nPoint.limitPower < 8) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
+//            if (player.nPoint.power >= 120000000000L && player.nPoint.limitPower < 9) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
             if (player.nPoint.power >= 170000000000L && player.nPoint.limitPower < 10) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
@@ -241,42 +241,42 @@ public class OpenPowerService {
                 }
                 return true;
             }
-            if (player.nPoint.power >= 240000000000L && player.nPoint.limitPower < 11) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
-            if (player.nPoint.power >= 270000000000L && player.nPoint.limitPower < 12) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
-            if (player.nPoint.power >= 320000000000L && player.nPoint.limitPower < 13) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
+//            if (player.nPoint.power >= 240000000000L && player.nPoint.limitPower < 11) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
+//            if (player.nPoint.power >= 270000000000L && player.nPoint.limitPower < 12) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
+//            if (player.nPoint.power >= 320000000000L && player.nPoint.limitPower < 13) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
             if (player.nPoint.power >= 360000000000L && player.nPoint.limitPower < 14) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
@@ -313,18 +313,18 @@ public class OpenPowerService {
                 }
                 return true;
             }
-            if (player.nPoint.power >= 670000000000L && player.nPoint.limitPower < 17) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
+//            if (player.nPoint.power >= 670000000000L && player.nPoint.limitPower < 17) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
             if (player.nPoint.power >= 760999999999L && player.nPoint.limitPower < 18) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
@@ -337,18 +337,18 @@ public class OpenPowerService {
                 }
                 return true;
             }
-            if (player.nPoint.power >= 800999999999L && player.nPoint.limitPower < 19) {
-                player.nPoint.limitPower += 1;
-                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
-                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
-                }
-                if (!player.isPet) {
-                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
-                } else {
-                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
-                }
-                return true;
-            }
+//            if (player.nPoint.power >= 800999999999L && player.nPoint.limitPower < 19) {
+//                player.nPoint.limitPower += 1;
+//                if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
+//                    player.nPoint.limitPower = NPoint.MAX_LIMIT;
+//                }
+//                if (!player.isPet) {
+//                    Service.getInstance().sendThongBao(player, "Giới hạn sức mạnh của bạn đã được tăng lên 1 bậc");
+//                } else {
+//                    Service.getInstance().sendThongBao(((Pet) player).master, "Giới hạn sức mạnh của đệ tử đã được tăng lên 1 bậc");
+//                }
+//                return true;
+//            }
             if (player.nPoint.power >= 960999999999L && player.nPoint.limitPower < 20) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {

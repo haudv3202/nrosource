@@ -2,7 +2,6 @@ package com.girlkun.models.player;
 
 import com.girlkun.models.item.Item;
 
-
 public class SetClothes {
 
     private Player player;
@@ -25,9 +24,9 @@ public class SetClothes {
 
     public byte worldcup;
     public byte setDHD;
-    
+
     public byte settl;
-    
+
     public boolean godClothes;
     public int ctHaiTac = -1;
 
@@ -64,9 +63,12 @@ public class SetClothes {
 
             }
         }
+
+//         System.err.println("test" +  settl);
     }
 
     private void setupSKT() {
+
         for (int i = 0; i < 5; i++) {
             Item item = this.player.inventory.itemsBody.get(i);
             if (item.isNotNullItem()) {
@@ -131,7 +133,9 @@ public class SetClothes {
                 }
                 if (item.template.id >= 555 && item.template.id <= 567) {
                     settl++;
-                    break;
+//                    System.err.println("id : "+settl );
+//                     System.err.println("songoku : "+ songoku );
+//                    break;
                 }
             } else {
                 break;
@@ -153,6 +157,7 @@ public class SetClothes {
         this.worldcup = 0;
         this.godClothes = false;
         this.ctHaiTac = -1;
+        this.settl = 0;
     }
 
     public void dispose() {

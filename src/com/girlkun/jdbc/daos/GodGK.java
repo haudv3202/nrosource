@@ -78,7 +78,15 @@ public class GodGK {
                     Service.getInstance().sendThongBaoOK(session, "Tài khoản đã bị khóa!");
                 } else if (baotri && session.isAdmin) {
                     Service.getInstance().sendThongBaoOK(session, "Máy chủ đang bảo trì, vui lòng quay trở lại sau!");
-                } else if (secondsPass1 < Manager.SECOND_WAIT_LOGIN) {
+                } else if (rs.getTimestamp("last_time_login").getTime() > session.lastTimeLogout) {
+                    Player plInGame = Client.gI().getPlayerByUser(session.userId);
+                    if (plInGame != null) {
+                        Client.gI().kickSession(plInGame.getSession());
+                        Service.getInstance().sendThongBaoOK(session, "Ai đó đã vô acc bạn :3");
+                    } else {
+                    }
+//                    Service.getInstance().sendThongBaoOK(session, "Tài khoản đang được đăng nhập tại máy chủ khác");
+                }else if (secondsPass1 < Manager.SECOND_WAIT_LOGIN) {
                     if (secondsPass < secondsPass1) {
                         Service.getInstance().sendThongBaoOK(session, "Vui lòng chờ " + (Manager.SECOND_WAIT_LOGIN - secondsPass) + "s");
                         return null;

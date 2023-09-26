@@ -960,13 +960,41 @@ public class NpcFactory {
             }
         };
     }
+
     ///////////////////////////////////////////NPC Black ró se///////////////////////////////////////////
+    public static Npc trong_tai(int mapId, int status, int cx, int cy, int tempId, int avartar) {
+        return new Npc(mapId, status, cx, cy, tempId, avartar) {
+            @Override
+            public void openBaseMenu(Player player) {
+                if (canOpenNpc(player)) {
+                    if (this.mapId == 233) {
+                        this.createOtherMenu(player, ConstNpc.BASE_MENU,
+                                "Ngươi muốn gì ở ta?",
+                                "Quay về");
+                    }
+                }
+            }
+
+            @Override
+            public void confirmMenu(Player player, int select) {
+                if (canOpenNpc(player)) {
+                    if (this.mapId == 233) {
+                        switch (select) {
+                            case 0:
+                                ChangeMapService.gI().changeMapBySpaceShip(player, 5, -1, 623);
+                                break;
+                        }
+                    }
+                }
+            }
+        };
+    }
 
     public static Npc blackrosegoku(int mapId, int status, int cx, int cy, int tempId, int avartar) {
         return new Npc(mapId, status, cx, cy, tempId, avartar) {
             public void chatWithNpc(Player player) {
                 String[] chat = {
-                   "Thằng nào có tiền",
+                    "Thằng nào có tiền",
                     "Nạp tiền vào donate cho anh",
                     "Ít thì 5 quả trứng",
                     "Nhiều thì 1 tên lửa",
@@ -984,13 +1012,14 @@ public class NpcFactory {
                     }
                 }, 10000, 10000);
             }
+
             @Override
             public void openBaseMenu(Player player) {
                 if (canOpenNpc(player)) {
                     if (this.mapId == 5) {
                         this.createOtherMenu(player, ConstNpc.BASE_MENU,
                                 "Ngươi muốn gì ở ta?",
-                                "SHOP VIP", "ĐỔI TIỀN\nMẶT", "Đóng");
+                                "SHOP VIP", "ĐỔI TIỀN\nMẶT", "Vùng đất hắc hóa", "Đóng");
                     }
                 }
             }
@@ -1009,6 +1038,9 @@ public class NpcFactory {
                                     this.createOtherMenu(player, 1,
                                             "Rất tán dương tinh thần cày cuốc của ngươi\nNgươi đã thu thập đủ vật phẩm ta cần chưa\n Ta sẽ trả lương cho ngươi <3",
                                             "Đổi coin Bạc", "Đổi coin Vàng", "Đổi coin Đỏ", "Đổi coin\n Bạch Kim", "Đóng");
+                                    break;
+                                case 2:
+                                      ChangeMapService.gI().changeMapBySpaceShip(player, 233, -1, 258);
                                     break;
                             }
                         } else if (player.iDMark.getIndexMenu() == 1) {
@@ -1037,7 +1069,7 @@ public class NpcFactory {
                             }
                         } else if (player.iDMark.getIndexMenu() == 2) {
                             Item coinBac = null;
-                             Item coinVangVip = null;
+                            Item coinVangVip = null;
                             switch (select) {
                                 case 0:
                                     try {
@@ -1086,7 +1118,7 @@ public class NpcFactory {
                                 case 2:
                                     try {
                                     coinBac = InventoryServiceNew.gI().findItemBag(player, 1348);
-                                    coinVangVip =  InventoryServiceNew.gI().findItemBag(player, 1349);
+                                    coinVangVip = InventoryServiceNew.gI().findItemBag(player, 1349);
                                 } catch (Exception e) {
 //                                        throw new RuntimeException(e);
                                 }
@@ -5816,7 +5848,7 @@ public class NpcFactory {
 //                                            player.getSession().coinBar -= 100000;
                                         Item i0 = ItemService.gI().createNewItem((short) 2001, 50);
                                         Item i1 = ItemService.gI().createNewItem((short) 2002, 50);
-                                        Item i2 = ItemService.gI().createNewItem((short) 2003, 50);
+                                        Item i2 = ItemService.gI().createNewItem((short) 2000, 50);
                                         Item i3 = ItemService.gI().createNewItem((short) 14, 3);
                                         Item i4 = ItemService.gI().createNewItem((short) 15, 3);
                                         Item i5 = ItemService.gI().createNewItem((short) 16, 3);
@@ -6665,6 +6697,8 @@ public class NpcFactory {
                     return tosukaio(mapId, status, cx, cy, tempId, avatar);
                 case ConstNpc.BLACKROSE:
                     return blackrosegoku(mapId, status, cx, cy, tempId, avatar);
+                case ConstNpc.TRONG_TAI:
+                    return trong_tai(mapId, status, cx, cy, tempId, avatar);
                 case ConstNpc.BILL:
                     return bill(mapId, status, cx, cy, tempId, avatar);
                 case ConstNpc.NPC_64:
