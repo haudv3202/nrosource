@@ -229,7 +229,7 @@ public class OpenPowerService {
 //                }
 //                return true;
 //            }
-            if (player.nPoint.power >= 170000000000L && player.nPoint.limitPower < 10) {
+            if (player.nPoint.power >= 170000000000L && player.nPoint.limitPower < 2) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
                     player.nPoint.limitPower = NPoint.MAX_LIMIT;
@@ -277,7 +277,7 @@ public class OpenPowerService {
 //                }
 //                return true;
 //            }
-            if (player.nPoint.power >= 360000000000L && player.nPoint.limitPower < 14) {
+            if (player.nPoint.power >= 360000000000L && player.nPoint.limitPower < 3) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
                     player.nPoint.limitPower = NPoint.MAX_LIMIT;
@@ -289,7 +289,7 @@ public class OpenPowerService {
                 }
                 return true;
             }
-            if (player.nPoint.power >= 500000000000L && player.nPoint.limitPower < 15) {
+            if (player.nPoint.power >= 500000000000L && player.nPoint.limitPower < 4) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
                     player.nPoint.limitPower = NPoint.MAX_LIMIT;
@@ -301,7 +301,7 @@ public class OpenPowerService {
                 }
                 return true;
             }
-            if (player.nPoint.power >= 600000000000L && player.nPoint.limitPower < 16) {
+            if (player.nPoint.power >= 600000000000L && player.nPoint.limitPower < 5) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
                     player.nPoint.limitPower = NPoint.MAX_LIMIT;
@@ -325,7 +325,7 @@ public class OpenPowerService {
 //                }
 //                return true;
 //            }
-            if (player.nPoint.power >= 760999999999L && player.nPoint.limitPower < 18) {
+            if (player.nPoint.power >= 760999999999L && player.nPoint.limitPower < 6) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
                     player.nPoint.limitPower = NPoint.MAX_LIMIT;
@@ -349,7 +349,7 @@ public class OpenPowerService {
 //                }
 //                return true;
 //            }
-            if (player.nPoint.power >= 960999999999L && player.nPoint.limitPower < 20) {
+            if (player.nPoint.power >= 960999999999L && player.nPoint.limitPower < 7) {
                 player.nPoint.limitPower += 1;
                 if (player.nPoint.limitPower > NPoint.MAX_LIMIT) {
                     player.nPoint.limitPower = NPoint.MAX_LIMIT;
