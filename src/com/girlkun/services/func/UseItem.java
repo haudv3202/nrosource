@@ -505,6 +505,10 @@ public class UseItem {
                         case 384: //giáp xên
                         case 385: //ẩn danh
                         case 379: //máy dò capsule
+                        case 465:
+                        case 466:
+                        case 472:
+                        case 473:
                         case 2037: //máy dò cosmos
                         case 663: //bánh pudding
                         case 664: //xúc xíc
@@ -1147,6 +1151,38 @@ public class UseItem {
                 pl.itemTime.lastTimeAnDanh2 = System.currentTimeMillis();
                 pl.itemTime.isUseAnDanh2 = true;
                 break;
+            case 465:
+                if (pl.itemTime.isUseBanhTrungThu1Trung == true) {
+                    Service.getInstance().sendThongBao(pl, "Bạn đã sử dụng ");
+                    return;
+                }
+                pl.itemTime.lastTimeBanhTrungThu1Trung = System.currentTimeMillis();
+                pl.itemTime.isUseBanhTrungThu1Trung = true;
+                break;
+            case 466:
+                if (pl.itemTime.isUseBanhTrungThu2Trung == true) {
+                    Service.getInstance().sendThongBao(pl, "Bạn đã sử dụng ");
+                    return;
+                }
+                pl.itemTime.lastTimeBanhTrungThu2Trung = System.currentTimeMillis();
+                pl.itemTime.isUseBanhTrungThu2Trung = true;
+                break;
+            case 472:
+                if (pl.itemTime.isUseBanhTrungThuDacBiet == true) {
+                    Service.getInstance().sendThongBao(pl, "Bạn đã sử dụng ");
+                    return;
+                }
+                pl.itemTime.lastTimeBanhTrungThuDacBiet = System.currentTimeMillis();
+                pl.itemTime.isUseBanhTrungThuDacBiet = true;
+                break;
+            case 473:
+                if (pl.itemTime.isUseHopBanhTrungThu == true) {
+                    Service.getInstance().sendThongBao(pl, "Bạn đã sử dụng ");
+                    return;
+                }
+                pl.itemTime.lastTimeHopBanhTrungThu = System.currentTimeMillis();
+                pl.itemTime.isUseHopBanhTrungThu = true;
+                break;
             case 663: //bánh pudding
             case 664: //xúc xíc
             case 665: //kem dâu
@@ -1184,6 +1220,7 @@ public class UseItem {
             Service.getInstance().sendThongBao(pl, "Không thể thực hiện");
         }
     }
+
     private void controllerCallRongThan(Player pl, Item item) {
         int tempId = item.template.id;
         if (tempId >= SummonDragon.NGOC_RONG_1_SAO && tempId <= SummonDragon.NGOC_RONG_7_SAO) {

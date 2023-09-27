@@ -68,6 +68,7 @@ public class Input {
     public static final int TNSMSERVER = 526;
     public static final int GIVE_ITEM = 527;
     public static final int SCAN_ITEM = 528;
+    public static final int GIOTHUCAN = 529;
 
     public void createFormChooseLevelRanDoc(Player pl) {
         createForm(pl, CHOOSE_LEVEL_RD, "Chọn cấp độ", new SubInput("Cấp độ (1-110)", NUMERIC));
@@ -137,7 +138,32 @@ public class Input {
                         Service.getInstance().sendThongBao(player, "Nhập dữ liệu không đúng");
                     }
                     break;
-
+                case GIOTHUCAN:
+                       int total = Integer.valueOf(text[0]);
+                       int totalCoin = total * 4;
+                       int totalGold = total * 1_000_000;
+                       Item coinDo = null;
+                             try {
+                                    coinDo = InventoryServiceNew.gI().findItemBag(player, 1347);
+                                } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                }
+                                if (coinDo == null || coinDo.quantity < totalCoin) {
+                                    Service.gI().sendThongBao(player, "Không đủ " + totalCoin +"Coin để đổi vật phẩm");
+                                } else if (player.inventory.gold < totalGold) {
+                                   Service.gI().sendThongBao(player, "Bạn không đủ "+totalGold+" triệu vàng");
+                                } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                    Service.gI().sendThongBao(player, "Hành trang của bạn không đủ chỗ trống");
+                                } else {
+                                    player.inventory.gold -= totalGold;
+                                    InventoryServiceNew.gI().subQuantityItemsBag(player, coinDo, totalCoin);
+                                    Service.getInstance().sendMoney(player);
+                                    Item gioThucAn = ItemService.gI().createNewItem((short) 993, total);
+                                    InventoryServiceNew.gI().addItemBag(player, gioThucAn);
+                                    InventoryServiceNew.gI().sendItemBags(player);
+                                    Service.getInstance().sendThongBaoOK(player, "Bạn nhận được " + total +" Giỏ thức ăn");
+                                }
+                    break;
                 case SCAN_ITEM:
                     int[] idItem0 = {0, 1, 2, 3, 4, 5, 33, 34, 49, 50, 136, 137, 138, 139, 152, 153, 154, 155, 168, 169, 170, 171, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 555, 557, 559, 650, 652, 654, 1048, 1049, 1050};
                     int[] idItem1 = {6, 7, 8, 9, 10, 11, 35, 36, 43, 44, 51, 52, 140, 141, 142, 143, 156, 157, 158, 159, 172, 173, 174, 175, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 556, 558, 559, 560, 651, 653, 655, 691, 692, 693, 1051, 1052, 1053};
@@ -146,7 +172,7 @@ public class Input {
                     int[] idItem4 = {12, 57, 58, 59, 184, 185, 186, 187, 278, 279, 280, 281, 561, 562, 563, 656, 1060, 1061, 1062};
 
                     int indexBody = Integer.valueOf(text[0]);
-                    System.out.println("data: " +indexBody);
+                    System.out.println("data: " + indexBody);
                     String optionScan = text[1];
                     String paramScan = text[2];
                     String[] option1Scan = optionScan.split("-");
@@ -155,7 +181,6 @@ public class Input {
                     int length2Scan = param1Scan.length;
                     if (length1Scan == length2Scan) {
                         ScanResult result = null;
-                         
 
                         switch (indexBody) {
                             case 0:
@@ -370,6 +395,7 @@ public class Input {
                                 int TimeSeconds = 10;
                                 Service.gI().sendThongBao(player, "Chờ 10 giây để biết kết quả.");
                                 while (TimeSeconds > 0) {
+                                    Service.gI().sendThongBao(player, "Thời gian còn " + TimeSeconds + "s");
                                     TimeSeconds--;
                                     Thread.sleep(1000);
                                 }
@@ -430,6 +456,7 @@ public class Input {
                                 int TimeSeconds = 10;
                                 Service.gI().sendThongBao(player, "Chờ 10 giây để biết kết quả.");
                                 while (TimeSeconds > 0) {
+                                    Service.gI().sendThongBao(player, "Thời gian còn " + TimeSeconds + "s");
                                     TimeSeconds--;
                                     Thread.sleep(1000);
                                 }
@@ -991,6 +1018,10 @@ public class Input {
 
     public void createFormChangeTNSMServer(Player pl) {
         createForm(pl, TNSMSERVER, "Tiềm năng sức mạnh Server hiện tại là " + Manager.RATE_EXP_SERVER, new SubInput("Nhập tiềm năng sau: ", ANY));
+    }
+
+    public void createFormGioThucAn(Player pl) {
+        createForm(pl, GIOTHUCAN, "ĐỔI GIỎ THỨC ĂN \n x4 coin đỏ => Giỏ thức ăn ", new SubInput("Số lượng muốn đổi ", ANY));
     }
 
     public void createFormSendItem(Player pl) {

@@ -64,6 +64,19 @@ public class ItemTimeService {
         if (player.itemTime.isUseBanhTet) {
             sendItemTime(player, 7079, (int) ((TIME_ITEM45P - (System.currentTimeMillis() - player.itemTime.lastTimeBanhTet)) / 1000));
         }
+        
+        if (player.itemTime.isUseBanhTrungThu1Trung) {
+            sendItemTime(player, 4042, (int) ((TIME_ITEM25P - (System.currentTimeMillis() - player.itemTime.lastTimeBanhTrungThu1Trung)) / 1000));
+        }
+        if (player.itemTime.isUseBanhTrungThu2Trung) {
+            sendItemTime(player, 4043, (int) ((TIME_ITEM25P - (System.currentTimeMillis() - player.itemTime.lastTimeBanhTrungThu2Trung)) / 1000));
+        }
+        if (player.itemTime.isUseBanhTrungThuDacBiet) {
+            sendItemTime(player, 4125, (int) ((TIME_ITEM25P - (System.currentTimeMillis() - player.itemTime.lastTimeBanhTrungThuDacBiet)) / 1000));
+        }
+        if (player.itemTime.isUseHopBanhTrungThu) {
+            sendItemTime(player, 4126, (int) ((TIME_ITEM45P - (System.currentTimeMillis() - player.itemTime.lastTimeHopBanhTrungThu)) / 1000));
+        }
 
         if (player.itemTime.isUseBanhChung) {
             sendItemTime(player, 7080, (int) ((TIME_ITEM45P - (System.currentTimeMillis() - player.itemTime.lastTimeBanhChung)) / 1000));

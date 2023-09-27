@@ -27,14 +27,13 @@ import com.girlkun.services.func.ChangeMapService;
 import com.girlkun.utils.SkillUtil;
 import com.girlkun.utils.Util;
 
-
 public class Boss extends Player implements IBossNew, IBossOutfit {
 
     public int currentLevel = -1;
     protected final BossData[] data;
 
     public BossStatus bossStatus;
-public int mapCongDuc;
+    public int mapCongDuc;
     protected Zone lastZone;
 
     protected long lastTimeRest;
@@ -92,7 +91,8 @@ public int mapCongDuc;
         this.name = String.format(data.getName(), Util.nextInt(0, 100));
         this.gender = data.getGender();
         this.nPoint.mpg = 7_5_2002;
-        this.nPoint.dameg = data.getDame();this.nPoint.hpg = data.getHp()[Util.nextInt(0, data.getHp().length - 1)];
+        this.nPoint.dameg = data.getDame();
+        this.nPoint.hpg = data.getHp()[Util.nextInt(0, data.getHp().length - 1)];
         this.nPoint.hp = nPoint.hpg;
         this.nPoint.calPoint();
         this.initSkill();
@@ -187,7 +187,8 @@ public int mapCongDuc;
             this.playerTarger = this.zone.getRandomPlayerInMap();
             this.lastTimeTargetPlayer = System.currentTimeMillis();
             this.timeTargetPlayer = Util.nextInt(5000, 7000);
-        }return this.playerTarger;
+        }
+        return this.playerTarger;
     }
 
     @Override
@@ -200,8 +201,8 @@ public int mapCongDuc;
         PlayerService.gI().changeAndSendTypePK(this, ConstPlayer.NON_PK);
     }
 
-     @Override
-   public void update() {
+    @Override
+    public void update() {
         super.update();
 //        System.out.println("this status: " + this.bossStatus + " (" + this.id + ")");
         this.nPoint.mp = this.nPoint.mpg;
@@ -250,7 +251,6 @@ public int mapCongDuc;
         }
     }
 
-
     //loop
     @Override
     public void rest() {
@@ -274,9 +274,7 @@ public int mapCongDuc;
         this.changeToTypeNonPK();
     }
 
-    
 //    private long timeboss;
-    
     @Override
     public void joinMap() {
         if (zoneFinal != null) {
@@ -288,7 +286,8 @@ public int mapCongDuc;
 //              timeboss= System.currentTimeMillis();
 //        }
         if (this.zone == null) {
-            if (this.parentBoss != null) {this.zone = parentBoss.zone;
+            if (this.parentBoss != null) {
+                this.zone = parentBoss.zone;
             } else if (this.lastZone == null) {
                 this.zone = getMapJoin();
             } else {
@@ -328,10 +327,13 @@ public int mapCongDuc;
     }
 
     protected void notifyJoinMap() {
-        if (this.id >= -22 && this.id <= -20) return;
-        if (this.zone.map.mapId == 140||MapService.gI().isMapMaBu(this.zone.map.mapId) || MapService.gI().isMapBlackBallWar(this.zone.map.mapId))
+        if (this.id >= -22 && this.id <= -20) {
             return;
-        System.out.println("BOSS SERVER - " + this.name + "Map : " + this.zone.map.mapName + " -  Khu : " + this.zone.zoneId );
+        }
+        if (this.zone.map.mapId == 140 || MapService.gI().isMapMaBu(this.zone.map.mapId) || MapService.gI().isMapBlackBallWar(this.zone.map.mapId)) {
+            return;
+        }
+        System.out.println("BOSS SERVER - " + this.name + "Map : " + this.zone.map.mapName + " -  Khu : " + this.zone.zoneId);
         ServerNotify.gI().notify("BOSS: " + this.name + " vừa xuất hiện tại " + this.zone.map.mapName);
     }
 
@@ -372,7 +374,8 @@ public int mapCongDuc;
         }
         if (!Util.canDoWithTime(this.lastTimeChatM, this.timeChatM)) {
             return;
-        }String textChat = this.data[this.currentLevel].getTextM()[Util.nextInt(0, this.data[this.currentLevel].getTextM().length - 1)];
+        }
+        String textChat = this.data[this.currentLevel].getTextM()[Util.nextInt(0, this.data[this.currentLevel].getTextM().length - 1)];
         int prefix = Integer.parseInt(textChat.substring(1, textChat.lastIndexOf("|")));
         textChat = textChat.substring(textChat.lastIndexOf("|") + 1);
         this.chat(prefix, textChat);
@@ -386,7 +389,7 @@ public int mapCongDuc;
             this.changeToTypePK();
         }
         this.attack();
-        
+
 //        if(Util.canDoWithTime(timeboss,900000)){
 //            this.changeStatus(BossStatus.REST);
 //        }
@@ -414,7 +417,7 @@ public int mapCongDuc;
                                     Util.nextInt(10) % 2 == 0 ? pl.location.y : pl.location.y - Util.nextInt(0, 50));
                         }
                     }
-                    SkillService.gI().useSkill(this, pl, null,null);
+                    SkillService.gI().useSkill(this, pl, null, null);
                     checkPlayerDie(pl);
                 } else {
                     if (Util.isTrue(1, 2)) {
@@ -434,8 +437,6 @@ public int mapCongDuc;
         }
     }
 
-    
-
     protected int getRangeCanAttackWithSkillSelect() {
         int skillId = this.playerSkill.skillSelect.template.id;
         if (skillId == Skill.KAMEJOKO || skillId == Skill.MASENKO || skillId == Skill.ANTOMIC) {
@@ -447,7 +448,8 @@ public int mapCongDuc;
     }
 
     @Override
-    public void die(Player plKill) {if (plKill != null) {
+    public void die(Player plKill) {
+        if (plKill != null) {
             reward(plKill);
             ServerNotify.gI().notify(plKill.name + " vừa tiêu diệt được " + this.name + ", ghê chưa ghê chưa..");
         }
@@ -500,6 +502,7 @@ public int mapCongDuc;
         }
         this.wakeupAnotherBossWhenDisappear();
     }
+
     //end loop
     @Override
     public int injured(Player plAtt, int damage, boolean piercing, boolean isMobAttack) {
@@ -534,7 +537,8 @@ public int mapCongDuc;
     @Override
     public void moveTo(int x, int y) {
         byte dir = (byte) (this.location.x - x < 0 ? 1 : -1);
-        byte move = (byte) Util.nextInt(40, 60);PlayerService.gI().playerMove(this, this.location.x + (dir == 1 ? move : -move), y + (Util.isTrue(3, 10) ? -50 : 0));
+        byte move = (byte) Util.nextInt(40, 60);
+        PlayerService.gI().playerMove(this, this.location.x + (dir == 1 ? move : -move), y + (Util.isTrue(3, 10) ? -50 : 0));
     }
 
     public void chat(String text) {
@@ -599,6 +603,7 @@ public int mapCongDuc;
             }
         }
     }
+
     @Override
     public void wakeupAnotherBossWhenDisappear() {//        System.out.println("wake up boss when disappear");
         System.out.println("Boss " + this.name + " vừa bị tiêu diệt");

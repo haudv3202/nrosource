@@ -622,7 +622,8 @@ public void DoneTask(Player player, int id) {
                 case ConstMob.XEN_CON_CAP_3:
                 case ConstMob.XEN_CON_CAP_5:
                 case ConstMob.XEN_CON_CAP_8:
-                    if (player.clan != null) {
+//                    != null
+                    if (player.clan == null) {
                         List<Player> list = new ArrayList<>();
                         List<Player> playersMap = player.zone.getPlayers();
                         for (Player pl : playersMap) {
@@ -630,10 +631,11 @@ public void DoneTask(Player player, int id) {
                                 list.add(pl);
                             }
                         }
-                        if (list.size() >= 2) {
-                            for (Player pl : list) {
+//                        if (list.size() >= 2) {
+//                            for (Player pl : list) {
                                 switch (mob.tempId) {
                                     case ConstMob.XEN_CON_CAP_1:
+                                         System.err.println("list size" + list.size());
                                          doneTask(player, ConstTask.TASK_24_4);
                                         break;
                                     case ConstMob.XEN_CON_CAP_3:
@@ -645,8 +647,8 @@ public void DoneTask(Player player, int id) {
                                     case ConstMob.XEN_CON_CAP_8:
                                         doneTask(player, ConstTask.TASK_28_4);
                                         break;
-                                }
-                            }
+//                                }
+//                            }
                         }
                   }
             }
@@ -1096,7 +1098,27 @@ public void DoneTask(Player player, int id) {
                      Service.gI().sendThongBao(player, "Tiếp theo là tiêu diệt Android 20");
                      break;
                  case ConstTask.TASK_25_2:   
-                     if (isCurrentTask(player, idTaskCustom)) {
+                      Service.gI().sendThongBao(player, "Tiếp theo là tiêu diệt xên con cấp 3");
+//                     if (isCurrentTask(player, idTaskCustom)) {
+//                        Service.gI().sendThongBao(player, "Bạn đánh được "
+//                                + player.playerTask.taskMain.subTasks.get(player.playerTask.taskMain.index).count + "/"
+//                                + player.playerTask.taskMain.subTasks.get(player.playerTask.taskMain.index).maxCount
+//                                + transformName(player, " Xên con cấp 3"));
+//                    }else{
+//                        Service.gI().sendThongBao(player, "Về báo cáo với Bunma tương lai");
+//                    } 
+                     break;
+                 case ConstTask.TASK_25_3:
+//                     npcSay(player, ConstNpc.BUNMA_TL, "Số 1 chính là bác học Kôrê\n"
+//                             + "Ông ta đã tự biến mình thành Rôbốt để được bất tử\n"
+//                             + "2 tên Rôbốt này không phải là Rôbốt sát thủ mà chúng tôi nói đến\n"
+//                             + "Có thể quá khứ đã thay đổi từ khi cậu đến đây\n"
+//                             + "Mau trở về quá khứ xem chuyện gì đã xảy ra");
+                     
+//                     if (isCurrentTask(player, idTaskCustom)) {
+//                        Service.gI().sendThongBao(player, "Đến sân sau siêu thị");
+//                    }
+                       if (isCurrentTask(player, idTaskCustom)) {
                         Service.gI().sendThongBao(player, "Bạn đánh được "
                                 + player.playerTask.taskMain.subTasks.get(player.playerTask.taskMain.index).count + "/"
                                 + player.playerTask.taskMain.subTasks.get(player.playerTask.taskMain.index).maxCount
@@ -1104,17 +1126,6 @@ public void DoneTask(Player player, int id) {
                     }else{
                         Service.gI().sendThongBao(player, "Về báo cáo với Bunma tương lai");
                     } 
-                     break;
-                 case ConstTask.TASK_25_3:
-                     npcSay(player, ConstNpc.BUNMA_TL, "Số 1 chính là bác học Kôrê\n"
-                             + "Ông ta đã tự biến mình thành Rôbốt để được bất tử\n"
-                             + "2 tên Rôbốt này không phải là Rôbốt sát thủ mà chúng tôi nói đến\n"
-                             + "Có thể quá khứ đã thay đổi từ khi cậu đến đây\n"
-                             + "Mau trở về quá khứ xem chuyện gì đã xảy ra");
-                     
-                     if (isCurrentTask(player, idTaskCustom)) {
-                        Service.gI().sendThongBao(player, "Đến sân sau siêu thị");
-                    }
                      break;
                   //=============================================================
                  case ConstTask.TASK_26_0:

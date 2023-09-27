@@ -39,7 +39,7 @@ private boolean calledNinja;
                                                 (byte) 0,
                                                 new short[]{285, 286, 287, -1, -1, -1},
                                                 0,
-                                                new int[]{1111},
+                                                new long[]{1111},
                                                 new int[]{140},
                                                 new int[][]{},
                                                 new String[]{}, //text chat 1
@@ -72,7 +72,7 @@ private boolean calledNinja;
             this.gender,
             new short[]{294, 295, 296, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
             Util.nextInt(100000,200000), //dame
-            new int[]{Util.nextInt(10000000,16070777)}, //hp
+            new long[]{Util.nextInt(10000000,16070777)}, //hp
           new int[]{},
           new int[][]{
                     {Skill.ANTOMIC,7,100},{Skill.MASENKO,7,100},

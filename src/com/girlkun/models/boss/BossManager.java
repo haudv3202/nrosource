@@ -10,6 +10,11 @@ import com.girlkun.models.boss.list_boss.BLACK.BlackGokuBase;
 import com.girlkun.models.boss.list_boss.BLACK.BlackGokuTl;
 import com.girlkun.models.boss.list_boss.BLACK.SuperBlack2;
 import com.girlkun.models.boss.list_boss.BLACK.ZamasKaio;
+import com.girlkun.models.boss.list_boss.BossBrock;
+import com.girlkun.models.boss.list_boss.BossChopper;
+import com.girlkun.models.boss.list_boss.BossLuffy;
+import com.girlkun.models.boss.list_boss.BossSanji;
+import com.girlkun.models.boss.list_boss.BossZoro;
 import com.girlkun.models.boss.list_boss.nappa.Kuku;
 import com.girlkun.models.boss.list_boss.nappa.Rambo;
 import com.girlkun.models.boss.list_boss.nappa.MapDauDinh;
@@ -148,8 +153,11 @@ public class BossManager implements Runnable {
             this.createBoss(BossID.Anime_11);
             this.createBoss(BossID.Anime_22);
             this.createBoss(BossID.Anime_33);
-            
-            
+            this.createBoss(BossID.LUFFY);
+            this.createBoss(BossID.ZORO);
+            this.createBoss(BossID.SANJI);
+            this.createBoss(BossID.BROCK);
+            this.createBoss(BossID.CHOPPER);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -208,11 +216,11 @@ public class BossManager implements Runnable {
                     return new Kingcold();
                 case BossID.FIDE_ROBOT:
                     return new FideRobot();
-                    case BossID.Anime_11:
+                case BossID.Anime_11:
                     return new Anime();
-                    case BossID.Anime_22:
+                case BossID.Anime_22:
                     return new Anime2();
-                    case BossID.Anime_33:
+                case BossID.Anime_33:
                     return new Anime3();
                 case BossID.ZAMASZIN:
                     return new ZamasKaio();
@@ -254,9 +262,19 @@ public class BossManager implements Runnable {
                     return new Frost();
                 case BossID.BROLY:
                     return new Broly();
-                
                 case BossID.Mabu2h:
                     return new bossMabu2h();
+                case BossID.LUFFY:
+                    return new BossLuffy();
+                case BossID.ZORO:
+                    return new BossZoro();
+                case BossID.SANJI:
+                    return new BossSanji();
+                case BossID.BROCK:
+                    return new BossBrock();
+                case BossID.CHOPPER:
+                    return new BossChopper();
+
                 default:
                     return null;
             }
@@ -273,7 +291,7 @@ public class BossManager implements Runnable {
 //        if (!player.isAdmin()) {
 //            return;
 //        }
-      Message msg;
+        Message msg;
         try {
             msg = new Message(-96);
             msg.writer().writeByte(0);

@@ -6,7 +6,6 @@ import com.girlkun.services.Service;
 import com.girlkun.utils.Util;
 import com.girlkun.services.ItemTimeService;
 
-
 public class ItemTime {
 
     //id item text
@@ -17,6 +16,7 @@ public class ItemTime {
 
     public static final int TIME_ITEM = 600000;
     public static final int TIME_ITEM45P = 2700000;
+    public static final int TIME_ITEM25P = 1500000;
     public static final int TIME_OPEN_POWER = 86400000;
     public static final int TIME_MAY_DO = 1800000;
     public static final int TIME_MAY_DO2 = 1800000;
@@ -29,12 +29,12 @@ public class ItemTime {
     public boolean isUseGiapXen;
     public boolean isUseCuongNo;
     public boolean isUseAnDanh;
-     public boolean isUseBoHuyet2;
+    public boolean isUseBoHuyet2;
     public boolean isUseBoKhi2;
     public boolean isUseGiapXen2;
     public boolean isUseCuongNo2;
     public boolean isUseAnDanh2;
-    
+
     public long lastTimeBoHuyet;
     public long lastTimeBoKhi;
     public long lastTimeGiapXen;
@@ -50,13 +50,13 @@ public class ItemTime {
     public long lastTimeUseMayDo;//lastime de chung 1 cai neu time = nhau
     public boolean isUseMayDo2;
     public long lastTimeUseMayDo2;
-    
+
     public long lastTimeBanhTet;
     public long lastTimeBanhChung;
-    
+
     public boolean isOpenPower;
     public long lastTimeOpenPower;
-    
+
     public boolean isUseBanhTet;
     public boolean isUseBanhChung;
 
@@ -67,6 +67,14 @@ public class ItemTime {
     public boolean isEatMeal;
     public long lastTimeEatMeal;
     public int iconMeal;
+    public long lastTimeBanhTrungThu1Trung;
+    public boolean isUseBanhTrungThu1Trung;
+    public long lastTimeBanhTrungThu2Trung;
+    public boolean isUseBanhTrungThu2Trung;
+    public long lastTimeBanhTrungThuDacBiet;
+    public boolean isUseBanhTrungThuDacBiet;
+    public long lastTimeHopBanhTrungThu;
+    public boolean isUseHopBanhTrungThu;
 
     public ItemTime(Player player) {
         this.player = player;
@@ -86,14 +94,14 @@ public class ItemTime {
 //                Service.getInstance().Send_Info_NV(this.player);
             }
         }
-        
+
         if (isUseBoKhi) {
             if (Util.canDoWithTime(lastTimeBoKhi, TIME_ITEM)) {
                 isUseBoKhi = false;
                 Service.getInstance().point(player);
             }
         }
-       
+
         if (isUseGiapXen) {
             if (Util.canDoWithTime(lastTimeGiapXen, TIME_ITEM)) {
                 isUseGiapXen = false;
@@ -110,7 +118,7 @@ public class ItemTime {
                 isUseAnDanh = false;
             }
         }
-       
+
         if (isUseBoHuyet2) {
             if (Util.canDoWithTime(lastTimeBoHuyet2, TIME_ITEM)) {
                 isUseBoHuyet2 = false;
@@ -118,7 +126,7 @@ public class ItemTime {
 //                Service.getInstance().Send_Info_NV(this.player);
             }
         }
-        
+
         if (isUseBoKhi2) {
             if (Util.canDoWithTime(lastTimeBoKhi2, TIME_ITEM)) {
                 isUseBoKhi2 = false;
@@ -141,12 +149,12 @@ public class ItemTime {
                 isUseAnDanh2 = false;
             }
         }
-        if(isUseBanhTet){
+        if (isUseBanhTet) {
             if (Util.canDoWithTime(lastTimeBanhTet, TIME_ITEM45P)) {
                 isUseBanhTet = false;
             }
         }
-        if(isUseBanhChung){
+        if (isUseBanhChung) {
             if (Util.canDoWithTime(lastTimeBanhChung, TIME_ITEM45P)) {
                 isUseBanhChung = false;
             }
@@ -178,8 +186,8 @@ public class ItemTime {
             }
         }
     }
-    
-    public void dispose(){
+
+    public void dispose() {
         this.player = null;
     }
 }

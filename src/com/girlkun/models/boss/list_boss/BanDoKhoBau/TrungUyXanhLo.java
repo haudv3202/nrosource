@@ -23,7 +23,7 @@ public class TrungUyXanhLo extends Boss {
                 ConstPlayer.TRAI_DAT,
                 new short[]{135, 136, 137, -1, -1, -1},
                 ((10000 + dame) * level),
-                new int[]{((500000 + hp) * level)},
+                new long[]{((500000 + hp) * level)},
                 new int[]{103},
                 (int[][]) Util.addArray(FULL_DEMON),
                 new String[]{},

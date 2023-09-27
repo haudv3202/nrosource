@@ -320,13 +320,13 @@ public class SummonDragon {
                             for (ItemOption io : item.itemOptions) {
                                 if (io.optionTemplate.id == 72) {
                                     level = io.param;
-                                    if (level < 4) {
+                                    if (level < 7) {
                                         io.param++;
                                     }
                                     break;
                                 }
                             }
-                            if (level < 4) {
+                            if (level < 7) {
                                 if (level == 0) {
                                     item.itemOptions.add(new ItemOption(72, 1));
                                 }

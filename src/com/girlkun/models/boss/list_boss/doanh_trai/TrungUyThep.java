@@ -36,7 +36,7 @@ public class TrungUyThep extends Boss {
                 ConstPlayer.TRAI_DAT, //gender
                 new short[]{129, 130, 131, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
                 ((1 + dame)), //dame
-                new int[]{((1 + hp ))}, //hp
+                new long[]{((1 + hp ))}, //hp
                 new int[]{55}, //map join
                 new int[][]{
                 {Skill.DEMON, 3, 1}, {Skill.DEMON, 6, 2}, {Skill.DRAGON, 7, 3}, {Skill.DRAGON, 1, 4}, {Skill.GALICK, 5, 5},

@@ -28,7 +28,7 @@ public class Vegeta extends Boss {
                 ConstPlayer.TRAI_DAT,
                 new short[]{645, 646, 647, -1, -1, -1},
                 ((10000 + dame) * level),
-                new int[]{((500000 + hp) * level)},
+                new long[]{((500000 + hp) * level)},
                 new int[]{144},
                 (int[][]) Util.addArray(FULL_DEMON),
                 new String[]{},

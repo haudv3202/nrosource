@@ -80,6 +80,7 @@ import java.text.NumberFormat;
 import java.util.Locale;
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Random;
 
 public class NpcFactory {
 
@@ -93,6 +94,10 @@ public class NpcFactory {
 
     private static Npc onggianoel(int mapId, int status, int cx, int cy, int tempId, int avatar) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    public static int getRandomValue(int min, int max, Random random) {
+        return random.nextInt(max - min + 1) + min;
     }
 
     public static Npc GhiDanh(int mapId, int status, int cx, int cy, int tempId, int avartar) {
@@ -894,8 +899,8 @@ public class NpcFactory {
                                                 "Nhân Bản " + player.name,
                                                 player.gender,
                                                 new short[]{player.getHead(), player.getBody(), player.getLeg(), player.getFlagBag(), player.idAura, player.getEffFront()},
-                                                (int) player.nPoint.hpMax / 200,
-                                                new int[]{(int) player.nPoint.hpMax},
+                                                (long) player.nPoint.dame,
+                                                new long[]{(long) player.nPoint.hpMax},
                                                 new int[]{140},
                                                 skillTemp,
                                                 new String[]{"|-2|Boss nhân bản đã xuất hiện rồi"}, //text chat 1
@@ -1019,7 +1024,7 @@ public class NpcFactory {
                     if (this.mapId == 5) {
                         this.createOtherMenu(player, ConstNpc.BASE_MENU,
                                 "Ngươi muốn gì ở ta?",
-                                "SHOP VIP", "ĐỔI TIỀN\nMẶT", "Vùng đất hắc hóa", "Đóng");
+                                "SHOP VIP", "ĐỔI TIỀN\nMẶT", "Vùng đất hắc hóa", "ĐỔI GIỎ\nTHỨC ĂN", "Đóng");
                     }
                 }
             }
@@ -1040,7 +1045,10 @@ public class NpcFactory {
                                             "Đổi coin Bạc", "Đổi coin Vàng", "Đổi coin Đỏ", "Đổi coin\n Bạch Kim", "Đóng");
                                     break;
                                 case 2:
-                                      ChangeMapService.gI().changeMapBySpaceShip(player, 233, -1, 258);
+                                    ChangeMapService.gI().changeMapBySpaceShip(player, 233, -1, 258);
+                                    break;
+                                case 3:
+                                    Input.gI().createFormGioThucAn(player);
                                     break;
                             }
                         } else if (player.iDMark.getIndexMenu() == 1) {
@@ -2672,7 +2680,7 @@ public class NpcFactory {
             public void openBaseMenu(Player player) {
                 if (canOpenNpc(player)) {
                     if (this.mapId == 5) {
-                        this.createOtherMenu(player, ConstNpc.BASE_MENU, "|7|Ngươi cần gì ở ta!!\b|1|ta sẽ tặng ngươi những\ngì ngươi muốn với điều kiện....", "Đổi Thời Trang", "Đóng");
+                        this.createOtherMenu(player, ConstNpc.BASE_MENU, "|7|Ngươi cần gì ở ta!!\b|1|ta sẽ tặng ngươi những\ngì ngươi muốn với điều kiện....", "Đổi Thời Trang", "Soi Boss", "Đóng");
                     }
                 }
             }
@@ -2717,7 +2725,11 @@ public class NpcFactory {
                                         this.npcChat(player, "|1|Bạn nhận được 1 Túi Thời trang Anime");
                                     }
                                     break;
+
                                 }
+                                case 1:
+                                    BossManager.gI().showListBoss(player);
+                                    break;
 
                             }
                         }
@@ -3097,6 +3109,250 @@ public class NpcFactory {
                 }
             }
         };
+    }
+
+    public static Npc noibanh(int mapId, int status, int cx, int cy, int tempId, int avartar) {
+        return new Npc(mapId, status, cx, cy, tempId, avartar) {
+            @Override
+            public void openBaseMenu(Player player) {
+                if (canOpenNpc(player)) {
+                    createOtherMenu(player, ConstNpc.BASE_MENU,
+                            "4 Nguyên liệu + 99 bột mì + 99 đậu xanh+ 99 trứng+ 99 con gà + 1000 Hồng ngọc\n"
+                            + "Dùng để =>\n"
+                            + "Quy đổi bánh trung thu 1 trứng, 2 trứng và Bánh trung thu đặc biệt!! \n"
+                            + "Để quy đổi hộp bánh trung thu ta cần x25 bánh trung thu 1 trứng , x25 bánh 2 trứng , x25 bánh trung thu đặc biệt + 2k hồng ngọc\n"
+                            + "Để quy đổi thỏi vàng ta cần x5 hộp bánh trung thu + 10k hồng ngọc\n"
+                            + "=> 100 thỏi vàng \n"
+                            + "Để quy đổi cải trang ta cần x5 hộp bánh trung thu + 10k hồng ngọc",
+                            "Bánh Trung Thu 1 trứng", "Bánh Trung Thu 2 trứng", "Bánh Trung Thu Đặc Biệt", "Hộp Bánh trung thu", "Đổi thỏi vàng", "Quy đổi cải trang");
+                }
+            }
+
+            @Override
+            public void confirmMenu(Player player, int select) {
+                if (canOpenNpc(player)) {
+                    if (this.mapId == 0 || this.mapId == 14 || this.mapId == 7) {
+                        if (player.iDMark.isBaseMenu()) {
+                            switch (select) {
+                                case 0: {
+
+                                    Item botmi = null;
+                                    Item dauxanh = null;
+                                    Item trung = null;
+                                    Item conga = null;
+                                    Item hongngoc = null;
+                                    try {
+
+                                        botmi = InventoryServiceNew.gI().findItemBag(player, 888);
+                                        dauxanh = InventoryServiceNew.gI().findItemBag(player, 889);
+                                        trung = InventoryServiceNew.gI().findItemBag(player, 886);
+                                        conga = InventoryServiceNew.gI().findItemBag(player, 887);
+
+                                    } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                    }
+                                    if (botmi == null || botmi.quantity < 98 || conga == null || conga.quantity < 98 || dauxanh == null || dauxanh.quantity < 98 || trung == null || trung.quantity < 98) {
+                                        this.npcChat(player, "Bạn không đủ nguyên liệu để nấu bánh");
+                                    } else if (player.inventory.ruby < 1000) {
+                                        this.npcChat(player, "Bạn không đủ hồng ngọc");
+                                    } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                        this.npcChat(player, "Hành trang của bạn không đủ chỗ trống");
+                                    } else {
+
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, botmi, 99);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, dauxanh, 99);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, trung, 99);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, conga, 99);
+                                        player.inventory.ruby -= 1000;
+                                        Service.getInstance().sendMoney(player);
+                                        Item trungLinhThu = ItemService.gI().createNewItem((short) 465);
+                                        InventoryServiceNew.gI().addItemBag(player, trungLinhThu);
+                                        InventoryServiceNew.gI().sendItemBags(player);
+                                        this.npcChat(player, "Bạn nhận được 1 bánh trung thu 1 nhân");
+                                    }
+                                    break;
+                                }
+                                case 1: {
+                                    Item botmi = null;
+                                    Item dauxanh = null;
+                                    Item trung = null;
+                                    Item conga = null;
+
+                                    try {
+
+                                        botmi = InventoryServiceNew.gI().findItemBag(player, 888);
+                                        dauxanh = InventoryServiceNew.gI().findItemBag(player, 889);
+                                        trung = InventoryServiceNew.gI().findItemBag(player, 886);
+                                        conga = InventoryServiceNew.gI().findItemBag(player, 887);
+                                    } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                    }
+                                    if (botmi == null || botmi.quantity < 98 || conga == null || conga.quantity < 98 || dauxanh == null || dauxanh.quantity < 98 || trung == null || trung.quantity < 98) {
+                                        this.npcChat(player, "Bạn không đủ nguyên liệu để nấu bánh");
+                                    } else if (player.inventory.ruby < 1000) {
+                                        this.npcChat(player, "Bạn không đủ hồng ngọc");
+                                    } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                        this.npcChat(player, "Hành trang của bạn không đủ chỗ trống");
+                                    } else {
+
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, botmi, 99);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, dauxanh, 99);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, trung, 99);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, conga, 99);
+
+                                        Service.getInstance().sendMoney(player);
+                                        player.inventory.ruby -= 1000;
+                                        Item trungLinhThu = ItemService.gI().createNewItem((short) 466);
+                                        InventoryServiceNew.gI().addItemBag(player, trungLinhThu);
+                                        InventoryServiceNew.gI().sendItemBags(player);
+                                        this.npcChat(player, "Bạn nhận được 1 bánh trung thu 2 nhân");
+                                    }
+                                    break;
+                                }
+                                case 2: {
+                                    Item botmi = null;
+                                    Item dauxanh = null;
+                                    Item trung = null;
+                                    Item conga = null;
+
+                                    try {
+
+                                        botmi = InventoryServiceNew.gI().findItemBag(player, 888);
+                                        dauxanh = InventoryServiceNew.gI().findItemBag(player, 889);
+                                        trung = InventoryServiceNew.gI().findItemBag(player, 886);
+                                        conga = InventoryServiceNew.gI().findItemBag(player, 887);
+                                    } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                    }
+                                    if (botmi == null || botmi.quantity < 98 || conga == null || conga.quantity < 98 || dauxanh == null || dauxanh.quantity < 98 || trung == null || trung.quantity < 98) {
+                                        this.npcChat(player, "Bạn không đủ nguyên liệu để nấu bánh");
+                                    } else if (player.inventory.ruby < 1000) {
+                                        this.npcChat(player, "Bạn không đủ hồng ngọc");
+                                    } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                        this.npcChat(player, "Hành trang của bạn không đủ chỗ trống");
+                                    } else {
+
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, botmi, 99);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, dauxanh, 99);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, trung, 99);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, conga, 99);
+
+                                        Service.getInstance().sendMoney(player);
+                                        player.inventory.ruby -= 1000;
+                                        Item trungLinhThu = ItemService.gI().createNewItem((short) 472);
+                                        InventoryServiceNew.gI().addItemBag(player, trungLinhThu);
+                                        InventoryServiceNew.gI().sendItemBags(player);
+                                        this.npcChat(player, "Bạn nhận được banh trung thu đặc biệt");
+                                    }
+                                    break;
+                                }
+                                case 3: {
+                                    Item banh1nhan = null;
+                                    Item banh2nhan = null;
+                                    Item banhdb = null;
+
+                                    try {
+
+                                        banh1nhan = InventoryServiceNew.gI().findItemBag(player, 465);
+                                        banh2nhan = InventoryServiceNew.gI().findItemBag(player, 466);
+                                        banhdb = InventoryServiceNew.gI().findItemBag(player, 472);
+
+                                    } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                    }
+                                    if (banh1nhan == null || banh1nhan.quantity < 24 || banh2nhan == null || banh2nhan.quantity < 24 || banhdb == null || banhdb.quantity < 24) {
+                                        this.npcChat(player, "Bạn không đủ nguyên liệu để nấu bánh");
+                                    } else if (player.inventory.ruby < 1000) {
+                                        this.npcChat(player, "Bạn không đủ hồng ngọc");
+                                    } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                        this.npcChat(player, "Hành trang của bạn không đủ chỗ trống");
+                                    } else {
+
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, banh1nhan, 25);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, banh2nhan, 25);
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, banhdb, 25);
+
+                                        Service.getInstance().sendMoney(player);
+                                        player.inventory.ruby -= 10000;
+                                        Item trungLinhThu = ItemService.gI().createNewItem((short) 473);
+                                        InventoryServiceNew.gI().addItemBag(player, trungLinhThu);
+                                        InventoryServiceNew.gI().sendItemBags(player);
+                                        this.npcChat(player, "Bạn nhận được banh trung thu đặc biệt");
+                                    }
+                                    break;
+                                }
+                                case 4: {
+                                    Item banh1nhan = null;
+                                    Item banh2nhan = null;
+                                    Item banhdb = null;
+
+                                    try {
+                                        banhdb = InventoryServiceNew.gI().findItemBag(player, 473);
+
+                                    } catch (Exception e) {
+//                                        throw new RuntimeException(e);
+                                    }
+                                    if (banhdb == null || banhdb.quantity < 5) {
+                                        this.npcChat(player, "Bạn không đủ nguyên liệu để nấu bánh");
+                                    } else if (player.inventory.ruby < 1000) {
+                                        this.npcChat(player, "Bạn không đủ hồng ngọc");
+                                    } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                        this.npcChat(player, "Hành trang của bạn không đủ chỗ trống");
+                                    } else {
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, banhdb, 5);
+                                        Service.getInstance().sendMoney(player);
+                                        player.inventory.ruby -= 10000;
+                                        Item trungLinhThu = ItemService.gI().createNewItem((short) 457, 100);
+                                        InventoryServiceNew.gI().addItemBag(player, trungLinhThu);
+                                        InventoryServiceNew.gI().sendItemBags(player);
+                                        this.npcChat(player, "Bạn nhận được 100 thỏi vàng");
+                                    }
+                                    break;
+                                }
+                                case 5: {
+                                    Item hopbanh = null;
+                                    try {
+                                        hopbanh = InventoryServiceNew.gI().findItemBag(player, 473);
+                                    } catch (Exception e) {
+                                    }
+
+                                    if (hopbanh == null || hopbanh.quantity <= 5) {
+                                        this.npcChat(player, "Bạn không đủ nguyên liệu để quy đổi cải trang");
+                                    } else if (player.inventory.ruby < 10000) {
+                                        this.npcChat(player, "Bạn không đủ hồng ngọc");
+                                    } else if (InventoryServiceNew.gI().getCountEmptyBag(player) == 0) {
+                                        this.npcChat(player, "Hành trang của bạn không đủ chỗ trống");
+                                    } else {
+                                        InventoryServiceNew.gI().subQuantityItemsBag(player, hopbanh, 5);
+                                        player.inventory.ruby -= 10000;
+                                        Random random = new Random();
+                                        Item caitrang = ItemService.gI().createNewItem((short) 463);
+                                        caitrang.itemOptions.add(new Item.ItemOption(50, getRandomValue(40, 45, random)));
+                                        caitrang.itemOptions.add(new Item.ItemOption(77, getRandomValue(40, 45, random)));
+                                        caitrang.itemOptions.add(new Item.ItemOption(103, getRandomValue(40, 45, random)));
+                                        caitrang.itemOptions.add(new Item.ItemOption(95, 5));
+                                        caitrang.itemOptions.add(new Item.ItemOption(96, 5));
+                                        caitrang.itemOptions.add(new Item.ItemOption(116, 0));
+                                        if (Util.isTrue(99, 100)) {
+                                            caitrang.itemOptions.add(new Item.ItemOption(93, getRandomValue(1, 3, random)));
+                                        }
+                                        caitrang.itemOptions.add(new Item.ItemOption(30, 0));
+
+                                        InventoryServiceNew.gI().addItemBag(player, caitrang);
+                                        InventoryServiceNew.gI().sendItemBags(player);
+
+                                        this.npcChat(player, "Bạn nhận được cải trang VIP Pro");
+                                    }
+                                    break;
+                                }
+
+                            }
+                        }
+                    }
+                }
+            }
+        };
+
     }
 
     public static Npc thodaika(int mapId, int status, int cx, int cy, int tempId, int avartar) {
@@ -6523,7 +6779,7 @@ public class NpcFactory {
                                                 new short[]{841, 842, 843, -1, -1, -1},
                                                 100000,
                                                 //          (int) player.nPoint.hpMax * 2,
-                                                new int[]{(int) player.nPoint.hpMax * 2},
+                                                new long[]{(long) player.nPoint.hpMax * 2},
                                                 new int[]{103},
                                                 new int[][]{
                                                     {Skill.TAI_TAO_NANG_LUONG, 7, 15000}},
@@ -6619,6 +6875,8 @@ public class NpcFactory {
                     return kyGui(mapId, status, cx, cy, tempId, avatar);
                 case ConstNpc.TRUONG_LAO_GURU:
                     return truongLaoGuru(mapId, status, cx, cy, tempId, avatar);
+                case ConstNpc.NOI_BANH:
+                    return noibanh(mapId, status, cx, cy, tempId, avatar);
                 case ConstNpc.VUA_VEGETA:
                     return vuaVegeta(mapId, status, cx, cy, tempId, avatar);
                 case ConstNpc.THO_DAI_CA:

@@ -34,7 +34,7 @@ public class Broly extends Boss {
             this.gender,
             new short[]{294, 295, 296, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
             Util.nextInt(100000,200000), //dame
-            new int[]{Util.nextInt(1000000,16077777)}, //hp
+            new long[]{Util.nextInt(1000000,16077777)}, //hp
             new int[]{6,27,28,29,30,13,31,32,33,34,10,19,20,35,36,37,38}, //map join
             new int[][]{
                     {Skill.ANTOMIC,7,100},{Skill.MASENKO,7,100},
@@ -70,7 +70,7 @@ public class Broly extends Boss {
             this.gender,
             new short[]{294, 295, 296, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
             Util.nextInt(100000,200000), //dame
-            new int[]{Util.nextInt(10000000,16070777)}, //hp
+            new long[]{Util.nextInt(10000000,16070777)}, //hp
             new int[]{6,27,28,29,30,13,31,32,33,34,10,19,20,35,36,37,38}, //map join
             new int[][]{
                     {Skill.ANTOMIC,7,100},{Skill.MASENKO,7,100},

@@ -2103,11 +2103,23 @@ public class Mob {
                 || this.zone.map.mapId >= 155
                   || this.zone.map.mapId >= 218
                 ) {
-            if (Util.isTrue(40, 100)) {
+            if (Util.isTrue(30, 100)) {
                 ItemMap tv = new ItemMap(zone, 1348, Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
                 list.add(tv);
             }
+            
+            if (Util.isTrue(20, 100)) {
+                ItemMap tv = new ItemMap(zone,  Util.nextInt(886, 889), Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
+            }
+            
+            if (Util.isTrue(20, 100)) {
+                ItemMap tv = new ItemMap(zone,  Util.nextInt(220, 224), Util.nextInt(1, 3), player.location.x, player.location.y, player.id);
+                list.add(tv);
+            }
         }
+        
+        
         // lông thú
         if (this.zone.map.mapId == 1 || this.zone.map.mapId == 2 || this.zone.map.mapId == 3 || this.zone.map.mapId == 4 || this.zone.map.mapId == 5 || this.zone.map.mapId == 6 || this.zone.map.mapId == 8 || this.zone.map.mapId == 9 || this.zone.map.mapId == 10 || this.zone.map.mapId == 11 || this.zone.map.mapId == 12 || this.zone.map.mapId == 13 || this.zone.map.mapId == 15 || this.zone.map.mapId == 17 || this.zone.map.mapId == 18 || this.zone.map.mapId == 19 || this.zone.map.mapId == 20 || this.zone.map.mapId == 27 || this.zone.map.mapId == 28 || this.zone.map.mapId == 29 || this.zone.map.mapId == 30 || this.zone.map.mapId == 31 || this.zone.map.mapId == 32 || this.zone.map.mapId == 33 || this.zone.map.mapId == 34 || this.zone.map.mapId == 35 || this.zone.map.mapId == 36 || this.zone.map.mapId == 37 || this.zone.map.mapId == 38 || this.zone.map.mapId == 30) {
             if (Util.isTrue(1, 4000)) {

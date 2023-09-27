@@ -697,6 +697,13 @@ public class NPoint {
                 this.hpMax += (this.hpMax * percent / 100);
             }
         }
+        if (this.player.itemTime != null && this.player.itemTime.isUseBanhTrungThu1Trung) {
+            this.hpMax *= 1.1;
+        }
+        
+        if (this.player.itemTime != null && this.player.itemTime.isUseHopBanhTrungThu) {
+            this.hpMax *= 1.2;
+        }
 
         // chỉ số bông tai barcoll
         //pet mabư
@@ -986,7 +993,12 @@ public class NPoint {
         if (this.player.fusion.typeFusion != 0) {
             this.mpMax += this.player.pet.nPoint.mpMax;
         }
-
+        if (this.player.itemTime != null && this.player.itemTime.isUseBanhTrungThu2Trung) {
+            this.mpMax *= 1.1;
+        }
+          if (this.player.itemTime != null && this.player.itemTime.isUseHopBanhTrungThu) {
+            this.mpMax *= 1.2;
+        }
         //BTc2
         if (this.player.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA2) {
             this.mpMax *= 1.1;
@@ -1130,6 +1142,14 @@ public class NPoint {
         if (this.player.isPet && ((Pet) this.player).typePet == 7// chi so lam sao bac tu cho dj
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.dame += (this.dame * 60 / 100);//chi so dame
+        }
+        
+        if (this.player.itemTime != null && this.player.itemTime.isUseBanhTrungThuDacBiet) {
+            this.dame *= 1.1;
+        }
+        
+         if (this.player.itemTime != null && this.player.itemTime.isUseHopBanhTrungThu) {
+            this.dame *= 1.2;
         }
         //thức ăn
         if (!this.player.isPet && this.player.itemTime.isEatMeal
@@ -1338,9 +1358,9 @@ public class NPoint {
                 if (this.player.setClothes.songoku == 5 && this.player.setClothes.settl == 5) {
                     percentXDame = 105;
 //                    System.err.println("check" + "đúng");
-                }else if (this.player.setClothes.songoku == 5) {
-                   percentXDame = 100;
-               }
+                } else if (this.player.setClothes.songoku == 5) {
+                    percentXDame = 100;
+                }
                 if (player.isPl() || player.isPet) {
                     int dameX42 = player.inventory.getParam(player.inventory.itemsBody.get(5), 159);
                     if (dameX42 > 0) {
@@ -1356,10 +1376,10 @@ public class NPoint {
                     percentDameIntrinsic = intrinsic.param1;
                 }
                 percentDameSkill = skillSelect.damage;
-                if(this.player.setClothes.kakarot == 5 && this.player.setClothes.settl == 5){
-                   percentXDame = 105;
-                }else if (this.player.setClothes.kakarot == 5) {
-                       percentXDame = 100;
+                if (this.player.setClothes.kakarot == 5 && this.player.setClothes.settl == 5) {
+                    percentXDame = 105;
+                } else if (this.player.setClothes.kakarot == 5) {
+                    percentXDame = 100;
                 }
                 break;
             case Skill.ANTOMIC:
@@ -1400,9 +1420,9 @@ public class NPoint {
                 break;
             case Skill.KAIOKEN:
                 percentDameSkill = skillSelect.damage;
-                if(this.player.setClothes.kirin == 5 && this.player.setClothes.settl == 5){
+                if (this.player.setClothes.kirin == 5 && this.player.setClothes.settl == 5) {
                     percentDameSkill *= 2.1;
-                }else if (this.player.setClothes.kirin == 5) {
+                } else if (this.player.setClothes.kirin == 5) {
                     percentDameSkill *= 2;
                 }
                 break;
@@ -1411,9 +1431,9 @@ public class NPoint {
                     percentDameIntrinsic = intrinsic.param1;
                 }
                 percentDameSkill = skillSelect.damage;
-                if(this.player.setClothes.ocTieu == 5 && this.player.setClothes.settl == 5){
+                if (this.player.setClothes.ocTieu == 5 && this.player.setClothes.settl == 5) {
                     percentXDame = 105;
-                }else if (this.player.setClothes.ocTieu == 5) {
+                } else if (this.player.setClothes.ocTieu == 5) {
                     percentXDame = 100;
                 }
                 break;

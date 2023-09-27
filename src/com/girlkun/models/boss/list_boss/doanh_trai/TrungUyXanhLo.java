@@ -28,7 +28,7 @@ public class TrungUyXanhLo extends Boss {
                 ConstPlayer.TRAI_DAT, //gender
                 new short[]{135, 136, 137, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
                 ((1 + dame)), //dame
-                new int[]{((1 + hp ))}, //hp
+                new long[]{((1 + hp ))}, //hp
                 new int[]{62}, //map join
                 new int[][]{
                 {Skill.DEMON, 3, 1}, {Skill.DEMON, 6, 2}, {Skill.DRAGON, 7, 3}, {Skill.DRAGON, 1, 4}, {Skill.GALICK, 5, 5},

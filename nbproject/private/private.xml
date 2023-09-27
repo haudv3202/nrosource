@@ -12,17 +12,13 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/task/TaskMain.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/SkillService.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/map/Zone.java</file>
+            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/func/UseItem.java</file>
+            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/player/NPoint.java</file>
             <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/func/ChangeMapService.java</file>
+            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/player/Pet.java</file>
             <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/npc/NpcFactory.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/shop/ShopServiceNew.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/jdbc/daos/GodGK.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/data/girlkun/girlkun.properties</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/mob/Mob.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/player/Charms.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/utils/Util.java</file>
+            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/PetService.java</file>
+            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/OpenPowerService.java</file>
         </group>
     </open-files>
 </project-private>

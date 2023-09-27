@@ -86,7 +86,7 @@ public class GodGK {
                     } else {
                     }
 //                    Service.getInstance().sendThongBaoOK(session, "Tài khoản đang được đăng nhập tại máy chủ khác");
-                }else if (secondsPass1 < Manager.SECOND_WAIT_LOGIN) {
+                } else if (secondsPass1 < Manager.SECOND_WAIT_LOGIN) {
                     if (secondsPass < secondsPass1) {
                         Service.getInstance().sendThongBaoOK(session, "Vui lòng chờ " + (Manager.SECOND_WAIT_LOGIN - secondsPass) + "s");
                         return null;
@@ -386,6 +386,10 @@ public class GodGK {
                             int timeBoKhi2 = Integer.parseInt(String.valueOf(dataArray.get(15)));
                             int timeGiapXen2 = Integer.parseInt(String.valueOf(dataArray.get(16)));
                             int timeAnDanh2 = Integer.parseInt(String.valueOf(dataArray.get(17)));
+                            int timeBanhTrungThu1Trung = Integer.parseInt(String.valueOf(dataArray.get(18)));
+                            int timeBanhTrungThu2Trung = Integer.parseInt(String.valueOf(dataArray.get(19)));
+                            int timeBanhTrungThuDacBiet = Integer.parseInt(String.valueOf(dataArray.get(20)));
+                            int timeHopBanhTrungThu = Integer.parseInt(String.valueOf(dataArray.get(21)));
                             int timeUseTDLT = 0;
                             if (dataArray.size() == 10) {
                                 timeUseTDLT = Integer.parseInt(String.valueOf(dataArray.get(9)));
@@ -406,6 +410,10 @@ public class GodGK {
                             player.itemTime.lastTimeUseMayDo = System.currentTimeMillis() - (ItemTime.TIME_MAY_DO - timeMayDo);
                             player.itemTime.lastTimeBanhTet = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhTet);
                             player.itemTime.lastTimeBanhChung = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhChung);
+                            player.itemTime.lastTimeBanhTrungThu1Trung = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhTrungThu1Trung);
+                            player.itemTime.lastTimeBanhTrungThu2Trung = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhTrungThu2Trung);
+                            player.itemTime.lastTimeBanhTrungThuDacBiet = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeBanhTrungThuDacBiet);
+                            player.itemTime.lastTimeHopBanhTrungThu = System.currentTimeMillis() - (ItemTime.TIME_ITEM - timeHopBanhTrungThu);
 
                             player.itemTime.lastTimeUseMayDo2 = System.currentTimeMillis() - (ItemTime.TIME_MAY_DO2 - timeMayDo2);
                             player.itemTime.lastTimeEatMeal = System.currentTimeMillis() - (ItemTime.TIME_EAT_MEAL - timeMeal);
@@ -430,6 +438,10 @@ public class GodGK {
                             player.itemTime.isUseTDLT = timeUseTDLT != 0;
                             player.itemTime.isUseBanhTet = timeBanhTet != 0;
                             player.itemTime.isUseBanhChung = timeBanhChung != 0;
+                            player.itemTime.isUseBanhTrungThu1Trung = timeBanhTrungThu1Trung != 0;
+                            player.itemTime.isUseBanhTrungThu2Trung = timeBanhTrungThu2Trung != 0;
+                            player.itemTime.isUseBanhTrungThuDacBiet = timeBanhTrungThuDacBiet != 0;
+                            player.itemTime.isUseHopBanhTrungThu = timeHopBanhTrungThu != 0;
                             dataArray.clear();
 
                             //data nhiệm vụ

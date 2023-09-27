@@ -27,7 +27,7 @@ public class Saibamen6 extends Boss {
                 ConstPlayer.TRAI_DAT,
                 new short[]{642, 643, 644, -1, -1, -1},
                 ((10000 + dame) * level),
-                new int[]{((500000 + hp) * level)},
+                new long[]{((500000 + hp) * level)},
                 new int[]{144},
                 (int[][]) Util.addArray(FULL_DEMON),
                 new String[]{},

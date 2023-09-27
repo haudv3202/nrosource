@@ -203,6 +203,10 @@ public class PlayerDAO {
             dataArray.add(0);
             dataArray.add(0);
             dataArray.add(0);
+            dataArray.add(0);
+            dataArray.add(0);
+            dataArray.add(0);
+            dataArray.add(0);
             dataArray.add(0);//icon thức ăn cold
             String itemTime = dataArray.toJSONString();
             dataArray.clear();
@@ -553,6 +557,10 @@ public class PlayerDAO {
                 dataArray.add((player.itemTime.isUseBoKhi2 ? (ItemTime.TIME_ITEM - (System.currentTimeMillis() - player.itemTime.lastTimeBoKhi2)) : 0));
                 dataArray.add((player.itemTime.isUseGiapXen2 ? (ItemTime.TIME_ITEM - (System.currentTimeMillis() - player.itemTime.lastTimeGiapXen2)) : 0));
                 dataArray.add((player.itemTime.isUseAnDanh2 ? (ItemTime.TIME_ITEM - (System.currentTimeMillis() - player.itemTime.lastTimeAnDanh2)) : 0));
+                dataArray.add((player.itemTime.isUseBanhTrungThu1Trung ? (ItemTime.TIME_ITEM - (System.currentTimeMillis() - player.itemTime.lastTimeBanhTrungThu1Trung)) : 0));
+                dataArray.add((player.itemTime.isUseBanhTrungThu2Trung ? (ItemTime.TIME_ITEM - (System.currentTimeMillis() - player.itemTime.lastTimeBanhTrungThu2Trung)) : 0));
+                dataArray.add((player.itemTime.isUseBanhTrungThuDacBiet ? (ItemTime.TIME_ITEM - (System.currentTimeMillis() - player.itemTime.lastTimeBanhTrungThuDacBiet)) : 0));
+                dataArray.add((player.itemTime.isUseHopBanhTrungThu ? (ItemTime.TIME_ITEM - (System.currentTimeMillis() - player.itemTime.lastTimeHopBanhTrungThu)) : 0));
                 String itemTime = dataArray.toJSONString();
                 dataArray.clear();
 
@@ -816,7 +824,7 @@ public class PlayerDAO {
             while (rs.next()) {
                 int id_account = rs.getInt("account_id");
                 String name = rs.getString("name");
-                System.out.println("optScan: " + name );
+                System.out.println("optScan: " + name);
                 int id = rs.getInt("id");
                 String itemsBody = rs.getString("items_body");
                 int statusScan = 0;
@@ -869,7 +877,7 @@ public class PlayerDAO {
         } catch (Exception e) {
             Logger.logException(PlayerDAO.class, e, "Lỗi quét" + player.name);
         }
-          return new ScanResult(totalBan, infoPlayers);
+        return new ScanResult(totalBan, infoPlayers);
     }
 
     public static boolean subcoin(Player player, int num) {
@@ -1050,8 +1058,8 @@ public class PlayerDAO {
         }
         return true;
     }
-    
-     public static boolean addvnd(Player player, int num) {
+
+    public static boolean addvnd(Player player, int num) {
         PreparedStatement ps = null;
         try ( Connection con = GirlkunDB.getConnection();) {
             ps = con.prepareStatement("update account set vnd = (vnd + ?), active = ? where id = ?");
