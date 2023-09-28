@@ -12,13 +12,10 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/func/UseItem.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/player/NPoint.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/func/ChangeMapService.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/player/Pet.java</file>
+            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/func/CombineServiceNew.java</file>
+            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/ItemService.java</file>
             <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/npc/NpcFactory.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/PetService.java</file>
-            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/services/OpenPowerService.java</file>
+            <file>file:/C:/xampp/htdocs/nrosource/src/com/girlkun/models/mob/Mob.java</file>
         </group>
     </open-files>
 </project-private>

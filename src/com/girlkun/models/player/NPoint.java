@@ -700,7 +700,7 @@ public class NPoint {
         if (this.player.itemTime != null && this.player.itemTime.isUseBanhTrungThu1Trung) {
             this.hpMax *= 1.1;
         }
-        
+
         if (this.player.itemTime != null && this.player.itemTime.isUseHopBanhTrungThu) {
             this.hpMax *= 1.2;
         }
@@ -996,7 +996,7 @@ public class NPoint {
         if (this.player.itemTime != null && this.player.itemTime.isUseBanhTrungThu2Trung) {
             this.mpMax *= 1.1;
         }
-          if (this.player.itemTime != null && this.player.itemTime.isUseHopBanhTrungThu) {
+        if (this.player.itemTime != null && this.player.itemTime.isUseHopBanhTrungThu) {
             this.mpMax *= 1.2;
         }
         //BTc2
@@ -1143,12 +1143,12 @@ public class NPoint {
                 && (((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA || ((Pet) this.player).master.fusion.typeFusion == ConstPlayer.HOP_THE_PORATA5)) {
             this.dame += (this.dame * 60 / 100);//chi so dame
         }
-        
+
         if (this.player.itemTime != null && this.player.itemTime.isUseBanhTrungThuDacBiet) {
             this.dame *= 1.1;
         }
-        
-         if (this.player.itemTime != null && this.player.itemTime.isUseHopBanhTrungThu) {
+
+        if (this.player.itemTime != null && this.player.itemTime.isUseHopBanhTrungThu) {
             this.dame *= 1.2;
         }
         //thức ăn
@@ -1954,6 +1954,22 @@ public class NPoint {
             return 11;
         }
         if (limitPower == 14) {
+            return 11;
+        }
+        if (limitPower == 15) {
+            return 11;
+        }
+        if (limitPower == 16) {
+            return 12;
+        }
+        if (limitPower == 17) {
+            return 12;
+        }
+        if (limitPower == 18) {
+            return 12;
+        }
+
+        if (limitPower == 19) {
             return 12;
         }
         return 0;
@@ -2026,12 +2042,15 @@ public class NPoint {
             for (int i = 0; i < this.critg; i++) {
                 tiemNangUse *= 5L;
             }
+//            System.err.println("limit" + limitPower);            
+//            System.err.println("crit" + this.critg );
+//            System.err.println("point" + + point);
             if ((this.critg + point) <= getCritLimit()) {
                 if (doUseTiemNang(tiemNangUse)) {
                     critg += point;
                 }
             } else {
-                Service.gI().sendThongBaoOK(player, "Vui lòng mở giới hạn sức mạnh");
+                Service.gI().sendThongBaoOK(player, "Đã đạt giới hạn");
                 return;
             }
         }

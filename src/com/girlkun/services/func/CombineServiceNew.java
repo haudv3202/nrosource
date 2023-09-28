@@ -1308,7 +1308,9 @@ public class CombineServiceNew {
             CombineServiceNew.gI().sendEffectOpenItem(player, itemTS.template.iconID, itemTS.template.iconID);
             short itemId;
             if (itemTS.template.gender == 3 || itemTS.template.type == 4) {
-                itemId = Manager.radaSKHVip[Util.nextInt(0, 5)];
+                itemId = Manager.radaSKHVip[0];
+//                Util.nextInt(0, 5)
+//                Lấy trong mảng ra rada thần linh
                 if (player.getSession().bdPlayer > 0 && Util.isTrue(1, (int) (100 / player.getSession().bdPlayer))) {
                     itemId = Manager.radaSKHVip[6];
                 }

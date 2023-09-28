@@ -637,7 +637,6 @@ public class BossesData {
             new int[]{100},
             new int[][]{
                 {Skill.KAMEJOKO, 7, 1000},
-                {Skill.KAMEJOKO, 7, 1000},
                 {Skill.TAI_TAO_NANG_LUONG, 2, 3000000},
                 {Skill.LIEN_HOAN, 7, 10000}}, //skill
             new String[]{}, //text chat 1
@@ -664,7 +663,6 @@ public class BossesData {
             new long[]{800000000},
             new int[]{100},
             new int[][]{
-                {Skill.KAMEJOKO, 7, 1000},
                 {Skill.KAMEJOKO, 7, 1000},
                 {Skill.TAI_TAO_NANG_LUONG, 2, 3000000},
                 {Skill.LIEN_HOAN, 7, 10000}},
@@ -939,7 +937,7 @@ public class BossesData {
             "Xên Hoàn Thiện",
             ConstPlayer.XAYDA,
             new short[]{234, 235, 236, -1, -1, -1},
-            100000,
+            1000000,
             new long[]{1200000000},
             new int[]{103},
             new int[][]{
@@ -975,13 +973,12 @@ public class BossesData {
             "Xên Hoàn Thiện ",
             ConstPlayer.XAYDA,
             new short[]{234, 235, 236, -1, -1, -1},
-            100000,
+            1000000,
             new long[]{1500000000},
             new int[]{103},
             new int[][]{
-                {Skill.KAMEJOKO, 7, 6}, {Skill.KAMEJOKO, 6, 7}, {Skill.KAMEJOKO, 5, 8}, {Skill.KAMEJOKO, 4, 9}, {Skill.KAMEJOKO, 3, 10}, {Skill.KAMEJOKO, 2, 11}, {Skill.KAMEJOKO, 1, 12},
-                {Skill.ANTOMIC, 1, 13}, {Skill.ANTOMIC, 2, 14}, {Skill.ANTOMIC, 3, 15}, {Skill.ANTOMIC, 4, 16}, {Skill.ANTOMIC, 5, 17}, {Skill.ANTOMIC, 6, 19}, {Skill.ANTOMIC, 7, 20},
-                {Skill.MASENKO, 1, 21}, {Skill.MASENKO, 5, 22}, {Skill.MASENKO, 6, 23},
+                {Skill.KAMEJOKO, 7, 1000},
+                {Skill.MASENKO, 1, 2000}, {Skill.MASENKO, 5, 22}, {Skill.MASENKO, 6, 23},
                 {Skill.DICH_CHUYEN_TUC_THOI, 7, 100000},
                 {Skill.TAI_TAO_NANG_LUONG, 4, 3000000},
                 {Skill.THAI_DUONG_HA_SAN, 7, 150000},
@@ -1008,14 +1005,12 @@ public class BossesData {
             "Siêu Xên Hoàn Thiện",
             ConstPlayer.XAYDA,
             new short[]{234, 235, 236, -1, -1, -1},
-            100000,
+            1000000,
             new long[]{2000000000},
             new int[]{103},
             new int[][]{
                 {Skill.DEMON, 3, 1}, {Skill.DEMON, 6, 2}, {Skill.DRAGON, 7, 3}, {Skill.DRAGON, 1, 4}, {Skill.GALICK, 5, 5},
                 {Skill.KAMEJOKO, 7, 6}, {Skill.KAMEJOKO, 6, 7}, {Skill.KAMEJOKO, 5, 8}, {Skill.KAMEJOKO, 4, 9}, {Skill.KAMEJOKO, 3, 10}, {Skill.KAMEJOKO, 2, 11}, {Skill.KAMEJOKO, 1, 12},
-                {Skill.ANTOMIC, 1, 13}, {Skill.ANTOMIC, 2, 14}, {Skill.ANTOMIC, 3, 15}, {Skill.ANTOMIC, 4, 16}, {Skill.ANTOMIC, 5, 17}, {Skill.ANTOMIC, 6, 19}, {Skill.ANTOMIC, 7, 20},
-                {Skill.MASENKO, 1, 21}, {Skill.MASENKO, 5, 22}, {Skill.MASENKO, 6, 23},
                 {Skill.KAMEJOKO, 7, 1000},
                 {Skill.QUA_CAU_KENH_KHI, 7, 100000},
                 {Skill.DICH_CHUYEN_TUC_THOI, 7, 100000},
@@ -1083,7 +1078,7 @@ public class BossesData {
             "Xên con", //name
             ConstPlayer.XAYDA, //gender
             new short[]{264, 265, 266, -1, -1, -1}, //outfit {head, body, leg, bag, aura, eff}
-            20000, //dame
+            100000, //dame
             new long[]{1000000000}, //hp
             new int[]{103}, //map join
             (int[][]) Util.addArray(FULL_DEMON, FULL_MASENKO), //skill

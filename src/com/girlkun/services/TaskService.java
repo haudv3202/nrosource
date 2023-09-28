@@ -623,7 +623,7 @@ public void DoneTask(Player player, int id) {
                 case ConstMob.XEN_CON_CAP_5:
                 case ConstMob.XEN_CON_CAP_8:
 //                    != null
-                    if (player.clan == null) {
+                    if (player.clan != null) {
                         List<Player> list = new ArrayList<>();
                         List<Player> playersMap = player.zone.getPlayers();
                         for (Player pl : playersMap) {
@@ -631,6 +631,7 @@ public void DoneTask(Player player, int id) {
                                 list.add(pl);
                             }
                         }
+                        
 //                        if (list.size() >= 2) {
 //                            for (Player pl : list) {
                                 switch (mob.tempId) {

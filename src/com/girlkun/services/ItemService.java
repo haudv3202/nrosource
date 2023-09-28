@@ -290,8 +290,12 @@ public class ItemService {
     }
 
     public int randomSKHId(byte gender) {
-        if (gender == 3) gender = 2;
-        int[][] options = {{128, 129, 127}, {130, 131, 132}, {133, 135, 134}};
+//          System.err.println("genner" + gender);
+        if (gender == 3) {
+            gender = (byte) Util.nextInt(0, 2);
+        };
+//        0
+        int[][] options = {{127, 128, 129}, {130, 131, 132}, {133, 135, 134}};
         int skhv1 = 25;
         int skhv2 = 35;
         int skhc = 40;
@@ -304,6 +308,9 @@ public class ItemService {
         } else if (rd <= skhv1 + skhv2 + skhc) {
             skhId = 2;
         }
+//        System.err.println("id" + options[gender][skhId]);        
+//        System.err.println("genner" + gender);
+
         return options[gender][skhId];
     }
 
