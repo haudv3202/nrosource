@@ -636,7 +636,7 @@ public void DoneTask(Player player, int id) {
 //                            for (Player pl : list) {
                                 switch (mob.tempId) {
                                     case ConstMob.XEN_CON_CAP_1:
-                                         System.err.println("list size" + list.size());
+//                                         System.err.println("list size" + list.size());
                                          doneTask(player, ConstTask.TASK_24_4);
                                         break;
                                     case ConstMob.XEN_CON_CAP_3:
